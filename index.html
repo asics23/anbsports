@@ -216,16 +216,19 @@
 
                 <!-- 1. 幼兒班 -->
                 <div class="mb-10 bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden relative">
-                    <!-- 標籤 -->
-                    <div class="bg-brand-red text-white px-6 py-4 flex flex-col sm:flex-row sm:items-center justify-between">
+                    <!-- 標籤 (點擊可展開/收回下方內容) -->
+                    <button type="button" onclick="toggleTbody('tbody-toddler', 'icon-toddler')" class="w-full text-left bg-brand-red text-white px-6 py-4 flex flex-col sm:flex-row sm:items-center justify-between cursor-pointer focus:outline-none select-none hover:bg-brand-red_hover transition-colors">
                         <div>
                             <h4 class="text-2xl font-black flex items-center">
                                 幼兒班 <span class="text-sm font-normal bg-black/20 px-3 py-1 rounded-full ml-3 tracking-widest">適合 4-6 歲</span>
                             </h4>
                             <p class="text-sm text-white/80 mt-1">⚪ 著重提升基礎運動技能及協調能力</p>
                         </div>
-                        <div class="mt-2 sm:mt-0 font-sport font-bold text-lg">Ratio 1:8</div>
-                    </div>
+                        <div class="mt-2 sm:mt-0 flex items-center space-x-3">
+                            <span class="font-sport font-bold text-lg">Ratio 1:8</span>
+                            <svg id="icon-toddler" class="w-5 h-5 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
+                        </div>
+                    </button>
                    
                     <!-- 表格主體 -->
                     <div class="overflow-x-auto touch-pan-x overscroll-x-contain">
@@ -237,15 +240,10 @@
                                     <th class="p-4">日期</th>
                                     <th class="p-4 w-40">時間</th>
                                     <th class="p-4 w-40">地點</th>
-                                    <th class="p-4 w-32 text-center">
-                                        <span>費用</span>
-                                        <button type="button" onclick="toggleTableBody('class-table-1', this)" class="inline-flex items-center justify-center gap-1.5 px-3 py-1 bg-gray-200/80 hover:bg-gray-300 active:scale-95 text-gray-800 rounded-md font-bold transition-all text-xs">
-                                            <svg class="w-3.5 h-3.5 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                                        </button>
-                                    </th>
+                                    <th class="p-4 w-32 text-center">費用</th>
                                 </tr>
                             </thead>
-                            <tbody id="class-table-1" class="transition-all duration-200">
+                            <tbody id="tbody-toddler" class="divide-y divide-gray-100 text-gray-800">
                                 <tr class="hover:bg-red-50/30 transition-colors">
                                     <td class="p-4 font-sport font-bold">ADH-2609n1</td>
                                     <td class="p-4 font-bold">(一)</td>
@@ -286,15 +284,18 @@
 
                 <!-- 2. 青苗班 -->
                 <div class="mb-10 bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden relative">
-                    <div class="bg-brand-red text-white px-6 py-4 flex flex-col sm:flex-row sm:items-center justify-between">
+                    <button type="button" onclick="toggleTbody('tbody-junior', 'icon-junior')" class="w-full text-left bg-brand-red text-white px-6 py-4 flex flex-col sm:flex-row sm:items-center justify-between cursor-pointer focus:outline-none select-none hover:bg-brand-red_hover transition-colors">
                         <div>
                             <h4 class="text-2xl font-black flex items-center">
                                 青苗班 <span class="text-sm font-normal bg-black/20 px-3 py-1 rounded-full ml-3 tracking-widest">適合 6-12 歲</span>
                             </h4>
                             <p class="text-sm text-white/80 mt-1">⚪ 培養對田徑運動的興趣</p>
                         </div>
-                        <div class="mt-2 sm:mt-0 font-sport font-bold text-lg">Ratio 1:12</div>
-                    </div>
+                        <div class="mt-2 sm:mt-0 flex items-center space-x-3">
+                            <span class="font-sport font-bold text-lg">Ratio 1:12</span>
+                            <svg id="icon-junior" class="w-5 h-5 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
+                        </div>
+                    </button>
                    
                     <div class="overflow-x-auto touch-pan-x overscroll-x-contain">
                         <table class="w-full min-w-[800px] text-left border-collapse">
@@ -308,7 +309,7 @@
                                     <th class="p-4 w-32 text-center">費用</th>
                                 </tr>
                             </thead>
-                            <tbody class="divide-y divide-gray-100 text-gray-800">
+                            <tbody id="tbody-junior" class="divide-y divide-gray-100 text-gray-800">
                                 <tr class="hover:bg-gray-50 transition-colors">
                                     <td class="p-4 font-sport font-bold">ADH-2609k1</td>
                                     <td class="p-4 font-bold">(一)</td>
@@ -356,15 +357,18 @@
 
                 <!-- 3. 訓練班 -->
                 <div class="mb-10 bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden relative">
-                    <div class="bg-brand-red text-white px-6 py-4 flex flex-col sm:flex-row sm:items-center justify-between">
+                    <button type="button" onclick="toggleTbody('tbody-elite', 'icon-elite')" class="w-full text-left bg-brand-red text-white px-6 py-4 flex flex-col sm:flex-row sm:items-center justify-between cursor-pointer focus:outline-none select-none hover:bg-brand-red_hover transition-colors">
                         <div>
                             <h4 class="text-2xl font-black flex items-center">
                                 訓練班 <span class="text-sm font-normal bg-black/20 px-3 py-1 rounded-full ml-3 tracking-widest">適合 8-15 歲</span>
                             </h4>
                             <p class="text-sm text-white/80 mt-1">⚪ 完成青苗班 或 以提升表現及成績為目標</p>
                         </div>
-                        <div class="mt-2 sm:mt-0 font-sport font-bold text-lg">Ratio 1:14</div>
-                    </div>
+                        <div class="mt-2 sm:mt-0 flex items-center space-x-3">
+                            <span class="font-sport font-bold text-lg">Ratio 1:14</span>
+                            <svg id="icon-elite" class="w-5 h-5 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
+                        </div>
+                    </button>
                    
                     <div class="overflow-x-auto touch-pan-x overscroll-x-contain">
                         <table class="w-full min-w-[800px] text-left border-collapse">
@@ -378,7 +382,7 @@
                                     <th class="p-4 w-32 text-center">費用</th>
                                 </tr>
                             </thead>
-                            <tbody class="divide-y divide-gray-100 text-gray-800">
+                            <tbody id="tbody-elite" class="divide-y divide-gray-100 text-gray-800">
                                 <tr class="hover:bg-gray-50 transition-colors">
                                     <td class="p-4 font-sport font-bold">ASP-2609e3</td>
                                     <td class="p-4 font-bold">(三)</td>
@@ -494,6 +498,59 @@
 
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
+
+        // 課程資料下拉選單切換與外部點擊關閉
+        const dropdownBtn = document.getElementById('course-dropdown-btn');
+        const dropdownMenu = document.getElementById('course-dropdown-menu');
+        const dropdownArrow = document.getElementById('course-dropdown-arrow');
+        const dropdownContainer = document.getElementById('course-dropdown-container');
+
+        function closeDropdown() {
+            dropdownMenu.classList.remove('opacity-100', 'visible');
+            dropdownMenu.classList.add('opacity-0', 'invisible');
+            dropdownArrow.classList.remove('rotate-180');
+            dropdownBtn.setAttribute('aria-expanded', 'false');
+        }
+
+        function openDropdown() {
+            dropdownMenu.classList.remove('opacity-0', 'invisible');
+            dropdownMenu.classList.add('opacity-100', 'visible');
+            dropdownArrow.classList.add('rotate-180');
+            dropdownBtn.setAttribute('aria-expanded', 'true');
+        }
+
+        dropdownBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const isOpen = dropdownMenu.classList.contains('opacity-100');
+            if (isOpen) {
+                closeDropdown();
+            } else {
+                openDropdown();
+            }
+        });
+
+        document.querySelectorAll('.dropdown-link').forEach(link => {
+            link.addEventListener('click', closeDropdown);
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!dropdownContainer.contains(e.target)) {
+                closeDropdown();
+            }
+        });
+
+        // 表格詳細資料向下伸展與收回 (只收合 tbody)
+        function toggleTbody(tbodyId, iconId) {
+            const tbody = document.getElementById(tbodyId);
+            const icon = document.getElementById(iconId);
+            if (tbody.classList.contains('hidden')) {
+                tbody.classList.remove('hidden');
+                icon.classList.remove('-rotate-90');
+            } else {
+                tbody.classList.add('hidden');
+                icon.classList.add('-rotate-90');
+            }
+        }
     </script>
 </body>
 </html>
