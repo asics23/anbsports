@@ -1,0 +1,2171 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中國香港啦啦隊總會 | Cheerleading Federation of Hong Kong, China</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+   
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Noto Sans HK"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            DEFAULT: '#FF6600', // 鮮明活力橙 (Vibrant Orange)
+                            hover: '#FF8533',   // 較淺/亮的橙色 (Hover 用)
+                            light: '#FFA366',   // 淺橙色 (次要強調)
+                            dark: '#E65C00',    // 深橙色
+                            darker: '#CC3300',  // 鮮紅橙色 (深色強調，絕無啡色)
+                            50: '#FFF0E6',      // 極淺橙底色
+                            100: '#FFE0CC',     // 淺橙底色
+                            200: '#FFC299',
+                            300: '#FFA366',
+                            800: '#CC3300',     // 鮮紅橙色點綴
+                            900: '#B32400',     // 最深的鮮紅/深橙色，絕無啡色
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* View transition base classes */
+        .view-section {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.4s ease-in-out;
+        }
+        .view-section.active {
+            display: block;
+            opacity: 1;
+        }
+       
+        /* Custom scrollbar for tables */
+        .table-scroll::-webkit-scrollbar {
+            height: 8px;
+        }
+        .table-scroll::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 4px;
+        }
+        .table-scroll::-webkit-scrollbar-thumb {
+            background: #FFA366;
+            border-radius: 4px;
+        }
+        .table-scroll::-webkit-scrollbar-thumb:hover {
+            background: #FF6600;
+        }
+
+        /* Marquee Animation */
+        @keyframes marquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-100%); }
+        }
+        .animate-marquee {
+            display: flex;
+            animation: marquee 50s linear infinite;
+        }
+        .marquee-container:hover .animate-marquee {
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-gray-800 font-sans flex flex-col min-h-screen selection:bg-brand selection:text-white">
+
+    <div class="bg-brand-darker text-white py-2 px-4 text-xs md:text-sm flex justify-between items-center">
+        <div class="container mx-auto flex justify-between">
+            <div class="flex space-x-4">
+                <span class="flex items-center"><i data-lucide="phone" class="w-3 h-3 mr-1" aria-hidden="true"></i> (852) 2527 9288</span>
+                <a href="mailto:cfhkemail@gmail.com" class="flex items-center hidden sm:flex"><i data-lucide="mail" class="w-3 h-3 mr-1" aria-hidden="true"></i> cfhkemail@gmail.com</a>
+            </div>
+            <!-- <div class="flex space-x-3">
+                <button class="hover:text-brand-light transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-light rounded">繁體中文</button>
+                <span aria-hidden="true">|</span>
+                <button class="hover:text-brand-light transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-light rounded">English</button>
+            </div> -->
+        </div>
+    </div>
+
+    <header class="bg-white shadow-md sticky top-0 z-40">
+        <!-- 走馬燈圖片區塊 (全螢幕寬度) -->
+        <div class="marquee-container w-full overflow-hidden flex bg-white pt-2 pb-2 border-b border-gray-100 relative">
+            <div class="animate-marquee flex space-x-1 px-0.5 min-w-full flex-shrink-0 justify-around">
+                <img src="image/top01.jpg" alt="圖片" class="h-28 md:h-32 w-auto rounded object-cover shadow-sm">
+                <img src="image/top02.jpg" alt="圖片" class="h-28 md:h-32 w-auto rounded object-cover shadow-sm">
+                <img src="image/top03.jpg" alt="圖片" class="h-28 md:h-32 w-auto rounded object-cover shadow-sm">
+                <img src="image/top04.jpg" alt="圖片" class="h-28 md:h-32 w-auto rounded object-cover shadow-sm">
+                <img src="image/top05.jpg" alt="圖片" class="h-28 md:h-32 w-auto rounded object-cover shadow-sm">
+                <img src="image/top06.jpg" alt="圖片" class="h-28 md:h-32 w-auto rounded object-cover shadow-sm">
+                <img src="image/top07.jpg" alt="圖片" class="h-28 md:h-32 w-auto rounded object-cover shadow-sm">
+                <img src="image/top08.jpg" alt="圖片" class="h-28 md:h-32 w-auto rounded object-cover shadow-sm">
+                <img src="image/top09.jpg" alt="圖片" class="h-28 md:h-32 w-auto rounded object-cover shadow-sm">
+                <img src="image/top10.jpg" alt="圖片" class="h-28 md:h-32 w-auto rounded object-cover shadow-sm">
+                <img src="image/top11.jpg" alt="圖片" class="h-28 md:h-32 w-auto rounded object-cover shadow-sm">
+                <img src="image/top12.jpg" alt="圖片" class="h-28 md:h-32 w-auto rounded object-cover shadow-sm">
+            </div>
+            <div class="animate-marquee flex space-x-1 px-0.5 min-w-full flex-shrink-0 justify-around" aria-hidden="true">
+                <img src="image/top01.jpg" alt="圖片" class="h-28 md:h-32 w-auto rounded object-cover shadow-sm">
+                <img src="image/top02.jpg" alt="圖片" class="h-28 md:h-32 w-auto rounded object-cover shadow-sm">
+                <img src="image/top03.jpg" alt="圖片" class="h-28 md:h-32 w-auto rounded object-cover shadow-sm">
+                <img src="image/top04.jpg" alt="圖片" class="h-28 md:h-32 w-auto rounded object-cover shadow-sm">
+                <img src="image/top05.jpg" alt="圖片" class="h-28 md:h-32 w-auto rounded object-cover shadow-sm">
+                <img src="image/top06.jpg" alt="圖片" class="h-28 md:h-32 w-auto rounded object-cover shadow-sm">
+                <img src="image/top07.jpg" alt="圖片" class="h-28 md:h-32 w-auto rounded object-cover shadow-sm">
+                <img src="image/top08.jpg" alt="圖片" class="h-28 md:h-32 w-auto rounded object-cover shadow-sm">
+                <img src="image/top09.jpg" alt="圖片" class="h-28 md:h-32 w-auto rounded object-cover shadow-sm">
+                <img src="image/top10.jpg" alt="圖片" class="h-28 md:h-32 w-auto rounded object-cover shadow-sm">
+                <img src="image/top11.jpg" alt="圖片" class="h-28 md:h-32 w-auto rounded object-cover shadow-sm">
+                <img src="image/top12.jpg" alt="圖片" class="h-28 md:h-32 w-auto rounded object-cover shadow-sm">
+            </div>
+        </div>
+
+    <header class="bg-white shadow-md sticky top-0 z-40">
+        <div class="container mx-auto px-1 py-1 flex justify-between items-center">
+            <a href="#" data-view="home" class="flex items-center space-x-1 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-darker rounded-lg p-1" aria-label="返回首頁">
+                <div class="relative w-[120px] h-16 flex items-center justify-center flex-shrink-0">
+                    <img src="logo/cfhk_logo.png" alt="中國香港啦啦隊總會標誌" class="w-full h-full object-contain z-10" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div style="display: none;" class="absolute inset-0 bg-brand rounded-full items-center justify-center text-white font-bold text-xl group-hover:bg-brand-darker transition duration-300">
+                        CFHK
+                    </div>
+                </div>
+                <div>
+                    <h1 class="text-xl md:text-2xl font-black text-brand-darker tracking-tight">中國香港啦啦隊總會</h1>
+                    <p class="text-[0.6rem] md:text-xs text-gray-600 font-bold uppercase tracking-widest">Cheerleading Federation of Hong Kong, China</p>
+                </div>
+            </a>
+
+            <nav class="hidden lg:flex items-center space-x-1 font-medium text-gray-700" aria-label="主要導航">
+                <div class="relative group">
+                    <button class="px-2 py-2 rounded-md hover:text-brand hover:bg-brand-50 transition flex items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand" aria-expanded="false" aria-haspopup="true">
+                        關於本會 <i data-lucide="chevron-down" class="w-4 h-4 ml-1 transition-transform group-hover:rotate-180"></i>
+                    </button>
+                    <div class="absolute top-full left-0 mt-2 w-max min-w-full whitespace-nowrap bg-white border-t-2 border-brand rounded-b-md shadow-xl invisible opacity-0 translate-y-2 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 z-50 flex flex-col">
+                        <a href="#" data-view="about" data-scroll-to="about-intro" class="px-4 py-3 text-sm text-gray-700 hover:bg-brand-50 hover:text-brand transition">本會簡介</a>
+                        <a href="#" data-view="about" data-scroll-to="about-structure" class="px-4 py-3 text-sm text-gray-700 hover:bg-brand-50 hover:text-brand transition">本會架構</a>
+                        <a href="#" data-view="about" data-scroll-to="about-approve" class="px-4 py-3 text-sm text-gray-700 hover:bg-brand-50 hover:text-brand transition">國際認可</a>
+                        <!-- <a href="#" data-view="about" data-scroll-to="footer" class="px-4 py-3 text-sm text-gray-700 hover:bg-brand-50 hover:text-brand transition">聯絡我們</a> -->
+                    </div>
+                </div>
+
+                <a href="#" data-view="news" class="px-2 py-2 rounded-md hover:text-brand hover:bg-brand-50 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand">最新消息</a>
+
+                <div class="relative group">
+                    <button class="px-2 py-2 rounded-md hover:text-brand hover:bg-brand-50 transition flex items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand" aria-expanded="false" aria-haspopup="true">
+                        賽事 <i data-lucide="chevron-down" class="w-4 h-4 ml-1 transition-transform group-hover:rotate-180"></i>
+                    </button>
+                    <div class="absolute top-full left-0 mt-2 w-max min-w-full whitespace-nowrap bg-white border-t-2 border-brand rounded-b-md shadow-xl invisible opacity-0 translate-y-2 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 z-50 flex flex-col">
+                        <a href="#" data-view="events" data-target-tab="tab-local" class="px-4 py-3 text-sm text-gray-700 hover:bg-brand-50 hover:text-brand transition">本地賽事</a>
+                        <a href="#" data-view="events" data-target-tab="tab-intl" class="px-4 py-3 text-sm text-gray-700 hover:bg-brand-50 hover:text-brand transition">港外賽事</a>
+                    </div>
+                </div>
+
+                <a href="#" data-view="training-cheer" class="px-2 py-2 rounded-md hover:text-brand hover:bg-brand-50 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand">啦啦隊培訓</a>
+
+                <a href="#" data-view="hk-team" class="px-2 py-2 rounded-md hover:text-brand hover:bg-brand-50 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand">香港代表隊</a>
+
+                <a href="#" data-view="training-coach" class="px-2 py-2 rounded-md hover:text-brand hover:bg-brand-50 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand">教練</a>
+
+                <a href="#" data-view="training-referee" class="px-2 py-2 rounded-md hover:text-brand hover:bg-brand-50 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand">裁判</a>
+                
+                <div class="relative group">
+                    <button class="px-2 py-2 rounded-md hover:text-brand hover:bg-brand-50 transition flex items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand" aria-expanded="false" aria-haspopup="true">
+                        新聞 <i data-lucide="chevron-down" class="w-4 h-4 ml-1 transition-transform group-hover:rotate-180"></i>
+                    </button>
+                    <div class="absolute top-full left-0 mt-2 w-max min-w-full whitespace-nowrap bg-white border-t-2 border-brand rounded-b-md shadow-xl invisible opacity-0 translate-y-2 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 z-50 flex flex-col">
+                        <a href="#" data-view="media" data-scroll-to="media-post" class="px-4 py-3 text-sm text-gray-700 hover:bg-brand-50 hover:text-brand transition">傳媒採訪</a>
+                        <a href="#" data-view="media" data-scroll-to="media-announcement" class="px-4 py-3 text-sm text-gray-700 hover:bg-brand-50 hover:text-brand transition">公告</a>
+                        <a href="#" data-view="media" data-scroll-to="media-tender" class="px-4 py-3 text-sm text-gray-700 hover:bg-brand-50 hover:text-brand transition">招標</a>
+                    </div>
+                </div>
+
+                <a href="#" data-view="application" class="px-2 py-2 rounded-md hover:text-brand hover:bg-brand-50 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand">表演申請</a>
+
+                <a href="#" data-view="downloads" class="px-2 py-2 rounded-md hover:text-brand hover:bg-brand-50 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand">文件下載</a>
+            </nav>
+
+            <button id="mobile-btn" class="lg:hidden text-gray-700 hover:text-brand focus:outline-none focus-visible:ring-2 focus-visible:ring-brand rounded p-1" aria-controls="mobile-menu" aria-expanded="false" aria-label="打開手機選單">
+                <i data-lucide="menu" class="w-7 h-7"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="lg:hidden absolute top-[100%] right-0 w-full sm:w-80 max-w-full bg-white border-b border-l border-gray-200 shadow-2xl max-h-0 overflow-hidden transition-all duration-300 ease-in-out rounded-bl-xl z-50">
+            <nav class="px-4 py-1 flex flex-col text-sm font-medium text-left" aria-label="手機導航">
+                
+                <div class="border-b border-gray-100">
+                    <button class="mobile-submenu-btn flex items-center justify-start text-left text-gray-800 hover:text-brand font-bold py-1 focus:outline-none w-full" aria-expanded="false" aria-controls="mobile-about-sub">
+                        <span>關於本會</span> <i data-lucide="chevron-down" class="w-3.5 h-3.5 ml-1 transition-transform duration-300"></i>
+                    </button>
+                    <div id="mobile-about-sub" class="hidden flex-col pb-0.5">
+                        <a href="#" data-view="about" data-scroll-to="about-intro" class="mobile-link block py-0.5 pl-3 text-xs text-gray-600 hover:text-brand text-left">- 本會簡介</a>
+                        <a href="#" data-view="about" data-scroll-to="about-structure" class="mobile-link block py-0.5 pl-3 text-xs text-gray-600 hover:text-brand text-left">- 本會架構</a>
+                        <a href="#" data-view="about" data-scroll-to="about-approve" class="mobile-link block py-0.5 pl-3 text-xs text-gray-600 hover:text-brand text-left">- 國際認可</a>
+                        <!-- <a href="#" data-view="about" data-scroll-to="footer" class="mobile-link block py-0.5 pl-3 text-xs text-gray-600 hover:text-brand text-left">- 聯絡我們</a> -->
+                    </div>
+                </div>
+                
+                <a href="#" data-view="news" class="mobile-link block py-1 text-gray-800 hover:text-brand font-bold border-b border-gray-100 text-left">最新消息</a>
+                
+                <div class="border-b border-gray-100">
+                    <button class="mobile-submenu-btn flex items-center justify-start text-left text-gray-800 hover:text-brand font-bold py-1 focus:outline-none w-full" aria-expanded="false" aria-controls="mobile-events-sub">
+                        <span>賽事</span> <i data-lucide="chevron-down" class="w-3.5 h-3.5 ml-1 transition-transform duration-300"></i>
+                    </button>
+                    <div id="mobile-events-sub" class="hidden flex-col pb-0.5">
+                        <a href="#" data-view="events" data-target-tab="tab-local" class="mobile-link block py-0.5 pl-3 text-xs text-gray-600 hover:text-brand text-left">- 本地賽事</a>
+                        <a href="#" data-view="events" data-target-tab="tab-intl" class="mobile-link block py-0.5 pl-3 text-xs text-gray-600 hover:text-brand text-left">- 港外賽事</a>
+                    </div>
+                </div>
+
+                <a href="#" data-view="training-cheer" class="mobile-link block py-1 text-gray-800 hover:text-brand font-bold border-b border-gray-100 text-left">啦啦隊培訓</a>
+                <a href="#" data-view="hk-team" class="mobile-link block py-1 text-gray-800 hover:text-brand font-bold border-b border-gray-100 text-left">香港代表隊</a>
+                <a href="#" data-view="training-coach" class="mobile-link block py-1 text-gray-800 hover:text-brand font-bold border-b border-gray-100 text-left">教練</a>
+                <a href="#" data-view="training-referee" class="mobile-link block py-1 text-gray-800 hover:text-brand font-bold border-b border-gray-100 text-left">裁判</a>
+                <div class="border-b border-gray-100">
+                    <button class="mobile-submenu-btn flex items-center justify-start text-left text-gray-800 hover:text-brand font-bold py-1 focus:outline-none w-full" aria-expanded="false" aria-controls="mobile-media-sub">
+                        <span>新聞</span> <i data-lucide="chevron-down" class="w-3.5 h-3.5 ml-1 transition-transform duration-300"></i>
+                    </button>
+                    <div id="mobile-media-sub" class="hidden flex-col pb-0.5">
+                        <a href="#" data-view="media" data-scroll-to="media-post" class="mobile-link block py-0.5 pl-3 text-xs text-gray-600 hover:text-brand text-left">- 傳媒採訪</a>
+                        <a href="#" data-view="media" data-scroll-to="media-announcement" class="mobile-link block py-0.5 pl-3 text-xs text-gray-600 hover:text-brand text-left">- 公告</a>
+                        <a href="#" data-view="media" data-scroll-to="media-tender" class="mobile-link block py-0.5 pl-3 text-xs text-gray-600 hover:text-brand text-left">- 招標</a>
+                    </div>
+                </div>
+                <a href="#" data-view="application" class="mobile-link block py-1 text-gray-800 hover:text-brand font-bold border-b border-gray-100 text-left">表演申請</a>
+                <a href="#" data-view="downloads" class="mobile-link block py-1 text-gray-800 hover:text-brand font-bold text-left">文件下載</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+       
+        <section id="view-home" class="view-section active">
+            <div class="relative bg-brand text-white overflow-hidden">
+                <div class="absolute inset-0 opacity-40 mix-blend-multiply bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1574005089302-3f8c8d8b6da9?auto=format&fit=crop&q=80');" aria-hidden="true"></div>
+                <div class="container mx-auto px-4 py-24 md:py-12 relative z-10 flex flex-col items-center text-center">
+                    <span class="inline-block py-1 px-3 rounded-full bg-brand-light text-brand-900 font-bold text-lg mb-4 shadow-sm">凝聚力量 • 展現活力</span>
+                    <h2 class="text-3xl md:text-5xl font-black mb-3 tracking-tight shadow-sm">推動香港啦啦隊發展</h2>
+                    <p class="text-lg md:text-xl max-w-2xl mx-auto mb-2 font-light text-brand-50">
+                        致力於培育本地啦啦隊運動員、教練及裁判，提升競技水平，代表香港參與國際賽事，為社會注入正能量。
+                    </p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <button data-view="news" class="bg-brand-darker hover:bg-brand-900 text-white font-bold py-3 px-8 rounded-full shadow-lg transition transform hover:-translate-y-1 focus:ring-2 focus:ring-offset-2 focus:ring-brand-darker outline-none">
+                            最新消息
+                        </button>
+                        <button data-view="application" class="bg-white hover:bg-brand-50 text-brand-darker font-bold py-3 px-8 rounded-full shadow-lg transition transform hover:-translate-y-1 focus:ring-2 focus:ring-offset-2 focus:ring-white outline-none">
+                            表演申請
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        <!-- <div class="bg-white border-b border-gray-200">
+                <div class="container mx-auto px-4 py-8">
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                        <button data-view="events" class="p-6 rounded-xl hover:bg-slate-50 transition group border border-transparent hover:border-gray-200 outline-none focus-visible:ring-2 focus-visible:ring-brand-darker">
+                            <div class="w-16 h-16 mx-auto bg-brand-50 text-brand-darker rounded-full flex items-center justify-center mb-4 group-hover:bg-brand-darker group-hover:text-white transition">
+                                <i data-lucide="trophy" class="w-8 h-8"></i>
+                            </div>
+                            <h3 class="font-bold text-gray-800 group-hover:text-brand-darker">賽事成績</h3>
+                        </button>
+                        <button data-view="training-cheer" class="p-6 rounded-xl hover:bg-slate-50 transition group border border-transparent hover:border-gray-200 outline-none focus-visible:ring-2 focus-visible:ring-brand-darker">
+                            <div class="w-16 h-16 mx-auto bg-brand-50 text-brand-darker rounded-full flex items-center justify-center mb-4 group-hover:bg-brand-darker group-hover:text-white transition">
+                                <i data-lucide="users" class="w-8 h-8"></i>
+                            </div>
+                            <h3 class="font-bold text-gray-800 group-hover:text-brand-darker">培訓課程</h3>
+                        </button>
+                        <button data-view="training-coach" class="p-6 rounded-xl hover:bg-slate-50 transition group border border-transparent hover:border-gray-200 outline-none focus-visible:ring-2 focus-visible:ring-brand-darker">
+                            <div class="w-16 h-16 mx-auto bg-brand-50 text-brand-darker rounded-full flex items-center justify-center mb-4 group-hover:bg-brand-darker group-hover:text-white transition">
+                                <i data-lucide="file-badge-2" class="w-8 h-8"></i>
+                            </div>
+                            <h3 class="font-bold text-gray-800 group-hover:text-brand-darker">註冊教練</h3>
+                        </button>
+                        <button data-view="training-referee" class="p-6 rounded-xl hover:bg-slate-50 transition group border border-transparent hover:border-gray-200 outline-none focus-visible:ring-2 focus-visible:ring-brand-darker">
+                            <div class="w-16 h-16 mx-auto bg-brand-50 text-brand-darker rounded-full flex items-center justify-center mb-4 group-hover:bg-brand-darker group-hover:text-white transition">
+                                <i data-lucide="gavel" class="w-8 h-8"></i>
+                            </div>
+                            <h3 class="font-bold text-gray-800 group-hover:text-brand-darker">註冊裁判</h3>
+                        </button>
+                    </div>
+                </div>
+            </div> -->
+
+            <div id="news-section" class="container mx-auto px-4 md:px-8 lg:px-40 py-16">
+                <div class="flex justify-between items-end mb-8">
+                    <div>
+                        <h2 class="text-3xl font-black text-brand-darker border-l-4 border-brand pl-4">最新消息</h2>
+                        <p class="text-gray-500 mt-2 pl-5">Latest News & Announcements</p>
+                    </div>
+                    <button data-view="news" class="text-brand font-medium hover:underline flex items-center outline-none focus-visible:ring-2 focus-visible:ring-brand rounded">
+                        查看全部 <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                    </button>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <article class="bg-white rounded-xl shadow-sm hover:shadow-xl transition duration-300 overflow-hidden border border-gray-100 flex flex-row h-full">
+                        <div class="p-4 flex flex-col flex-grow w-3/5">
+                            <span class="inline-block bg-green-200 text-gray-800 text-xs font-bold px-3 py-1 rounded shadow w-max mb-3">訓練班</span>
+                            <p class="text-sm text-gray-500 mb-2 flex items-center"><i data-lucide="calendar" class="w-4 h-4 mr-2"></i> 2026年2月15日</p>
+                            <h3 class="text-xl font-bold text-gray-800 mb-3 hover:text-brand-darker transition cursor-pointer news-title">啦啦隊青苗訓練班</h3>
+                            <!--<p class="text-gray-600 line-clamp-3 mb-4 flex-grow">敬請各屬會及個人會員於3月31日前辦理本年度之續會手續，逾期將影響參賽及相關權利。</p>-->
+                            <p class="line-clamp-3 mb-4 flex-grow">請參閱章程。</p>
+                            <button class="text-brand-darker font-bold text-sm flex items-center hover:text-brand transition mt-auto">閱讀全文 <i data-lucide="chevron-right" class="w-4 h-4 ml-1"></i></button>
+                        </div>
+                        <div class="w-2/5 flex-shrink-0 relative bg-gray-200">
+                            <img src="https://images.unsplash.com/photo-1569074187119-c87815b476da?auto=format&fit=crop&q=80" alt="訓練班" class="absolute inset-0 w-full h-full object-cover">
+                        </div>
+                    </article>
+                   
+                    <article class="bg-white rounded-xl shadow-sm hover:shadow-xl transition duration-300 overflow-hidden border border-gray-100 flex flex-row h-full">
+                        <div class="p-4 flex flex-col flex-grow w-3/5">
+                            <span class="inline-block bg-brand-100 text-brand-800 text-xs font-bold px-3 py-1 rounded shadow w-max mb-3">港外賽事</span>
+                            <p class="text-sm text-gray-500 mb-2 flex items-center"><i data-lucide="calendar" class="w-4 h-4 mr-2"></i> 2026年1月10日</p>
+                            <h3 class="text-xl font-bold text-gray-800 mb-3 hover:text-brand-darker transition cursor-pointer news-title">ICU 亞洲啦啦隊錦標賽 2026 及 亞太啦啦隊盃2026</h3>
+                            <!--<p class="text-gray-600 line-clamp-3 mb-4 flex-grow">本年度首個一級教練課程已順利完成，恭喜所有通過考核的新晉教練，證書將於下週寄出。</p>-->
+                            <button class="text-brand-darker font-bold text-sm flex items-center hover:text-brand transition mt-auto">閱讀全文 <i data-lucide="chevron-right" class="w-4 h-4 ml-1"></i></button>
+                        </div>
+                        <div class="w-2/5 flex-shrink-0 relative bg-gray-200">
+                            <img src="https://images.unsplash.com/photo-1569074187119-c87815b476da?auto=format&fit=crop&q=80" alt="港外賽事" class="absolute inset-0 w-full h-full object-cover">
+                        </div>
+                    </article>
+
+                    <article class="bg-white rounded-xl shadow-sm hover:shadow-xl transition duration-300 overflow-hidden border border-gray-100 flex flex-row h-full">
+                        <div class="p-4 flex flex-col flex-grow w-3/5">
+                            <span class="inline-block bg-red-200 text-red-800 text-xs font-bold px-3 py-1 rounded shadow w-max mb-3">本地賽事</span>
+                            <p class="text-sm text-gray-500 mb-2 flex items-center"><i data-lucide="calendar" class="w-4 h-4 mr-2"></i> 2026年1月10日</p>
+                            <h3 class="text-xl font-bold text-gray-800 mb-3 hover:text-brand-darker transition cursor-pointer news-title">全港啦啦隊大賽2026</h3>
+                            <!--<p class="text-gray-600 line-clamp-3 mb-4 flex-grow">本年度首個一級教練課程已順利完成，恭喜所有通過考核的新晉教練，證書將於下週寄出。</p>-->
+                            <button class="text-brand-darker font-bold text-sm flex items-center hover:text-brand transition mt-auto">閱讀全文 <i data-lucide="chevron-right" class="w-4 h-4 ml-1"></i></button>
+                        </div>
+                        <div class="w-2/5 flex-shrink-0 relative bg-gray-200">
+                            <img src="https://images.unsplash.com/photo-1569074187119-c87815b476da?auto=format&fit=crop&q=80" alt="本地賽事" class="absolute inset-0 w-full h-full object-cover">
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="view-news" class="view-section py-16">
+            <div class="container mx-auto px-4 lg:px-32">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-black text-brand-darker mb-4">最新消息</h2>
+                    <p class="text-gray-600">緊貼總會最新動向、賽事公告及培訓資訊。</p>
+                    <div class="h-1 w-24 bg-brand mx-auto rounded mt-6"></div>
+                </div>
+
+                <!-- <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <article class="bg-white rounded-xl shadow-sm hover:shadow-xl transition duration-300 overflow-hidden border border-gray-100 flex flex-col h-full">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <span class="inline-block bg-gray-100 text-gray-600 text-xs font-bold px-3 py-1 rounded shadow w-max mb-3">訓練班</span>
+                            <p class="text-sm text-gray-500 mb-2 flex items-center"><i data-lucide="calendar" class="w-4 h-4 mr-2"></i> 2026年2月15日</p>
+                            <h3 class="text-xl font-bold text-gray-800 mb-3 hover:text-brand-darker transition cursor-pointer"><button>啦啦隊青苗訓練班</button></h3>
+                            <p class="text-gray-600 line-clamp-3 mb-4 flex-grow">敬請各屬會及個人會員於3月31日前辦理本年度之續會手續，逾期將影響參賽及相關權利。</p>
+                            <button class="text-brand-darker font-bold text-sm flex items-center hover:text-brand transition mt-auto">閱讀全文 <i data-lucide="chevron-right" class="w-4 h-4 ml-1"></i></button>
+                        </div>
+                    </article>
+
+                    <article class="bg-white rounded-xl shadow-sm hover:shadow-xl transition duration-300 overflow-hidden border border-gray-100 flex flex-col h-full">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <span class="inline-block bg-brand-100 text-brand-800 text-xs font-bold px-3 py-1 rounded shadow w-max mb-3">港外賽事</span>
+                            <p class="text-sm text-gray-500 mb-2 flex items-center"><i data-lucide="calendar" class="w-4 h-4 mr-2"></i> 2026年1月10日</p>
+                            <h3 class="text-xl font-bold text-gray-800 mb-3 hover:text-brand-darker transition cursor-pointer"><button>ICU 亞洲啦啦隊錦標賽2026 及 亞太啦啦隊盃2026</button></h3>
+                            <p class="text-gray-600 line-clamp-3 mb-4 flex-grow">本年度首個一級教練課程已順利完成，恭喜所有通過考核的新晉教練，證書將於下週寄出。</p>
+                            <button class="text-brand-darker font-bold text-sm flex items-center hover:text-brand transition mt-auto">閱讀全文 <i data-lucide="chevron-right" class="w-4 h-4 ml-1"></i></button>
+                        </div>
+                    </article>
+
+                    <article class="bg-white rounded-xl shadow-sm hover:shadow-xl transition duration-300 overflow-hidden border border-gray-100 flex flex-col h-full">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <span class="inline-block bg-brand-100 text-brand-800 text-xs font-bold px-3 py-1 rounded shadow w-max mb-3">本地賽事</span>
+                            <p class="text-sm text-gray-500 mb-2 flex items-center"><i data-lucide="calendar" class="w-4 h-4 mr-2"></i> 2026年1月10日</p>
+                            <h3 class="text-xl font-bold text-gray-800 mb-3 hover:text-brand-darker transition cursor-pointer"><button>全港啦啦隊大賽2026</button></h3>
+                            <p class="text-gray-600 line-clamp-3 mb-4 flex-grow">本年度首個一級教練課程已順利完成，恭喜所有通過考核的新晉教練，證書將於下週寄出。</p>
+                            <button class="text-brand-darker font-bold text-sm flex items-center hover:text-brand transition mt-auto">閱讀全文 <i data-lucide="chevron-right" class="w-4 h-4 ml-1"></i></button>
+                        </div>
+                    </article>
+
+                    <article class="bg-white rounded-xl shadow-sm hover:shadow-xl transition duration-300 overflow-hidden border border-gray-100 flex flex-col h-full">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <span class="inline-block bg-brand-100 text-brand-800 text-xs font-bold px-3 py-1 rounded shadow w-max mb-3">獲獎消息</span>
+                            <p class="text-sm text-gray-500 mb-2 flex items-center"><i data-lucide="calendar" class="w-4 h-4 mr-2"></i> 2026年1月10日</p>
+                            <h3 class="text-xl font-bold text-gray-800 mb-3 hover:text-brand-darker transition cursor-pointer"><button>/</button></h3>
+                            <p class="text-gray-600 line-clamp-3 mb-4 flex-grow">本年度首個一級教練課程已順利完成，恭喜所有通過考核的新晉教練，證書將於下週寄出。</p>
+                            <button class="text-brand-darker font-bold text-sm flex items-center hover:text-brand transition mt-auto">閱讀全文 <i data-lucide="chevron-right" class="w-4 h-4 ml-1"></i></button>
+                        </div>
+                    </article>
+
+                    <article class="bg-white rounded-xl shadow-sm hover:shadow-xl transition duration-300 overflow-hidden border border-gray-100 flex flex-col h-full">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <span class="inline-block bg-brand-100 text-brand-800 text-xs font-bold px-3 py-1 rounded shadow w-max mb-3">其他</span>
+                            <p class="text-sm text-gray-500 mb-2 flex items-center"><i data-lucide="calendar" class="w-4 h-4 mr-2"></i> 2026年1月10日</p>
+                            <h3 class="text-xl font-bold text-gray-800 mb-3 hover:text-brand-darker transition cursor-pointer"><button>/</button></h3>
+                            <p class="text-gray-600 line-clamp-3 mb-4 flex-grow">本年度首個一級教練課程已順利完成，恭喜所有通過考核的新晉教練，證書將於下週寄出。</p>
+                            <button class="text-brand-darker font-bold text-sm flex items-center hover:text-brand transition mt-auto">閱讀全文 <i data-lucide="chevron-right" class="w-4 h-4 ml-1"></i></button>
+                        </div>
+                    </article>
+                </div> -->
+
+                <div class="mb-16 mt-12">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center"></h3>
+                    <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                        <div class="overflow-x-auto table-scroll">
+                            <table class="w-full text-left border-collapse min-w-[600px]">
+                                <tbody class="text-gray-800">
+                                    <tr class="border-b border-gray-100 hover:bg-slate-50 transition">
+                                        <td class="py-4 px-6 text-sm">2026年5月10日</td>
+                                        <td class="py-4 px-6 font-bold text-brand-darker">訓練班：啦啦隊青苗訓練班</td>
+                                        <td class="py-4 px-6">
+                                            <span class="bg-green-100 text-green-700 py-1 px-3 rounded-full text-xs font-bold cursor-pointer hover:bg-green-200 transition">詳情</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="border-b border-gray-100 hover:bg-slate-50 transition">
+                                        <td class="py-4 px-6 text-sm">2026年6月10日</td>
+                                        <td class="py-4 px-6 font-bold text-brand-darker">港外賽事：ICU 亞洲啦啦隊錦標賽2026 及 亞太啦啦隊盃2026</td>
+                                        <td class="py-4 px-6">
+                                            <span class="bg-yellow-100 text-yellow-700 py-1 px-3 rounded-full text-xs font-bold cursor-pointer hover:bg-yellow-200 transition">詳情</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-slate-50 transition">
+                                        <td class="py-4 px-6 text-sm">2026年4月11日</td>
+                                        <td class="py-4 px-6 font-bold text-brand-darker">本地賽事：全港啦啦隊大賽2026</td>
+                                        <td class="py-4 px-6">
+                                            <span class="bg-brand-100 text-brand-800 py-1 px-3 rounded-full text-xs font-bold cursor-pointer hover:bg-brand-200 transition">詳情</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="view-about" class="view-section py-16">
+            <div class="container mx-auto px-4 lg:px-32">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-black text-brand-darker mb-4">關於本會</h2>
+                    <div class="h-1 w-24 bg-brand mx-auto rounded"></div>
+                </div>
+
+                <div id="about-intro" class="scroll-mt-28 mb-20">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-8 flex items-center"><i data-lucide="info" class="text-brand-light mr-3"></i> 本會簡介</h3>
+                    <h2 class="text-xl font-bold text-gray-500 mb-8 flex items-center"><i data-lucide="book-open" class="text-brand-light mr-3"></i> 中國香港啦啦隊總會：歷史傳承與未來展望</h2>
+                    <div class="relative border-l-4 border-brand-100 ml-4 md:ml-8 space-y-12 pb-8">
+                        <div class="relative pl-8 md:pl-12">
+                            <div class="absolute w-6 h-6 bg-brand rounded-full -left-3.5 top-1 border-4 border-white shadow"></div>
+                            <h4 class="text-xl font-bold text-brand-darker">一、創會背景與核心使命：逆境中的重生與堅守</h4>
+                            <span class="text-sm font-bold text-brand mb-2 block">2006年</span>
+                            <p class="text-gray-600">中國香港啦啦隊總會（下稱「本會」）源於2003年「沙士」疫情後的社會重建期，由多位熱心社會公益的人士傾力籌備，並於2006年正式成立。作為一家無政府常規資助、完全由社會熱心人士支持的非牟利機構，本會始終秉持一項崇高使命：為香港青少年及廣大參與者創造正面、健康的體育文化，致力構建一個充滿歡樂、互助支持且多姿多彩的運動人生舞台。</p>
+                        </div>
+                        <div class="relative pl-8 md:pl-12">
+                            <div class="absolute w-6 h-6 bg-brand-darker rounded-full -left-3.5 top-1 border-4 border-white shadow"></div>
+                            <h4 class="text-xl font-bold text-brand-darker">二、國際與全國賽事的輝煌足跡：從零的突破到屢創佳績</h4>
+                            <span class="text-sm font-bold text-brand mb-2 block">2013年</span>
+                            <p class="text-gray-600">自2006年成立以來，本會積極推動本地及國際啦啦隊運動的發展，並屢創佳績。我們多次派遣中國香港特區代表團出征世界錦標賽及各類國際會議，足跡遍及全球。其中，2009年參與德國不來梅世錦賽及東京亞洲錦標賽；<b>2013年</b>於泰國曼谷舉行的世界錦標賽中，實現歷史性「零的突破」，勇奪女子五人技巧組別團體銅牌；<b>2017年</b>更在日本高崎市世錦賽中力壓群雄，榮獲16人技巧混合組別團體季軍；<b>2019年</b>於深圳亞太公開賽中，亦斬獲2人舞蹈組別及集體技巧小學組別雙料季軍。<br><br>
+                                在全國賽事方面，本會自2006年起積極參與國內大型賽事，包括2008年北京奧運會期間的全國啦啦操比賽、歷屆全國冠軍賽、兩岸三地賽事及中國公開賽等，並與國家體育總局全國啦啦操委員會保持著長期、密切的交流與戰略協作。</p>
+                        </div>
+                        <div class="relative pl-8 md:pl-12">
+                            <div class="absolute w-6 h-6 bg-brand-light rounded-full -left-3.5 top-1 border-4 border-white shadow"></div>
+                            <h4 class="text-xl font-bold text-brand-darker">三、深耕社區與培育精英：普及運動，傳遞正能量</h4>
+                            <span class="text-sm font-bold text-brand mb-2 block">2007年起</span>
+                            <p class="text-gray-600">本會長久以來堅持協助特區政府推動青年發展，將啦啦隊運動普及至兒童、成年人乃至長者等各年齡階層。自2007年參與慶祝香港回歸十週年大型巡遊嘉年華起，本會每年均積極支持回歸紀念、國慶慶典、立法會活動、奧運主題活動、十八區賽事及全港運動會啦啦隊大賽等大型盛事。同時，本會定期舉辦教練員及裁判員專業培訓班，為行業建立嚴謹標準，持續為香港體壇培育高素質的運動精英。</p>
+                        </div>
+                        <div class="relative pl-8 md:pl-12">
+                            <div class="absolute w-6 h-6 bg-brand-darker rounded-full -left-3.5 top-1 border-4 border-white shadow"></div>
+                            <h4 class="text-xl font-bold text-brand-darker">四、國際影響力與領導地位：立足香港，放眼世界</h4>
+                            <span class="text-sm font-bold text-brand mb-2 block">2011年</span>
+                            <p class="text-gray-600">在組織國際賽事方面，本會於<b>2011年</b>成功在香港紅磡體育館主辦世界錦標賽，吸引來自19個國家及地區、超過800名運動員參與，盛況空前，大幅提升香港在國際體壇的能見度。此外，於2009年至2015年期間，本會創會會長及副會長分別獲選為前創會國際啦啦隊總會（ICU）秘書長及法律顧問；創會會長亦同期當選為前亞洲啦啦隊總會副會長，為國際及亞洲啦啦隊運動的發展作出了卓越貢獻。</p>
+                        </div>
+                        <div class="relative pl-8 md:pl-12">
+                            <div class="absolute w-6 h-6 bg-brand-light rounded-full -left-3.5 top-1 border-4 border-white shadow"></div>
+                            <h4 class="text-xl font-bold text-brand-darker">五、未來願景與發展策略：融入國家大局，共創體育新篇</h4>
+                            <span class="text-sm font-bold text-brand mb-2 block">2019年</span>
+                            <p class="text-gray-600">邁向未來，本會的發展已邁入嶄新里程。本會已於2019年成為「粵港澳大灣區體育教育與發展聯盟」創會理事單位及「中國香港體育協會暨奧林匹克委員會」正式成員；並於<b>2022年</b>獲國際奧委會（IOC）官方認可的國際啦啦隊總會（ICU）接納為正式會員（Full Member），國際地位備受肯定。 (詳情： <a target="_blank" href="http://cheerunion.org/members/hong-kong" class="text-brand hover:underline">cheerunion.org/members/hong-kong</a>)<br><br>
+                            作為中國香港首創的競技及舞蹈啦啦隊總會，我們的未來願景是：<br>
+                            <b>1. 深化人才培育：</b>透過啦啦隊運動，持續為參與者注入運動正能量，讓他們在訓練中掌握正面的運動技能與生命智慧，為未來在不同體育領域的發揮奠定堅實基礎。<br>
+                            <b>2. 提升社會效益：</b>繼續透過各階層的培訓、展演及公開比賽平台，協助特區政府營造和諧共融、互助互愛的社會氛圍，幫助年輕一代建立卓越的團隊精神與充滿正能量的群體文化。<br>
+                            <b>3. 協同國家發展：</b>全面對接並協同國家啦啦操委員會的國際發展大方向，積極規劃在香港特區的推廣任務與發展策略。<br><br>
+                            展望前路，本會將持續培育啦啦隊運動精英，全力支援各項體育及社會公益工作，為香港特區體育事業的繁榮發展及下一代的健康成長貢獻力量。讓我們攜手並進，一起為運動及生命歡呼！</p>
+                        </div>
+                        <div class="relative pl-8 md:pl-12">
+                            <div class="absolute w-6 h-6 bg-brand-light rounded-full -left-3.5 top-1 border-4 border-white shadow"></div>
+                            <h4 class="text-xl font-bold text-brand-darker">六、拓展運動版圖與創新突破：邁向多元化與國際化</h4>
+                            <span class="text-sm font-bold text-brand mb-2 block">2024年起</span>
+                            <p class="text-gray-600">近年，本會緊握時代機遇，不斷拓展運動版圖，實現多項歷史性突破。<br><br>
+                            <b>2024年：</b>本會成功承辦「世界運動會巡迴賽香港站」之啦啦隊二人花球賽。這不僅是本會首次承辦此級別的國際巡迴賽事，更向全球展示了香港舉辦國際大型體育賽事的實力，進一步提升本會在國際啦啦隊界的地位。<br>
+                            <b>2025年：</b>本會與時並進，成立香港首支廣播體操隊伍，並獲委任代表香港參加第十五屆全國運動會。此舉標誌著本會將推廣項目從競技及舞蹈啦啦隊延伸至更具普及性的廣播體操，全面響應國家「全民健身」的號召。<br>
+                            <b>2026年：</b>本會歷史性地派出首支舞蹈啦啦隊（Dance Cheer）代表隊，出征於美國奧蘭多舉行的 ICU International Cheerleading Cup。這次參賽不僅為本會積累了寶貴的國際大賽經驗，更為本會未來大力發展舞蹈啦啦隊項目打下堅實基礎，開啟了本會項目多元化發展的新篇章。<br><br></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="about-structure" class="scroll-mt-28 mb-20">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-8 flex items-center"><i data-lucide="network" class="text-brand-light mr-3"></i> 本會架構</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+                       
+                        <div class="bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition flex flex-col">
+                            <div class="p-6 text-center">
+                                <div class="w-16 h-16 bg-brand-50 text-brand-darker rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <i data-lucide="users" class="w-8 h-8"></i>
+                                </div>
+                                <h4 class="font-bold text-lg text-gray-800">委員會成員</h4>
+                                <p class="text-sm text-gray-500 mt-2">負責總會日常營運、決策及長遠發展方針。</p>
+                            </div>
+                            <div class="border-t border-gray-100 mt-auto">
+                                <details class="group">
+                                    <summary class="w-full py-3 px-6 text-brand-darker font-bold flex items-center justify-center hover:bg-brand-50 transition cursor-pointer list-none [&::-webkit-details-marker]:hidden" style="list-style: none;">
+                                        <span class="group-open:hidden">查看名單</span>
+                                        <span class="hidden group-open:inline">收起名單</span>
+                                        <i data-lucide="chevron-down" class="w-4 h-4 ml-2 transition-transform duration-300 group-open:rotate-180"></i>
+                                    </summary>
+                                    <div class="bg-gray-50 p-6 text-sm text-gray-700 border-t border-gray-100 rounded-b-xl">
+                                        <ul class="space-y-3 text-left">
+                                            <li class="flex items-start border-b border-gray-200 pb-2">
+                                                <span class="w-24 flex-shrink-0 font-bold text-brand-darker">創會會長：</span>
+                                                <span>殷浩然先生</span>
+                                            </li>
+                                            <li class="flex items-start border-b border-gray-200 pb-2">
+                                                <span class="w-24 flex-shrink-0 font-bold text-brand-darker">會&nbsp;&nbsp;&nbsp;&nbsp;長：</span>
+                                                <span>陳銘傑先生</span>
+                                            </li>
+                                            <li class="flex items-start border-b border-gray-200 pb-2">
+                                                <span class="w-24 flex-shrink-0 font-bold text-brand-darker">副會長：</span>
+                                                <span class="leading-relaxed">陳永康先生&nbsp;&nbsp;&nbsp;張慧昕小姐<br>王軒麟先生</span>
+                                            </li>
+                                            <li class="flex items-start border-b border-gray-200 pb-2">
+                                                <span class="w-24 flex-shrink-0 font-bold text-brand-darker">秘書長：</span>
+                                                <span>鍾道穎先生</span>
+                                            </li>
+                                            <li class="flex items-start border-b border-gray-200 pb-2">
+                                                <span class="w-24 flex-shrink-0 font-bold text-brand-darker">副秘書長：</span>
+                                                <span class="leading-relaxed">吳家平先生&nbsp;&nbsp;&nbsp;關佩儀小姐<br>黃紫程小姐&nbsp;&nbsp;&nbsp;關綺雯小姐</span>
+                                            </li>
+                                            <li class="flex items-start border-b border-gray-200 pb-2">
+                                                <span class="w-24 flex-shrink-0 font-bold text-brand-darker">司&nbsp;&nbsp;&nbsp;&nbsp;庫：</span>
+                                                <span>劉少芬小姐</span>
+                                            </li>
+                                            <li class="flex items-start">
+                                                <span class="w-24 flex-shrink-0 font-bold text-brand-darker">委&nbsp;&nbsp;&nbsp;&nbsp;員：</span>
+                                                <span class="leading-relaxed">楊慧玲小姐&nbsp;&nbsp;&nbsp;廖錦華先生<br>葉青山先生&nbsp;&nbsp;&nbsp;盧紫欣小姐<br>陳康妮小姐&nbsp;&nbsp;&nbsp;羅永雄先生<br>余世彥先生</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </details>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm text-center hover:shadow-md transition flex flex-col justify-center">
+                            <div class="w-16 h-16 bg-brand-50 text-brand rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i data-lucide="users" class="w-8 h-8"></i>
+                            </div>
+                            <h4 class="font-bold text-lg text-gray-800">教練及裁判委員會</h4>
+                            <p class="text-sm text-gray-500 mt-2">監督各級別教練與裁判的培訓、考核及註冊事宜。</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm text-center hover:shadow-md transition flex flex-col justify-center">
+                            <div class="w-16 h-16 bg-brand-100 text-brand-darker rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i data-lucide="medal" class="w-8 h-8"></i>
+                            </div>
+                            <h4 class="font-bold text-lg text-gray-800">賽事發展委員會</h4>
+                            <p class="text-sm text-gray-500 mt-2">籌辦本地各項錦標賽及統籌海外參賽代表隊選拔。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="about-approve" class="scroll-mt-28">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-8 flex items-center"><i data-lucide="award" class="text-brand-light mr-3"></i> 國際認可與附屬機構</h3>
+                    <div class="flex flex-wrap justify-center gap-6 items-center bg-white p-8 rounded-xl border border-gray-100 shadow-sm">
+                        <div class="text-center w-40 flex-shrink-0 relative">
+                            <!-- <div class="w-24 h-24 mx-auto bg-gray-100 rounded-full flex items-center justify-center mb-3 text-gray-400 hover:bg-brand-50 hover:text-brand transition cursor-pointer">
+                                <i data-lucide="globe" class="w-10 h-10"></i>
+                            </div> -->
+                            <div class="w-40 flex items-center justify-center flex-shrink-0">
+                                <img src="logo/icu_logo.jpg" alt="國際啦啦隊聯盟">
+                            </div>
+                            <p class="text-sm font-bold text-gray-700">國際啦啦隊聯盟<br>(ICU)</p>
+                        </div>
+                        <div class="text-center w-40">
+                            <!-- <div class="w-24 h-24 mx-auto bg-gray-100 rounded-full flex items-center justify-center mb-3 text-gray-400 hover:bg-brand-50 hover:text-brand transition cursor-pointer">
+                                <i data-lucide="globe" class="w-10 h-10"></i>
+                            </div> -->
+                            <div class="w-40 flex items-center justify-center flex-shrink-0">
+                                <img src="logo/acu_logo.jpg" alt="亞洲啦啦隊總會">
+                            </div>
+                            <p class="text-sm font-bold text-gray-700">亞洲啦啦隊總會<br>(ACU)</p>
+                        </div>
+                        <div class="text-center w-40">
+                            <!-- <div class="w-24 h-24 mx-auto bg-gray-100 rounded-full flex items-center justify-center mb-3 text-gray-400 hover:bg-brand-50 hover:text-brand transition cursor-pointer">
+                                <i data-lucide="map" class="w-10 h-10"></i>
+                            </div> -->
+                            <div class="w-40 flex items-center justify-center flex-shrink-0">
+                                <img src="logo/gba_logo.jpg" alt="粵港澳大灣區體育教育與發展聯盟">
+                            </div>
+                            <p class="text-sm font-bold text-gray-700">粵港澳大灣區<br>體育教育與發展聯盟</p>
+                        </div>
+                        <div class="text-center w-40">
+                            <!-- <div class="w-24 h-24 mx-auto bg-gray-100 rounded-full flex items-center justify-center mb-3 text-gray-400 hover:bg-brand-50 hover:text-brand transition cursor-pointer">
+                                <i data-lucide="flag" class="w-10 h-10"></i>
+                            </div> -->
+                            <div class="w-40 flex items-center justify-center flex-shrink-0">
+                                <img src="logo/hko_logo.jpg" alt="中國香港體育協會暨奧林匹克委員會">
+                            </div>
+                            <p class="text-sm font-bold text-gray-700">中國香港體育協會<br>暨奧林匹克委員會</p>
+                        </div>
+                       
+                        <div class="text-center w-40">
+                            <span class="text-xs text-gray-500 mb-1 block">合作伙伴</span><br>
+                            <!-- <div class="w-24 h-24 mx-auto bg-gray-100 rounded-full flex items-center justify-center mb-3 text-gray-400 hover:bg-brand-50 hover:text-brand transition cursor-pointer">
+                                <i data-lucide="building" class="w-10 h-10"></i>
+                            </div> -->
+                            <div class="w-40 flex items-center justify-center flex-shrink-0">
+                                <img src="logo/hkmu_logo.jpg" alt="香港都會大學">
+                            </div>
+                            <p class="text-sm font-bold text-gray-700">香港都會大學</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="view-events" class="view-section bg-slate-50 py-16">
+            <div class="container mx-auto px-4 lg:px-32">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-black text-brand-darker mb-4">賽事資訊</h2>
+                    <p class="text-gray-600">緊貼本地及海外最新啦啦隊比賽動向及過往成績。</p>
+                </div>
+
+                <div class="flex justify-center mb-8" role="tablist">
+                    <button id="tab-local" class="event-tab-btn active px-8 py-3 font-bold text-lg border-b-4 border-brand text-brand-darker transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-darker" role="tab" aria-selected="true" aria-controls="panel-local">本地賽事</button>
+                    <button id="tab-intl" class="event-tab-btn px-8 py-3 font-bold text-lg border-b-4 border-transparent text-gray-500 hover:text-brand-darker transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-darker" role="tab" aria-selected="false" aria-controls="panel-intl">港外賽事</button>
+                </div>
+
+                <div id="panel-local" class="event-panel block" role="tabpanel" aria-labelledby="tab-local">
+                    <div class="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden mb-8">
+                        <div class="bg-brand-darker text-white px-6 py-4 flex justify-between items-center">
+                            <h3 class="font-bold text-lg flex items-center"><i data-lucide="calendar-clock" class="mr-2"></i>最近/即將舉行</h3>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex flex-col md:flex-row gap-6 items-start md:items-center">
+                                <div class="w-full md:w-1/4 bg-gray-50 p-4 rounded-lg text-center border border-gray-100">
+                                    <span class="block text-brand font-black text-2xl">3月29日</span>
+                                    <span class="text-gray-500 text-sm">2026年</span>
+                                </div>
+                                <div class="flex-grow">
+                                    <h4 class="text-xl font-bold text-gray-800 mb-2">2026 中國香港啦啦隊錦標賽</h4>
+                                    <p class="text-gray-600 text-sm mb-3">地點：深水埗體育館 <br>報名截止：2026年2月28日</p>
+                                    <div class="flex gap-3">
+                                        <a href="#" class="text-sm bg-brand-50 text-brand-darker px-3 py-1 rounded hover:bg-brand-100 font-medium">章程下載</a>
+                                        <a href="#" class="text-sm bg-brand-100 text-brand-900 px-3 py-1 rounded hover:bg-brand-200 font-medium">報名連結</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 class="font-bold text-xl text-gray-800 mb-4 pl-2 border-l-4 border-brand-light">賽事分類</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition">
+                            <h4 class="font-bold text-brand-darker mb-1">中國香港啦啦隊錦標賽</h4>
+                            <!--<p class="text-xs text-gray-500 mb-3">2025年11月15日</p>
+                            <a href="#" class="text-sm text-brand hover:underline flex items-center"><i data-lucide="download" class="w-4 h-4 mr-1"></i> 下載成績公佈 (PDF)</a> -->
+                            <div class="border-t border-gray-100 mt-auto">
+                                <details class="group">
+                                    <summary class="w-full py-1 px-1 text-brand-darker font-bold flex items-center justify-center hover:bg-brand-50 transition cursor-pointer list-none [&::-webkit-details-marker]:hidden" style="list-style: none;">
+                                        <span class="group-open:hidden">詳細資料</span>
+                                        <span class="hidden group-open:inline">收起</span>
+                                        <i data-lucide="chevron-down" class="w-4 h-4 ml-2 transition-transform duration-300 group-open:rotate-180"></i>
+                                    </summary>
+                                    <div class="bg-gray-50 p-3 text-sm text-gray-700 border-t border-gray-100 rounded-b-xl">
+                                        <ul class="space-y-3 text-left">
+                                            <!--<li class="flex flex-col sm:flex-row sm:items-start justify-between gap-2 border-b border-gray-200 pb-2">
+                                                <span class="w-full sm:w-1/2 font-bold text-brand-darker break-words">Cheerleading Championships Hong Kong China</span>
+                                                <span class="w-full sm:w-1/2 text-gray-600 break-words">日期：2026年月日<br>
+                                                地點：體育館</span>
+                                                <span class="w-20 flex-shrink-0 relative">
+                                                    <img src="poster/poster0.jpg">
+                                                </span>
+                                            </li> -->
+                                            <li class="flex flex-col sm:flex-row sm:items-start justify-between gap-2 border-b border-gray-200 pb-2">
+                                                <span class="w-full sm:w-1/2 font-bold text-brand-darker break-words">2026 Cheerleading Championships Hong Kong China</span>
+                                                <span class="w-full sm:w-1/2 text-gray-600 break-words">日期：2026年3月29日<br>
+                                                地點：深水埗體育館</span>
+                                                <span class="w-20 flex-shrink-0 relative">
+                                                    <img src="poster/poster0.jpg">
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </details>
+                            </div>
+                        
+                        </div>
+                        <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition">
+                            <h4 class="font-bold text-brand-darker mb-1">香港啦啦隊公開賽</h4>
+                            <!-- <p class="text-xs text-gray-500 mb-3">2025年8月10日</p>
+                            <a href="#" class="text-sm text-brand hover:underline flex items-center"><i data-lucide="download" class="w-4 h-4 mr-1"></i> 下載成績公佈 (PDF)</a> -->
+                            <div class="border-t border-gray-100 mt-auto">
+                                <details class="group">
+                                    <summary class="w-full py-1 px-1 text-brand-darker font-bold flex items-center justify-center hover:bg-brand-50 transition cursor-pointer list-none [&::-webkit-details-marker]:hidden" style="list-style: none;">
+                                        <span class="group-open:hidden">詳細資料</span>
+                                        <span class="hidden group-open:inline">收起</span>
+                                        <i data-lucide="chevron-down" class="w-4 h-4 ml-2 transition-transform duration-300 group-open:rotate-180"></i>
+                                    </summary>
+                                    
+                                    <div class="bg-gray-50 p-3 text-sm text-gray-700 border-t border-gray-100 rounded-b-xl">
+                                        <ul class="space-y-3 text-left">
+                                            <!-- <li class="flex flex-col sm:flex-row sm:items-start justify-between gap-2 border-b border-gray-200 pb-2">
+                                                <span class="w-full sm:w-1/2 font-bold text-brand-darker break-words">3rd Hong Kong Cheerleading Open Championships and Invitational Tournament</span>
+                                                <span class="w-full sm:w-1/2 text-gray-600 break-words">日期：2024年月日<br>
+                                                地點：奧海城</span>
+                                                <span class="w-20 flex-shrink-0 relative">
+                                                    <img src="poster/poster0.jpg">
+                                                </span>
+                                            </li> -->
+                                            <li class="flex flex-col sm:flex-row sm:items-start justify-between gap-2 border-b border-gray-200 pb-2">
+                                                <span class="w-full sm:w-1/2 font-bold text-brand-darker break-words">2024 3rd Hong Kong Cheerleading Open Championships and Invitational Tournament</span>
+                                                <span class="w-full sm:w-1/2 text-gray-600 break-words">日期：2024年6月22-23日<br>
+                                                地點：奧海城2期地下主題中庭</span>
+                                                <span class="w-20 flex-shrink-0 relative">
+                                                    <img src="poster/poster0.jpg">
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </details>
+                            </div>
+                        </div>
+                        <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition">
+                            <h4 class="font-bold text-brand-darker mb-1">香港啦啦隊挑戰賽</h4>
+                            <!-- <p class="text-xs text-gray-500 mb-3">2025年8月10日</p>
+                            <a href="#" class="text-sm text-brand hover:underline flex items-center"><i data-lucide="download" class="w-4 h-4 mr-1"></i> 下載成績公佈 (PDF)</a> -->
+                            <div class="border-t border-gray-100 mt-auto">
+                                <details class="group">
+                                    <summary class="w-full py-1 px-1 text-brand-darker font-bold flex items-center justify-center hover:bg-brand-50 transition cursor-pointer list-none [&::-webkit-details-marker]:hidden" style="list-style: none;">
+                                        <span class="group-open:hidden">詳細資料</span>
+                                        <span class="hidden group-open:inline">收起</span>
+                                        <i data-lucide="chevron-down" class="w-4 h-4 ml-2 transition-transform duration-300 group-open:rotate-180"></i>
+                                    </summary>
+                                    
+                                    <div class="bg-gray-50 p-3 text-sm text-gray-700 border-t border-gray-100 rounded-b-xl">
+                                        <ul class="space-y-3 text-left">
+                                            <!-- <li class="flex flex-col sm:flex-row sm:items-start justify-between gap-2 border-b border-gray-200 pb-2">
+                                                <span class="w-full sm:w-1/2 font-bold text-brand-darker break-words">Hong Kong Cheerleading Challenge Championships 2025</span>
+                                                <span class="w-full sm:w-1/2 text-gray-600 break-words">日期：2025年3月22日<br>
+                                                地點：中華基督教會協和小學(長沙灣)</span>
+                                                <span class="w-20 flex-shrink-0 relative">
+                                                    <img src="poster/poster0.jpg">
+                                                </span>
+                                            </li> -->
+                                            <li class="flex flex-col sm:flex-row sm:items-start justify-between gap-2 border-b border-gray-200 pb-2">
+                                                <span class="w-full sm:w-1/2 font-bold text-brand-darker break-words">Hong Kong Cheerleading Challenge Championships 2025</span>
+                                                <span class="w-full sm:w-1/2 text-gray-600 break-words">日期：2025年3月22日<br>
+                                                地點：中華基督教會協和小學(長沙灣)</span>
+                                                <span class="w-20 flex-shrink-0 relative">
+                                                    <img src="poster/poster0.jpg">
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </details>
+                            </div>
+                        </div>
+                        <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition">
+                            <h4 class="font-bold text-brand-darker mb-1">全港校際啦啦隊打氣大賽</h4>
+                            <!-- <p class="text-xs text-gray-500 mb-3">2025年8月10日</p>
+                            <a href="#" class="text-sm text-brand hover:underline flex items-center"><i data-lucide="download" class="w-4 h-4 mr-1"></i> 下載成績公佈 (PDF)</a> -->
+                            <div class="border-t border-gray-100 mt-auto">
+                                <details class="group">
+                                    <summary class="w-full py-1 px-1 text-brand-darker font-bold flex items-center justify-center hover:bg-brand-50 transition cursor-pointer list-none [&::-webkit-details-marker]:hidden" style="list-style: none;">
+                                        <span class="group-open:hidden">詳細資料</span>
+                                        <span class="hidden group-open:inline">收起</span>
+                                        <i data-lucide="chevron-down" class="w-4 h-4 ml-2 transition-transform duration-300 group-open:rotate-180"></i>
+                                    </summary>
+                                    
+                                    <div class="bg-gray-50 p-3 text-sm text-gray-700 border-t border-gray-100 rounded-b-xl">
+                                        <ul class="space-y-3 text-left">
+                                            <!-- <li class="flex flex-col sm:flex-row sm:items-start justify-between gap-2 border-b border-gray-200 pb-2">
+                                                <span class="w-full sm:w-1/2 font-bold text-brand-darker break-words">th Festival of Sport - Hong Kong Inter-School Cheering Competition 2026</span>
+                                                <span class="w-full sm:w-1/2 text-gray-600 break-words">日期：2027年月日<br>
+                                                地點：體育館</span>
+                                                <span class="w-20 flex-shrink-0 relative">
+                                                    <img src="poster/poster0.jpg">
+                                                </span>
+                                            </li> -->
+                                            <li class="flex flex-col sm:flex-row sm:items-start justify-between gap-2 border-b border-gray-200 pb-2">
+                                                <span class="w-full sm:w-1/2 font-bold text-brand-darker break-words">69th Festival of Sport - Hong Kong Inter-School Cheering Competition 2026</span>
+                                                <span class="w-full sm:w-1/2 text-gray-600 break-words">日期：2026年5月2日<br>
+                                                地點：深水埗體育館</span>
+                                                <span class="w-20 flex-shrink-0 relative">
+                                                    <img src="poster/poster_iscc2026.jpg">
+                                                </span>
+                                            </li>
+                                            
+                                        </ul>
+                                    </div>
+                                </details>
+                            </div>
+                        </div>
+                        <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition">
+                            <h4 class="font-bold text-brand-darker mb-1">其他</h4>
+                            <!-- <p class="text-xs text-gray-500 mb-3">2025年8月10日</p>
+                            <a href="#" class="text-sm text-brand hover:underline flex items-center"><i data-lucide="download" class="w-4 h-4 mr-1"></i> 下載成績公佈 (PDF)</a> -->
+                            <div class="border-t border-gray-100 mt-auto">
+                                <details class="group">
+                                    <summary class="w-full py-1 px-1 text-brand-darker font-bold flex items-center justify-center hover:bg-brand-50 transition cursor-pointer list-none [&::-webkit-details-marker]:hidden" style="list-style: none;">
+                                        <span class="group-open:hidden">詳細資料</span>
+                                        <span class="hidden group-open:inline">收起</span>
+                                        <i data-lucide="chevron-down" class="w-4 h-4 ml-2 transition-transform duration-300 group-open:rotate-180"></i>
+                                    </summary>
+                                    
+                                    <div class="bg-gray-50 p-3 text-sm text-gray-700 border-t border-gray-100 rounded-b-xl">
+                                        <ul class="space-y-3 text-left">
+                                            <!-- <li class="flex flex-col sm:flex-row sm:items-start justify-between gap-2 border-b border-gray-200 pb-2">
+                                                <span class="w-full sm:w-1/2 font-bold text-brand-darker break-words">樂韻賀華誕</span>
+                                                <span class="w-full sm:w-1/2 text-gray-600 break-words">日期：2024年月日<br>
+                                                地點：海濱長廊</span>
+                                                <span class="w-20 flex-shrink-0 relative">
+                                                    <img src="poster/poster0.jpg">
+                                                </span>
+                                            </li> -->
+                                            <li class="flex flex-col sm:flex-row sm:items-start justify-between gap-2 border-b border-gray-200 pb-2">
+                                                <span class="w-full sm:w-1/2 font-bold text-brand-darker break-words">Hong Kong Cheerleading Competition 2026</span>
+                                                <span class="w-full sm:w-1/2 text-gray-600 break-words">日期：2026年7月4日<br>
+                                                地點：九龍灣體育館</span>
+                                                <span class="w-20 flex-shrink-0 relative">
+                                                    <img src="poster/poster0.jpg">
+                                                </span>
+                                            </li>
+                                            <li class="flex flex-col sm:flex-row sm:items-start justify-between gap-2 border-b border-gray-200 pb-2">
+                                                <span class="w-full sm:w-1/2 font-bold text-brand-darker break-words">離島樂韻賀華誕—慶祝中華人民共和國成立75周年啦啦隊比賽暨文藝匯演</span>
+                                                <span class="w-full sm:w-1/2 text-gray-600 break-words">日期：2024年9月28日<br>
+                                                地點：東涌海濱長廊</span>
+                                                <span class="w-20 flex-shrink-0 relative">
+                                                    <img src="poster/poster0.jpg">
+                                                </span>
+                                            </li>                                           
+                                        </ul>
+                                    </div>
+                                </details>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="panel-intl" class="event-panel hidden" role="tabpanel" aria-labelledby="tab-intl">
+                    <div class="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden mb-8">
+                        <div class="bg-brand-light text-brand-900 px-6 py-4 flex justify-between items-center">
+                            <h3 class="font-bold text-lg flex items-center"><i data-lucide="plane" class="mr-2"></i>港隊遠征</h3>
+                        </div>
+                        <div class="flex flex-col md:flex-row">
+                            <div class="p-6 flex-grow">
+                                <div class="flex flex-col md:flex-row gap-6 items-start md:items-center">
+                                    <div class="w-full md:w-1/4 bg-gray-50 p-4 rounded-lg text-center border border-gray-100 flex-shrink-0">
+                                        <span class="block text-brand-darker font-black text-2xl">4月20日</span>
+                                        <span class="text-gray-500 text-sm">2026年</span>
+                                    </div>
+                                    <div class="flex-grow">
+                                        <h4 class="text-xl font-bold text-gray-800 mb-2">ICU 世界啦啦隊錦標賽 2026</h4>
+                                        <p class="text-gray-600 text-sm mb-3">地點：美國 佛羅里達州 奧蘭多 <br>代表隊：香港競技啦啦隊混合組、舞蹈啦啦隊雙人組</p>
+                                        <div class="flex gap-3">
+                                            <span class="text-sm bg-green-50 text-green-700 px-3 py-1 rounded font-medium"><i data-lucide="check-circle" class="w-3 h-3 inline mr-1"></i>名單已確認</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-full md:w-2/5 flex-shrink-0 relative bg-gray-200 min-h-[250px] md:min-h-auto">
+                                <img src="poster/poster_test.jpg" alt="港外賽事" class="absolute inset-0 w-full h-full object-cover">
+                            </div>
+                        </div>
+                    </div>
+                   
+       
+
+                    <h3 class="font-bold text-xl text-gray-800 mb-4 pl-2 border-l-4 border-brand-light">賽事分類</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition">
+                            <h4 class="font-bold text-brand-darker mb-1">大型運動會</h4>
+                            <!-- <p class="text-xs text-gray-500 mb-3">2025年11月15日</p>
+                            <a href="#" class="text-sm text-brand hover:underline flex items-center"><i data-lucide="download" class="w-4 h-4 mr-1"></i> 下載成績公佈 (PDF)</a> -->
+                            <div class="border-t border-gray-100 mt-auto">
+                                <details class="group">
+                                    <summary class="w-full py-1 px-1 text-brand-darker font-bold flex items-center justify-center hover:bg-brand-50 transition cursor-pointer list-none [&::-webkit-details-marker]:hidden" style="list-style: none;">
+                                        <span class="group-open:hidden">詳細資料</span>
+                                        <span class="hidden group-open:inline">收起</span>
+                                        <i data-lucide="chevron-down" class="w-4 h-4 ml-2 transition-transform duration-300 group-open:rotate-180"></i>
+                                    </summary>
+                                    
+                                    <div class="bg-gray-50 p-3 text-sm text-gray-700 border-t border-gray-100 rounded-b-xl">
+                                        <ul class="space-y-3 text-left">
+                                            <!-- <li class="flex flex-col sm:flex-row sm:items-start justify-between gap-2 border-b border-gray-200 pb-2">
+                                                <span class="w-full sm:w-1/2 font-bold text-brand-darker break-words">世界運動會</span>
+                                                <span class="w-full sm:w-1/2 text-gray-600 break-words">日期：2024年月日<br>
+                                                地點：GO PARK</span>
+                                                <span class="w-20 flex-shrink-0 relative">
+                                                    <img src="poster/poster0.jpg">
+                                                </span>
+                                            </li> -->
+                                            <li class="flex flex-col sm:flex-row sm:items-start justify-between gap-2 border-b border-gray-200 pb-2">
+                                                <span class="w-full sm:w-1/2 font-bold text-brand-darker break-words">世界運動會巡迴賽香港 2024<br>The World Games Series Hong Kong 2024</span>
+                                                <span class="w-full sm:w-1/2 text-gray-600 break-words">日期：2024年10月11-13日<br>
+                                                地點：西沙 GO PARK</span>
+                                                <span class="w-20 flex-shrink-0 relative">
+                                                    <img src="poster/poster_wgs2024.jpg">
+                                                </span>
+                                            </li>
+                                            <li class="flex flex-col sm:flex-row sm:items-start justify-between gap-2 border-b border-gray-200 pb-2">
+                                                <span class="w-full sm:w-1/2 font-bold text-brand-darker break-words">第一屆全國學生(青年)運動會<br>1st National Student (Youth) Games</span>
+                                                <span class="w-full sm:w-1/2 text-gray-600 break-words">日期：2023年11月5-15日<br>
+                                                地點：廣西桂林</span>
+                                                <span class="w-20 flex-shrink-0 relative">
+                                                    <img src="poster/poster0.jpg">
+                                                </span>
+                                            </li>                                           
+                                        </ul>
+                                    </div>
+                                </details>
+                            </div>
+                        </div>
+                        <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition">
+                            <h4 class="font-bold text-brand-darker mb-1">世界賽</h4>
+                            <!-- <p class="text-xs text-gray-500 mb-3">2025年8月10日</p>
+                            <a href="#" class="text-sm text-brand hover:underline flex items-center"><i data-lucide="download" class="w-4 h-4 mr-1"></i> 下載成績公佈 (PDF)</a> -->
+                            <div class="border-t border-gray-100 mt-auto">
+                                <details class="group">
+                                    <summary class="w-full py-1 px-1 text-brand-darker font-bold flex items-center justify-center hover:bg-brand-50 transition cursor-pointer list-none [&::-webkit-details-marker]:hidden" style="list-style: none;">
+                                        <span class="group-open:hidden">詳細資料</span>
+                                        <span class="hidden group-open:inline">收起</span>
+                                        <i data-lucide="chevron-down" class="w-4 h-4 ml-2 transition-transform duration-300 group-open:rotate-180"></i>
+                                    </summary>
+                                    <div class="bg-gray-50 p-3 text-sm text-gray-700 border-t border-gray-100 rounded-b-xl">
+                                        <ul class="space-y-3 text-left">
+                                            <!-- <li class="flex flex-col sm:flex-row sm:items-start justify-between gap-2 border-b border-gray-200 pb-2">
+                                                <span class="w-full sm:w-1/2 font-bold text-brand-darker break-words">啦啦隊錦標賽</span>
+                                                <span class="w-full sm:w-1/2 text-gray-600 break-words">日期：2026年月日<br>
+                                                地點：美國</span>
+                                                <span class="w-20 flex-shrink-0 relative">
+                                                    <img src="poster/poster0.jpg">
+                                                </span>
+                                            </li> -->
+                                            <li class="flex flex-col sm:flex-row sm:items-start justify-between gap-2 border-b border-gray-200 pb-2">
+                                                <span class="w-full sm:w-1/2 font-bold text-brand-darker break-words">世界啦啦隊錦標賽 / 啦啦隊世界盃<br>ICU Cheerleading World Championships (WC) / ICU International Cheerleading Cup (ICC)</span>
+                                                <span class="w-full sm:w-1/2 text-gray-600 break-words">日期：2026年4月20–27日/ 2026年4月23–30日<br>
+                                                地點：美國奧蘭多</span>
+                                                <span class="w-20 flex-shrink-0 relative">
+                                                    <img src="poster/poster0.jpg">
+                                                </span>
+                                            </li>                                           
+                                        </ul>
+                                    </div>
+                                </details>
+                            </div>
+                        </div>
+                        <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition">
+                            <h4 class="font-bold text-brand-darker mb-1">亞洲賽</h4>
+                            <!-- <p class="text-xs text-gray-500 mb-3">2025年8月10日</p>
+                            <a href="#" class="text-sm text-brand hover:underline flex items-center"><i data-lucide="download" class="w-4 h-4 mr-1"></i> 下載成績公佈 (PDF)</a> -->
+                            <div class="border-t border-gray-100 mt-auto">
+                                <details class="group">
+                                    <summary class="w-full py-1 px-1 text-brand-darker font-bold flex items-center justify-center hover:bg-brand-50 transition cursor-pointer list-none [&::-webkit-details-marker]:hidden" style="list-style: none;">
+                                        <span class="group-open:hidden">詳細資料</span>
+                                        <span class="hidden group-open:inline">收起</span>
+                                        <i data-lucide="chevron-down" class="w-4 h-4 ml-2 transition-transform duration-300 group-open:rotate-180"></i>
+                                    </summary>
+                                    <div class="bg-gray-50 p-3 text-sm text-gray-700 border-t border-gray-100 rounded-b-xl">
+                                        <ul class="space-y-3 text-left">
+                                            <!-- <li class="flex flex-col sm:flex-row sm:items-start justify-between gap-2 border-b border-gray-200 pb-2">
+                                                <span class="w-full sm:w-1/2 font-bold text-brand-darker break-words">啦啦隊錦標賽</span>
+                                                <span class="w-full sm:w-1/2 text-gray-600 break-words">日期：2026年月日<br>
+                                                地點：馬來西亞</span>
+                                                <span class="w-20 flex-shrink-0 relative">
+                                                    <img src="poster/poster0.jpg">
+                                                </span>
+                                            </li> -->
+                                            <li class="flex flex-col sm:flex-row sm:items-start justify-between gap-2 border-b border-gray-200 pb-2">
+                                                <span class="w-full sm:w-1/2 font-bold text-brand-darker break-words">ICU 亞洲啦啦隊錦標賽 2026 及亞太啦啦隊盃2026<br>The ICU Asian Cheerleading Championships 2026 (ACC) and Asia Pacific Cheerleading Cup 2026(APCC)</span>
+                                                <span class="w-full sm:w-1/2 text-gray-600 break-words">日期：2026年10月15–19日<br>
+                                                地點：馬來西亞</span>
+                                                <span class="w-20 flex-shrink-0 relative">
+                                                    <img src="poster/poster0.jpg">
+                                                </span>
+                                            </li>                                           
+                                        </ul>
+                                    </div>
+                                </details>
+                            </div>
+                        </div>
+                        <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition">
+                            <h4 class="font-bold text-brand-darker mb-1">國內賽事</h4>
+                            <!-- <p class="text-xs text-gray-500 mb-3">2025年8月10日</p>
+                            <a href="#" class="text-sm text-brand hover:underline flex items-center"><i data-lucide="download" class="w-4 h-4 mr-1"></i> 下載成績公佈 (PDF)</a> -->
+                            <div class="border-t border-gray-100 mt-auto">
+                                <details class="group">
+                                    <summary class="w-full py-1 px-1 text-brand-darker font-bold flex items-center justify-center hover:bg-brand-50 transition cursor-pointer list-none [&::-webkit-details-marker]:hidden" style="list-style: none;">
+                                        <span class="group-open:hidden">詳細資料</span>
+                                        <span class="hidden group-open:inline">收起</span>
+                                        <i data-lucide="chevron-down" class="w-4 h-4 ml-2 transition-transform duration-300 group-open:rotate-180"></i>
+                                    </summary>
+                                    <div class="bg-gray-50 p-3 text-sm text-gray-700 border-t border-gray-100 rounded-b-xl">
+                                        <ul class="space-y-3 text-left">
+                                            <!-- <li class="flex flex-col sm:flex-row sm:items-start justify-between gap-2 border-b border-gray-200 pb-2">
+                                                <span class="w-full sm:w-1/2 font-bold text-brand-darker break-words">粵港澳大灣區啦啦操精英賽</span>
+                                                <span class="w-full sm:w-1/2 text-gray-600 break-words">日期：2026年月<br>
+                                                地點：大灣區</span>
+                                                <span class="w-20 flex-shrink-0 relative">
+                                                    <img src="poster/poster0.jpg">
+                                                </span>
+                                            </li> -->
+                                            <li class="flex flex-col sm:flex-row sm:items-start justify-between gap-2 border-b border-gray-200 pb-2">
+                                                <span class="w-full sm:w-1/2 font-bold text-brand-darker break-words">第二屆粵港澳大灣區啦啦操精英賽</span>
+                                                <span class="w-full sm:w-1/2 text-gray-600 break-words">日期：2026年12月(暫定)<br>
+                                                地點：大灣區</span>
+                                                <span class="w-20 flex-shrink-0 relative">
+                                                    <img src="poster/poster0.jpg">
+                                                </span>
+                                            </li>
+                                            <li class="flex flex-col sm:flex-row sm:items-start justify-between gap-2 border-b border-gray-200 pb-2">
+                                                <span class="w-full sm:w-1/2 font-bold text-brand-darker break-words">第一屆粵港澳大灣區啦啦操精英賽暨廣東省第三屆啦啦操錦標賽</span>
+                                                <span class="w-full sm:w-1/2 text-gray-600 break-words">日期：2025年6月20-22日<br>
+                                                地點：廣東南沙</span>
+                                                <span class="w-20 flex-shrink-0 relative">
+                                                    <img src="poster/poster0.jpg">
+                                                </span>
+                                            </li>
+                                            <li class="flex flex-col sm:flex-row sm:items-start justify-between gap-2 border-b border-gray-200 pb-2">
+                                                <span class="w-full sm:w-1/2 font-bold text-brand-darker break-words">第十一屆中國(南京)啦啦隊公開賽<br>11th China (Nanjing) Cheerleading Open 2024</span>
+                                                <span class="w-full sm:w-1/2 text-gray-600 break-words">日期：2024年10月24-28日<br>
+                                                地點：中國南京</span>
+                                                <span class="w-20 flex-shrink-0 relative">
+                                                    <img src="poster/poster0.jpg">
+                                                </span>
+                                            </li>                                           
+                                        </ul>
+                                    </div>
+                                </details>
+                            </div>
+                        </div>
+                        <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition">
+                            <h4 class="font-bold text-brand-darker mb-1">其他地區</h4>
+                            <!-- <p class="text-xs text-gray-500 mb-3">2025年8月10日</p>
+                            <a href="#" class="text-sm text-brand hover:underline flex items-center"><i data-lucide="download" class="w-4 h-4 mr-1"></i> 下載成績公佈 (PDF)</a> -->
+                            <div class="border-t border-gray-100 mt-auto">
+                                <details class="group">
+                                    <summary class="w-full py-1 px-1 text-brand-darker font-bold flex items-center justify-center hover:bg-brand-50 transition cursor-pointer list-none [&::-webkit-details-marker]:hidden" style="list-style: none;">
+                                        <span class="group-open:hidden">詳細資料</span>
+                                        <span class="hidden group-open:inline">收起</span>
+                                        <i data-lucide="chevron-down" class="w-4 h-4 ml-2 transition-transform duration-300 group-open:rotate-180"></i>
+                                    </summary>
+                                    <div class="bg-gray-50 p-3 text-sm text-gray-700 border-t border-gray-100 rounded-b-xl">
+                                        <ul class="space-y-3 text-left">
+                                            <!-- <li class="flex flex-col sm:flex-row sm:items-start justify-between gap-2 border-b border-gray-200 pb-2">
+                                                <span class="w-full sm:w-1/2 font-bold text-brand-darker break-words">韓國啦啦隊公開錦標賽<br>Korea Open Cheerleading Championships</span>
+                                                <span class="w-full sm:w-1/2 text-gray-600 break-words">日期：2026年月日<br>
+                                                地點：韓國</span>
+                                                <span class="w-20 flex-shrink-0 relative">
+                                                    <img src="poster/poster0.jpg">
+                                                </span>
+                                            </li> -->
+                                            <li class="flex flex-col sm:flex-row sm:items-start justify-between gap-2 border-b border-gray-200 pb-2">
+                                                <span class="w-full sm:w-1/2 font-bold text-brand-darker break-words">韓國啦啦隊公開錦標賽<br>Korea Open Cheerleading Championships</span>
+                                                <span class="w-full sm:w-1/2 text-gray-600 break-words">日期：2026年6月12–16日<br>
+                                                地點：韓國</span>
+                                                <span class="w-20 flex-shrink-0 relative">
+                                                    <img src="poster/poster0.jpg">
+                                                </span>
+                                            </li>
+                                            <li class="flex flex-col sm:flex-row sm:items-start justify-between gap-2 border-b border-gray-200 pb-2">
+                                                <span class="w-full sm:w-1/2 font-bold text-brand-darker break-words">ICU World Cup Seoul</span>
+                                                <span class="w-full sm:w-1/2 text-gray-600 break-words">日期：2024年11月21-24日<br>
+                                                地點：韓國</span>
+                                                <span class="w-20 flex-shrink-0 relative">
+                                                    <img src="poster/poster0.jpg">
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </details>
+                            </div>
+                        </div>
+                        <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition">
+                            <h4 class="font-bold text-brand-darker mb-1">其他賽事</h4>
+                            <!-- <p class="text-xs text-gray-500 mb-3">2025年8月10日</p>
+                            <a href="#" class="text-sm text-brand hover:underline flex items-center"><i data-lucide="download" class="w-4 h-4 mr-1"></i> 下載成績公佈 (PDF)</a> -->
+                            <div class="border-t border-gray-100 mt-auto">
+                                <details class="group">
+                                    <summary class="w-full py-1 px-1 text-brand-darker font-bold flex items-center justify-center hover:bg-brand-50 transition cursor-pointer list-none [&::-webkit-details-marker]:hidden" style="list-style: none;">
+                                        <span class="group-open:hidden">詳細資料</span>
+                                        <span class="hidden group-open:inline">收起</span>
+                                        <i data-lucide="chevron-down" class="w-4 h-4 ml-2 transition-transform duration-300 group-open:rotate-180"></i>
+                                    </summary>
+                                    <div class="bg-gray-50 p-3 text-sm text-gray-700 border-t border-gray-100 rounded-b-xl">
+                                        <ul class="space-y-3 text-left">
+                                            <!-- <li class="flex flex-col sm:flex-row sm:items-start justify-between gap-2 border-b border-gray-200 pb-2">
+                                                <span class="w-full sm:w-1/2 font-bold text-brand-darker break-words">全國運動會群眾賽事廣播體操</span>
+                                                <span class="w-full sm:w-1/2 text-gray-600 break-words">日期：2025年月日<br>
+                                                地點：珠海</span>
+                                                <span class="w-20 flex-shrink-0 relative">
+                                                    <img src="poster/poster0.jpg">
+                                                </span>
+                                            </li> -->
+                                            <li class="flex flex-col sm:flex-row sm:items-start justify-between gap-2 border-b border-gray-200 pb-2">
+                                                <span class="w-full sm:w-1/2 font-bold text-brand-darker break-words">第十五屆全國運動會群眾賽事廣播體操</span>
+                                                <span class="w-full sm:w-1/2 text-gray-600 break-words">日期：2025年9月19-22日<br>
+                                                地點：珠海</span>
+                                                <span class="w-20 flex-shrink-0 relative">
+                                                    <img src="poster/poster0.jpg">
+                                                </span>
+                                            </li>                                           
+                                        </ul>
+                                    </div>
+                                </details>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="view-hk-team" class="view-section bg-slate-50 py-16">
+            <div class="container mx-auto px-4 lg:px-32">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-black text-brand-darker mb-4">港隊光榮史</h2>
+                    <p class="text-gray-600">歷年香港代表隊比賽成績</p>
+                </div>
+                           
+                    <div class="p-4">
+                    <!--<h3 class="font-bold text-xl text-gray-800 mb-4 pl-2 border-l-4 border-brand">港隊光榮史</h3>-->
+                        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+                            <ul class="space-y-4">
+                                <li class="flex items-start">
+                                    <i data-lucide="medal" class="w-5 h-5 text-brand-light mr-3 mt-0.5"></i>
+                                    <div>
+                                        <p class="font-bold text-gray-800">2024 亞洲啦啦隊錦標賽 (印尼)</p>
+                                        <p class="text-sm text-gray-600">小組混合技巧賽 - <span class="text-brand-dark font-bold">金牌</span></p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <i data-lucide="medal" class="w-5 h-5 text-gray-400 mr-3 mt-0.5"></i>
+                                    <div>
+                                        <p class="font-bold text-gray-800">2023 ICU 世界錦標賽 (美國)</p>
+                                        <p class="text-sm text-gray-600">國家盃混合組 - <span class="text-gray-600 font-bold">銀牌</span></p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="p-4">
+                        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+                            <ul class="space-y-4">
+                                <li class="flex items-start">
+                                    <i data-lucide="medal" class="w-5 h-5 text-brand-900 mr-3 mt-0.5"></i>
+                                    <div>
+                                        <p class="font-bold text-gray-800">啦啦隊世界盃2026</p>
+                                        <span class="w-20 flex-shrink-0 relative">
+                                            <img src="image/worldcup_2026.jpg">
+                                        </span>
+                                        <p class="text-sm text-gray-600">領隊：鍾道穎(右三)&nbsp;&nbsp;&nbsp;教練：林少軒(左三)<br>
+                                            運動員：(左起)&nbsp;&nbsp;&nbsp;莊銳澄&nbsp;&nbsp;&nbsp;鄧玥侖&nbsp;&nbsp;&nbsp;林圓喜&nbsp;&nbsp;&nbsp;鄭志婷</p>
+                                            <br><br>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <i data-lucide="medal" class="w-5 h-5 text-brand-900 mr-3 mt-0.5"></i>
+                                    <div>
+                                        <p class="font-bold text-gray-800">十五運廣播體操</p><br>
+                                        <span class="w-20 flex-shrink-0 relative">
+                                            <img src="image/National_Games_2025.jpg">
+                                        </span>
+                                        <p class="text-sm text-gray-600"></p>
+                                        <br><br>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <i data-lucide="medal" class="w-5 h-5 text-brand-900 mr-3 mt-0.5"></i>
+                                    <div>
+                                        <p class="font-bold text-gray-800">世界運動會巡迴賽香港站</p>
+                                        <span class="w-20 flex-shrink-0 relative">
+                                            <img src="image/worldgames_2026.jpg">
+                                        </span>
+                                        <p class="text-sm text-gray-600">運動員：(左起)&nbsp;&nbsp;&nbsp;陳樂晴&nbsp;&nbsp;&nbsp;黃紫晴</p>
+                                        <br><br>
+                                    </div>
+                                </li>
+                                <!-- <li class="flex items-start">
+                                    <i data-lucide="medal" class="w-5 h-5 text-brand-900 mr-3 mt-0.5"></i>
+                                    <div>
+                                        <p class="font-bold text-gray-800">2025年6月 </p>
+                                        <span class="w-20 flex-shrink-0 relative">
+                                            <img src="image/.jpg">
+                                        </span>
+                                        <p class="text-sm text-gray-600"></p>
+                                            <br><br>
+                                    </div>
+                                </li> -->
+                            </ul>
+                        </div>
+                    </div>
+        </section>
+
+        <section id="view-training-cheer" class="view-section py-16">
+            <div class="container mx-auto px-4 lg:px-32">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-black text-brand-darker mb-4">啦啦隊培訓</h2>
+                    <p class="text-gray-600">提供各類啦啦隊訓練班及體驗課程，培育本地啦啦隊新血。</p>
+                </div>
+
+                <div class="mb-16">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center"><i data-lucide="book-open" class="text-brand mr-3"></i>即將舉辦課程</h3>
+                    <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                        <div class="overflow-x-auto table-scroll">
+                            <table class="w-full text-left border-collapse min-w-[600px]">
+                                <thead>
+                                    <tr class="bg-gray-50 border-b border-gray-200 text-sm text-gray-600 uppercase">
+                                        <th class="py-4 px-6 font-medium" scope="col">課程名稱</th>
+                                        <th class="py-4 px-6 font-medium" scope="col">對象</th>
+                                        <th class="py-4 px-6 font-medium" scope="col">日期</th>
+                                        <th class="py-4 px-6 font-medium" scope="col">狀態</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-gray-800">
+                                    <tr class="border-b border-gray-100 hover:bg-slate-50 transition">
+                                        <td class="py-4 px-6 font-bold text-brand-darker"><a target="http://www..pdf" href="http://www..pdf">普及啦啦隊訓練班</a></td>
+                                        <td class="py-4 px-6 text-sm">年滿18歲具基礎經驗者</td>
+                                        <td class="py-4 px-6 text-sm">2026年5月 (共4節)</td>
+                                        <td class="py-4 px-6">
+                                            <span class="bg-green-100 text-green-700 py-1 px-3 rounded-full text-xs font-bold">接受報名</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="border-b border-gray-100 hover:bg-slate-50 transition">
+                                        <td class="py-4 px-6 font-bold text-brand-darker"><a target="http://www..pdf" href="http://www..pdf">啦啦隊青苗訓練班</a></td>
+                                        <td class="py-4 px-6 text-sm">註冊一級教練</td>
+                                        <td class="py-4 px-6 text-sm">2026年6月10日</td>
+                                        <td class="py-4 px-6">
+                                            <span class="bg-yellow-100 text-yellow-700 py-1 px-3 rounded-full text-xs font-bold">即將公佈</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-slate-50 transition">
+                                        <td class="py-4 px-6 font-bold text-brand-darker"><a target="http://www..pdf" href="http://www..pdf">粵港澳大灣區啦啦操精英訓練</a></td>
+                                        <td class="py-4 px-6 text-sm">12-18歲青少年</td>
+                                        <td class="py-4 px-6 text-sm">2026年4月11日起</td>
+                                        <td class="py-4 px-6">
+                                            <span class="bg-brand-100 text-brand-800 py-1 px-3 rounded-full text-xs font-bold">名額已滿</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="view-training-coach" class="view-section py-16">
+            <div class="container mx-auto px-4 lg:px-32">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-black text-brand-darker mb-4">教練專業資格</h2>
+                    <p class="text-gray-600">致力提升本地教練水平，確保啦啦隊運動安全及專業。</p>
+                </div>
+
+                <div class="max-w-3xl mx-auto">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center"><i data-lucide="shield-check" class="text-brand mr-3"></i><a target="list/coach_list.pdf" href="list/coach_list.pdf">註冊教練名單</a></h3>
+                    <!-- <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center"><i data-lucide="shield-check" class="text-brand mr-3"></i> 教練資歷架構</h3>
+                    <div class="bg-brand-50 p-6 rounded-xl border border-brand-100">
+                        <h4 class="font-bold text-xl text-brand-darker mb-4 flex items-center"><i data-lucide="whistle" class="mr-2"></i> 教練級別</h4>
+                        <ul class="space-y-4">
+                            <li class="bg-white p-4 rounded shadow-sm flex items-center border-l-4 border-gray-400">
+                                <span class="font-bold w-16 text-center text-gray-600 text-lg">一級</span>
+                                <span class="text-gray-700 ml-4 font-medium">基礎啦啦隊教練 (可執教中小學興趣班)</span>
+                            </li>
+                            <li class="bg-white p-4 rounded shadow-sm flex items-center border-l-4 border-brand-300">
+                                <span class="font-bold w-16 text-center text-brand-dark text-lg">二級</span>
+                                <span class="text-gray-700 ml-4 font-medium">進階競技教練 (可帶隊參與本地錦標賽)</span>
+                            </li>
+                            <li class="bg-white p-4 rounded shadow-sm flex items-center border-l-4 border-brand">
+                                <span class="font-bold w-16 text-center text-brand-darker text-lg">三級</span>
+                                <span class="text-gray-700 ml-4 font-medium">高級教練 / 港隊教練 (具國際帶隊資格)</span>
+                            </li>
+                        </ul>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+
+        <section id="view-training-referee" class="view-section py-16">
+            <div class="container mx-auto px-4 lg:px-32">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-black text-brand-darker mb-4">裁判專業資格</h2>
+                    <p class="text-gray-600">建立公平公正的評分標準，與國際啦啦隊聯盟 (ICU) 接軌。</p>
+                </div>
+
+                <div class="max-w-3xl mx-auto">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center"><i data-lucide="shield-check" class="text-brand mr-3"></i><a target="list/judge_list.pdf" href="list/judge_list.pdf">註冊裁判名單</a></h3>
+                    <!-- <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center"><i data-lucide="shield-check" class="text-brand mr-3"></i> 裁判資歷架構</h3>
+                    <div class="bg-brand-50 p-6 rounded-xl border border-brand-100">
+                        <h4 class="font-bold text-xl text-brand-darker mb-4 flex items-center"><i data-lucide="gavel" class="mr-2"></i> 裁判級別</h4>
+                        <ul class="space-y-4">
+                            <li class="bg-white p-4 rounded shadow-sm flex items-center border-l-4 border-gray-400">
+                                <span class="font-bold w-16 text-center text-gray-600 text-lg">C級</span>
+                                <span class="text-gray-700 ml-4 font-medium">本地實習裁判 / 助理裁判</span>
+                            </li>
+                            <li class="bg-white p-4 rounded shadow-sm flex items-center border-l-4 border-brand-300">
+                                <span class="font-bold w-16 text-center text-brand-dark text-lg">B級</span>
+                                <span class="text-gray-700 ml-4 font-medium">本地錦標賽正式評分裁判</span>
+                            </li>
+                            <li class="bg-white p-4 rounded shadow-sm flex items-center border-l-4 border-brand">
+                                <span class="font-bold w-16 text-center text-brand-darker text-lg">A級</span>
+                                <span class="text-gray-700 ml-4 font-medium">國際賽事級別裁判 (獲ICU認可)</span>
+                            </li>
+                        </ul>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+
+        <section id="view-media" class="view-section py-16">
+            <div class="container mx-auto px-4 lg:px-32">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-black text-brand-darker mb-4">新聞</h2>
+                    <p class="text-gray-600">傳媒採訪、公告及招標</p>
+                    <div class="h-1 w-24 bg-brand mx-auto rounded mt-6"></div>
+                </div>
+
+                <div id="media-post" class="scroll-mt-28 mb-20">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-8 flex items-center"><i data-lucide="info" class="text-brand-light mr-3"></i>傳媒採訪</h3>
+                    <div class="w-full">
+                        <div class="mb-16">
+                            <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                                <div class="overflow-x-auto table-scroll">
+                                    <table class="w-full text-left border-collapse min-w-[600px]">
+                                        <tbody class="text-gray-800">
+                                            <tr class="border-b border-gray-100 hover:bg-slate-50 transition">
+                                                <td class="py-4 px-6 text-sm">2025年6月</td>
+                                                <td class="py-4 px-6 font-bold text-brand-darker">粵港澳大灣區啦啦操精英賽</td>
+                                                <td class="py-4 px-6">
+                                                    <a class="bg-yellow-100 text-yellow-700 py-1 px-3 rounded-full text-xs font-bold cursor-pointer hover:bg-yellow-200 transition" target="media/olympic_voice.pdf" href="media/olympic_voice.pdf">Olympic Voice</a>
+                                                </td>
+                                            </tr>
+                                            <tr class="border-b border-gray-100 hover:bg-slate-50 transition">
+                                                <td class="py-4 px-6 text-sm">2025年9月</td>
+                                                <td class="py-4 px-6 font-bold text-brand-darker">十五運</td>
+                                                <td class="py-4 px-6">
+                                                    <a class="bg-yellow-100 text-yellow-700 py-1 px-3 rounded-full text-xs font-bold cursor-pointer hover:bg-yellow-200 transition" target="media/national_games_2025.pdf" href="media/national_games_2025.pdf">National Games 2025</a><br>
+                                                    <a class="bg-yellow-100 text-yellow-700 py-1 px-3 rounded-full text-xs font-bold cursor-pointer hover:bg-yellow-200 transition" target="media/20250226.pdf" href="media/20250226.pdf">香港01 全運會2025群眾項目｜即睇香港區免費選拔安排 民間高手機會來了</a><br>
+                                                    <a class="bg-yellow-100 text-yellow-700 py-1 px-3 rounded-full text-xs font-bold cursor-pointer hover:bg-yellow-200 transition" target="media/20250716.pdf" href="media/20250716.pdf">Now TV 我們的全運會｜社區 躍動</a><br>
+                                                    <a class="bg-yellow-100 text-yellow-700 py-1 px-3 rounded-full text-xs font-bold cursor-pointer hover:bg-yellow-200 transition" target="media/20250916.pdf" href="media/20250916.pdf">Sportsoho【我要上全運】港隊首征全運會廣播體操 盼推廣普及</a><br>
+                                                    <a class="bg-yellow-100 text-yellow-700 py-1 px-3 rounded-full text-xs font-bold cursor-pointer hover:bg-yellow-200 transition" target="media/20250919.pdf" href="media/20250919.pdf">香港新聞網 全運會廣播體操賽 香港群眾來了</a><br>
+                                                    <a class="bg-yellow-100 text-yellow-700 py-1 px-3 rounded-full text-xs font-bold cursor-pointer hover:bg-yellow-200 transition" target="media/20250920.pdf" href="media/20250920.pdf">Ulifestyle 全運會｜香港隊首戰廣播體操 廖綺婷母女檔上陣</a><br>
+                                                    <a class="bg-yellow-100 text-yellow-700 py-1 px-3 rounded-full text-xs font-bold cursor-pointer hover:bg-yellow-200 transition" target="media/202509201.pdf" href="media/202509201.pdf">Ulifestyle 全運會｜香港廣播體操隊首戰珠海 展現體操魅力</a><br>
+                                                    <a class="bg-yellow-100 text-yellow-700 py-1 px-3 rounded-full text-xs font-bold cursor-pointer hover:bg-yellow-200 transition" target="media/202509202.pdf" href="media/202509202.pdf">巴士的報 全運會｜廣播體操項目一連兩日珠海舉行 本港首次派隊參與</a><br>
+                                                    <a class="bg-yellow-100 text-yellow-700 py-1 px-3 rounded-full text-xs font-bold cursor-pointer hover:bg-yellow-200 transition" target="media/202509203.pdf" href="media/202509203.pdf">香港電台 即時新聞 全運會｜廣播體操今明兩日舉行 總會稱適合不同年齡參與值得推廣</a><br>
+                                                    <a class="bg-yellow-100 text-yellow-700 py-1 px-3 rounded-full text-xs font-bold cursor-pointer hover:bg-yellow-200 transition" target="media/20250921.pdf" href="media/20250921.pdf">中國體育報 十五運會群眾展演廣播體操决賽戰罢 各等次獎項產生</a><br>
+                                                    <a class="bg-yellow-100 text-yellow-700 py-1 px-3 rounded-full text-xs font-bold cursor-pointer hover:bg-yellow-200 transition" target="media/202509211.pdf" href="media/202509211.pdf">香港新聞網 全運會廣播體操項目開鑼 香港隊首現賽場</a><br>
+                                                    <a class="bg-yellow-100 text-yellow-700 py-1 px-3 rounded-full text-xs font-bold cursor-pointer hover:bg-yellow-200 transition" target="media/202509212.pdf" href="media/202509212.pdf">珠海網 十五運會香港代表隊首次亮相 收獲珠海觀眾熱烈掌聲</a><br>
+                                                    <a class="bg-yellow-100 text-yellow-700 py-1 px-3 rounded-full text-xs font-bold cursor-pointer hover:bg-yellow-200 transition" target="media/20250922.pdf" href="media/20250922.pdf">華僑網 十五運會群眾展演廣播體操項目决賽在珠海收官</a><br>
+                                                    <a class="bg-yellow-100 text-yellow-700 py-1 px-3 rounded-full text-xs font-bold cursor-pointer hover:bg-yellow-200 transition" target="media/20250923.pdf" href="media/20250923.pdf">國家體育總局 十五運會廣播體操比賽 香港隊來了</a><br>
+                                                    <a class="bg-yellow-100 text-yellow-700 py-1 px-3 rounded-full text-xs font-bold cursor-pointer hover:bg-yellow-200 transition" target="media/20251002.pdf" href="media/20251002.pdf">Sportsoho 【我要上全運】港隊首度征戰廣播體操 獲嘉賓團現場支持展現香港精神</a>
+                                                </td>
+                                            </tr>
+                                            <tr class="hover:bg-slate-50 transition">
+                                                <td class="py-4 px-6 text-sm">2024年10月</td>
+                                                <td class="py-4 px-6 font-bold text-brand-darker">世界運動會</td>
+                                                <td class="py-4 px-6">
+                                                    <a class="bg-yellow-100 text-yellow-700 py-1 px-3 rounded-full text-xs font-bold cursor-pointer hover:bg-yellow-200 transition" target="media/20240924.pdf" href="media/20240924.pdf">香港01 西沙GO PARK辦運動嘉年華</a><br>
+                                                    <a class="bg-yellow-100 text-yellow-700 py-1 px-3 rounded-full text-xs font-bold cursor-pointer hover:bg-yellow-200 transition" target="media/20241011.pdf" href="media/20241011.pdf">東方日報 世運香港巡迴賽明日上演 包括啦啦操武術等 嘉年華今起有得玩</a><br>
+                                                    <a class="bg-yellow-100 text-yellow-700 py-1 px-3 rounded-full text-xs font-bold cursor-pointer hover:bg-yellow-200 transition" target="media/202410111.pdf" href="media/202410111.pdf">星島日報 世動會香港巡迴賽西沙GO PARK揭幕 黃偉綸：重要里程碑</a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="media-announcement" class="scroll-mt-28 mb-20">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-8 flex items-center"><i data-lucide="info" class="text-brand-light mr-3"></i>公告</h3>
+                    <div class="w-full">
+                        <div class="mb-16">
+                            <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                                <div class="overflow-x-auto table-scroll">
+                                    <table class="w-full text-left border-collapse min-w-[600px]">
+                                        <tbody class="text-gray-800">
+                                            <tr class="border-b border-gray-100 hover:bg-slate-50 transition">
+                                                <td class="py-4 px-6 text-sm">-</td>
+                                                <td class="py-4 px-6 font-bold text-brand-darker">Coming Soon</td>
+                                                <td class="py-4 px-6">
+                                                    <!-- <a class="bg-green-100 text-green-500 py-1 px-3 rounded-full text-xs font-bold cursor-pointer hover:bg-green-200 transition" target="media/.pdf" href="media/.pdf">詳情</a> -->
+                                                </td>
+                                            </tr>
+                                            <!-- <tr class="border-b border-gray-100 hover:bg-slate-50 transition">
+                                                <td class="py-4 px-6 text-sm">2026年6月10日</td>
+                                                <td class="py-4 px-6 font-bold text-brand-darker">港外賽事：ICU 亞洲啦啦隊錦標賽2026 及 亞太啦啦隊盃2026</td>
+                                                <td class="py-4 px-6">
+                                                    <a class="bg-green-100 text-green-500 py-1 px-3 rounded-full text-xs font-bold cursor-pointer hover:bg-green-200 transition" target="media/.pdf" href="media/.pdf">詳情</a>
+                                                </td>
+                                            </tr> -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="media-tender" class="scroll-mt-28 mb-20">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-8 flex items-center"><i data-lucide="info" class="text-brand-light mr-3"></i>招標</h3>
+                    <div class="w-full">
+                        <div class="mb-16">
+                            <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                                <div class="overflow-x-auto table-scroll">
+                                    <table class="w-full text-left border-collapse min-w-[600px]">
+                                        <tbody class="text-gray-800">
+                                            <tr class="border-b border-gray-100 hover:bg-slate-50 transition">
+                                                <td class="py-4 px-6 text-sm">-</td>
+                                                <td class="py-4 px-6 font-bold text-brand-darker">Coming Soon</td>
+                                                <td class="py-4 px-6">
+                                                    <!-- <a class="bg-brand-100 text-brand-800 py-1 px-3 rounded-full text-xs font-bold cursor-pointer hover:bg-brand-200 transition" target="media/.pdf" href="media/.pdf">詳情</a> -->
+                                                </td>
+                                            </tr>
+                                            <!-- <tr class="hover:bg-slate-50 transition">
+                                                <td class="py-4 px-6 text-sm">2026年4月11日</td>
+                                                <td class="py-4 px-6 font-bold text-brand-darker">本地賽事：全港啦啦隊大賽2026</td>
+                                                <td class="py-4 px-6">
+                                                    <a class="bg-brand-100 text-brand-800 py-1 px-3 rounded-full text-xs font-bold cursor-pointer hover:bg-brand-200 transition" target="media/.pdf" href="media/.pdf">詳情</a>
+                                                </td>
+                                            </tr> -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        
+        <section id="view-downloads" class="view-section bg-slate-50 py-16 min-h-[60vh]">
+            <div class="container mx-auto px-4 lg:px-32">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-black text-brand-darker mb-4">文件下載</h2>
+                    <p class="text-gray-600">獲取總會相關章程、規則、報名表及行政文件。</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+                        <h3 class="font-bold text-lg text-brand-darker mb-4 border-b pb-2">政策指引</h3>
+                        <ul class="space-y-3">
+                            <li>
+                                <a href="downloads/privacy_policy.pdf" target="_blank" rel="noopener noreferrer" class="group flex items-center justify-between p-3 rounded hover:bg-gray-50 transition">
+                                    <div class="flex items-center">
+                                        <i data-lucide="file-text" class="w-5 h-5 text-brand-darker mr-3"></i>
+                                        <span class="text-gray-700 group-hover:text-brand font-medium transition">私隱政策</span>
+                                    </div>
+                                    <i data-lucide="download" class="w-4 h-4 text-gray-400 group-hover:text-brand"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="downloads/athlete_code.pdf" target="_blank" rel="noopener noreferrer" class="group flex items-center justify-between p-3 rounded hover:bg-gray-50 transition">
+                                    <div class="flex items-center">
+                                        <i data-lucide="file-text" class="w-5 h-5 text-brand-darker mr-3"></i>
+                                        <span class="text-gray-700 group-hover:text-brand font-medium transition">運動員(隊員)守則</span>
+                                    </div>
+                                    <i data-lucide="download" class="w-4 h-4 text-gray-400 group-hover:text-brand"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="downloads/complaint_handling.pdf" target="_blank" rel="noopener noreferrer" class="group flex items-center justify-between p-3 rounded hover:bg-gray-50 transition">
+                                    <div class="flex items-center">
+                                        <i data-lucide="file-text" class="w-5 h-5 text-brand-darker mr-3"></i>
+                                        <span class="text-gray-700 group-hover:text-brand font-medium transition">處理投訴指引</span>
+                                    </div>
+                                    <i data-lucide="download" class="w-4 h-4 text-gray-400 group-hover:text-brand"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="downloads/equal_opportunity.pdf" target="_blank" rel="noopener noreferrer" class="group flex items-center justify-between p-3 rounded hover:bg-gray-50 transition">
+                                    <div class="flex items-center">
+                                        <i data-lucide="file-text" class="w-5 h-5 text-brand-darker mr-3"></i>
+                                        <span class="text-gray-700 group-hover:text-brand font-medium transition">平等機會政策及指引</span>
+                                    </div>
+                                    <i data-lucide="download" class="w-4 h-4 text-gray-400 group-hover:text-brand"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="downloads/social_media_policy.pdf" target="_blank" rel="noopener noreferrer" class="group flex items-center justify-between p-3 rounded hover:bg-gray-50 transition">
+                                    <div class="flex items-center">
+                                        <i data-lucide="file-text" class="w-5 h-5 text-brand-darker mr-3"></i>
+                                        <span class="text-gray-700 group-hover:text-brand font-medium transition">社交媒體使用政策</span>
+                                    </div>
+                                    <i data-lucide="download" class="w-4 h-4 text-gray-400 group-hover:text-brand"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="downloads/anti_doping_policy.pdf" target="_blank" rel="noopener noreferrer" class="group flex items-center justify-between p-3 rounded hover:bg-gray-50 transition">
+                                    <div class="flex items-center">
+                                        <i data-lucide="file-text" class="w-5 h-5 text-brand-darker mr-3"></i>
+                                        <span class="text-gray-700 group-hover:text-brand font-medium transition">運動禁藥管制指引</span>
+                                    </div>
+                                    <i data-lucide="download" class="w-4 h-4 text-gray-400 group-hover:text-brand"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="downloads/recruitment_procedure.pdf" target="_blank" rel="noopener noreferrer" class="group flex items-center justify-between p-3 rounded hover:bg-gray-50 transition">
+                                    <div class="flex items-center">
+                                        <i data-lucide="file-text" class="w-5 h-5 text-brand-darker mr-3"></i>
+                                        <span class="text-gray-700 group-hover:text-brand font-medium transition">招聘程序</span>
+                                    </div>
+                                    <i data-lucide="download" class="w-4 h-4 text-gray-400 group-hover:text-brand"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+                        <h3 class="font-bold text-lg text-brand-darker mb-4 border-b pb-2">其他申請</h3>
+                        <ul class="space-y-3">
+                            <li>
+                                <a href="downloads/coach_registration.pdf" target="_blank" rel="noopener noreferrer" class="group flex items-center justify-between p-3 rounded hover:bg-gray-50 transition">
+                                    <div class="flex items-center">
+                                        <i data-lucide="file-spreadsheet" class="w-5 h-5 text-brand-dark mr-3"></i>
+                                        <span class="text-gray-700 group-hover:text-brand font-medium transition">教練註冊</span>
+                                    </div>
+                                    <i data-lucide="download" class="w-4 h-4 text-gray-400 group-hover:text-brand"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="downloads/judge_registration.pdf" target="_blank" rel="noopener noreferrer" class="group flex items-center justify-between p-3 rounded hover:bg-gray-50 transition">
+                                    <div class="flex items-center">
+                                        <i data-lucide="file-spreadsheet" class="w-5 h-5 text-brand-dark mr-3"></i>
+                                        <span class="text-gray-700 group-hover:text-brand font-medium transition">裁判註冊</span>
+                                    </div>
+                                    <i data-lucide="download" class="w-4 h-4 text-gray-400 group-hover:text-brand"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="downloads/membership_application.pdf" target="_blank" rel="noopener noreferrer" class="group flex items-center justify-between p-3 rounded hover:bg-gray-50 transition">
+                                    <div class="flex items-center">
+                                        <i data-lucide="file-text" class="w-5 h-5 text-brand-light mr-3"></i>
+                                        <span class="text-gray-700 group-hover:text-brand font-medium transition">會員申請</span>
+                                    </div>
+                                    <i data-lucide="download" class="w-4 h-4 text-gray-400 group-hover:text-brand"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="downloads/activity_consent_form.pdf" target="_blank" rel="noopener noreferrer" class="group flex items-center justify-between p-3 rounded hover:bg-gray-50 transition">
+                                    <div class="flex items-center">
+                                        <i data-lucide="file-text" class="w-5 h-5 text-brand-light mr-3"></i>
+                                        <span class="text-gray-700 group-hover:text-brand font-medium transition">活動/比賽同意書</span>
+                                    </div>
+                                    <i data-lucide="download" class="w-4 h-4 text-gray-400 group-hover:text-brand"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="view-application" class="view-section bg-slate-50 py-12">
+            <div class="container mx-auto px-4 max-w-4xl">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl md:text-4xl font-black text-brand-darker mb-4">啦啦隊表演申請</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">
+                        歡迎各大機構、學校或主辦單位邀請本會轄下之啦啦隊進行表演。請填妥以下網上表格，我們的統籌團隊將於收到申請後 3 個工作天內透過電郵與您聯絡。
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200">
+                    <div class="bg-brand-darker px-8 py-4 border-b-4 border-brand">
+                        <h3 class="text-white font-bold text-lg flex items-center">
+                            <i data-lucide="file-text" class="mr-2"></i> 網上申請表
+                        </h3>
+                    </div>
+                   
+                    <form id="performance-form" class="p-8">
+                        <fieldset>
+                            <legend class="text-lg font-bold text-gray-800 mb-4 pb-2 border-b w-full">1. 申請機構資料</legend>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                                <div>
+                                    <label for="orgName" class="block text-sm font-medium text-gray-700 mb-1">機構/團體名稱 <span class="text-brand" aria-label="必填">*</span></label>
+                                    <input type="text" id="orgName" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-darker focus:border-brand-darker outline-none transition" placeholder="例如：香港XYZ有限公司">
+                                </div>
+                                <div>
+                                    <label for="contactName" class="block text-sm font-medium text-gray-700 mb-1">聯絡人姓名 <span class="text-brand" aria-label="必填">*</span></label>
+                                    <input type="text" id="contactName" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-darker focus:border-brand-darker outline-none transition" placeholder="陳大文先生">
+                                </div>
+                                <div>
+                                    <label for="contactPhone" class="block text-sm font-medium text-gray-700 mb-1">聯絡電話 <span class="text-brand" aria-label="必填">*</span></label>
+                                    <input type="tel" id="contactPhone" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-darker focus:border-brand-darker outline-none transition" placeholder="9876 5432">
+                                </div>
+                                <div>
+                                    <label for="contactEmail" class="block text-sm font-medium text-gray-700 mb-1">電郵地址 (接收通知用) <span class="text-brand" aria-label="必填">*</span></label>
+                                    <input type="email" id="contactEmail" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-darker focus:border-brand-darker outline-none transition" placeholder="example@domain.com">
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend class="text-lg font-bold text-gray-800 mb-4 pb-2 border-b w-full">2. 活動及表演詳情</legend>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                                <div class="md:col-span-2">
+                                    <label for="eventName" class="block text-sm font-medium text-gray-700 mb-1">活動名稱 <span class="text-brand" aria-label="必填">*</span></label>
+                                    <input type="text" id="eventName" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-darker focus:border-brand-darker outline-none transition" placeholder="例如：2026全港青年體育節開幕禮">
+                                </div>
+                                <div>
+                                    <label for="eventDate" class="block text-sm font-medium text-gray-700 mb-1">活動日期 <span class="text-brand" aria-label="必填">*</span></label>
+                                    <input type="date" id="eventDate" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-darker focus:border-brand-darker outline-none transition">
+                                </div>
+                                <div>
+                                    <label for="eventTime" class="block text-sm font-medium text-gray-700 mb-1">預計表演時間 <span class="text-brand" aria-label="必填">*</span></label>
+                                    <input type="time" id="eventTime" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-darker focus:border-brand-darker outline-none transition">
+                                </div>
+                                <div class="md:col-span-2">
+                                    <label for="eventLocation" class="block text-sm font-medium text-gray-700 mb-1">表演場地地址 <span class="text-brand" aria-label="必填">*</span></label>
+                                    <input type="text" id="eventLocation" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-darker focus:border-brand-darker outline-none transition" placeholder="詳細地址，並註明室內或室外">
+                                </div>
+                                <div class="md:col-span-2">
+                                    <label for="eventNotes" class="block text-sm font-medium text-gray-700 mb-1">表演性質及要求 (選填)</label>
+                                    <textarea id="eventNotes" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-darker focus:border-brand-darker outline-none transition" placeholder="請簡述活動性質、預計觀眾人數、場地地面物料(如木地板/膠墊)等資訊..."></textarea>
+                                </div>
+                                <div class="md:col-span-2">
+                                    <label for="eventbudget" class="block text-sm font-medium text-gray-700 mb-1">表演預算 <span class="text-brand" aria-label="必填">*</span></label>
+                                    <input type="text" id="eventbudget" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-darker focus:border-brand-darker outline-none transition" placeholder="港幣$">
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <div class="bg-gray-50 p-4 rounded-lg border border-gray-200 mb-8">
+                            <label for="agreeTerms" class="flex items-start cursor-pointer">
+                                <input type="checkbox" id="agreeTerms" required class="mt-1 mr-3 w-4 h-4 text-brand-darker border-gray-300 rounded focus:ring-brand-darker cursor-pointer">
+                                <span class="text-sm text-gray-600">
+                                    本人已閱讀並同意 <a href="downloads/performance_rules.pdf" class="text-brand-darker underline hover:text-brand transition">表演申請條款及細則</a>。本人明白遞交此表格並不代表申請已獲批准，總會將以電郵作實。
+                                </span>
+                            </label>
+                        </div>
+
+                        <div class="flex justify-end">
+                            <button type="submit" class="bg-brand hover:bg-brand-dark text-white font-bold py-3 px-8 rounded-lg shadow-md transition flex items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-darker focus-visible:ring-offset-2">
+                                <i data-lucide="send" class="w-5 h-5 mr-2"></i> 遞交申請表
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="footer" class="bg-brand-darker text-white pt-16 pb-8 border-t-8 border-brand">
+        <div class="container mx-auto px-4 lg:px-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <div class="lg:col-span-1">
+                    <h3 class="text-xl font-bold mb-4">中國香港啦啦隊總會</h3>
+                    <p class="text-sm text-brand-200 mb-4 leading-relaxed">
+                        本會為國際啦啦隊聯盟 (I.C.U.)、粵港澳大灣區體育教育與發展聯盟，及中國香港體育協會暨奧林匹克委員會之成員。致力推廣啦啦隊運動，培育精英運動員。
+                    </p>
+                    <div class="flex space-x-3">
+                        <a href="https://www.facebook.com/profile.php?id=61560221670334" class="w-10 h-10 rounded-full bg-brand-900 flex items-center justify-center hover:bg-brand transition focus-visible:ring-2 focus-visible:ring-white outline-none" aria-label="Facebook"><img src="logo/facebook_logo.png"><i data-lucide="facebook" class="w-4 h-4"></i></a>
+                        <a href="http://www.instagram.com/cheerleadingfederation_hk" class="w-10 h-10 rounded-full bg-brand-900 flex items-center justify-center hover:bg-brand transition focus-visible:ring-2 focus-visible:ring-white outline-none" aria-label="Instagram"><img src="logo/instagram_logo.png"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+                        <a href="https://whatsapp.com/channel/0029VaoDCkY1noyyQvOfVN2M" class="w-10 h-10 rounded-full bg-brand-900 flex items-center justify-center hover:bg-brand transition focus-visible:ring-2 focus-visible:ring-white outline-none" aria-label="WhatsApp"><img src="logo/whatsapp_logo.jpg"><i data-lucide="whatsapp" class="w-4 h-4"></i></a>
+                    </div>
+                </div>
+               
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-brand-light">快速連結</h4>
+                    <ul class="space-y-2 text-sm text-brand-100">
+                        <li><a href="#" data-view="home" class="hover:text-white transition font-bold focus-visible:outline-none focus-visible:underline">主頁</a></li>
+                        <li><a href="#" data-view="about" class="hover:text-white transition font-bold focus-visible:outline-none focus-visible:underline">關於本會</a></li>
+                        <li><a href="#" data-view="news" class="hover:text-white transition font-bold focus-visible:outline-none focus-visible:underline">最新消息</a></li>
+                        <li><a href="#" data-view="application" class="hover:text-white transition font-bold focus-visible:outline-none focus-visible:underline">表演申請</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-brand-light">資源與下載</h4>
+                    <ul class="space-y-2 text-sm text-brand-100">
+                        <li><a href="#" data-view="downloads" class="hover:text-white transition flex items-center font-bold focus-visible:outline-none focus-visible:underline"><i data-lucide="file-down" class="w-3 h-3 mr-2"></i> 賽事規則 2026</a></li>
+                        <li><a href="#" data-view="downloads" class="hover:text-white transition flex items-center font-bold focus-visible:outline-none focus-visible:underline"><i data-lucide="file-down" class="w-3 h-3 mr-2"></i> 教練註冊表</a></li>
+                        <li><a href="#" data-view="downloads" class="hover:text-white transition flex items-center font-bold focus-visible:outline-none focus-visible:underline"><i data-lucide="file-down" class="w-3 h-3 mr-2"></i> 總會會章</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-brand-light">聯絡我們</h4>
+                    <ul class="space-y-3 text-sm text-brand-100">
+                        <li class="flex items-start">
+                            <i data-lucide="map-pin" class="w-5 h-5 mr-3 flex-shrink-0 text-brand-300 mt-0.5" aria-hidden="true"></i>
+                            <span>九龍荔枝角青山道704號<br>合興工業大厦7樓B3室</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="phone" class="w-5 h-5 mr-3 flex-shrink-0 text-brand-300" aria-hidden="true"></i>
+                            <span>(852) 2527 9288</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="printer" class="w-5 h-5 mr-3 flex-shrink-0 text-brand-300" aria-hidden="true"></i>
+                            <span>(852) 3914 9027</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="mail" class="w-5 h-5 mr-3 flex-shrink-0 text-brand-300" aria-hidden="true"></i>
+                            <a href="mailto:cfhkemail@gmail.com" class="hover:text-white transition focus-visible:outline-none focus-visible:underline">cfhkemail@gmail.com</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="clock" class="w-5 h-5 mr-3 flex-shrink-0 text-brand-300" aria-hidden="true"></i>
+                            <span>星期一至五: 10:00am - 5:00pm</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+           
+            <div class="border-t border-brand-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-brand-300">
+                <p>&copy; 2026 中國香港啦啦隊總會 Cheerleading Federation of Hong Kong, China. 版權所有.</p>
+                <div class="space-x-4 mt-4 md:mt-0 flex">
+                    <a href="downloads/privacy_policy.pdf" class="hover:text-white transition focus-visible:outline-none focus-visible:underline">私隱政策</a>
+                    <a href="downloads/disclaimer.pdf" class="hover:text-white transition focus-visible:outline-none focus-visible:underline">免責聲明</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button data-view="home" class="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-50 bg-brand-darker text-white p-3 md:px-5 md:py-3 rounded-full shadow-[0_8px_30px_rgb(0,0,0,0.3)] hover:bg-brand transition-all duration-300 transform hover:-translate-y-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand flex items-center justify-center border border-white/30 hover:border-white opacity-90 hover:opacity-100 group" aria-label="返回首頁">
+        <i data-lucide="home" class="w-6 h-6 md:w-5 md:h-5 md:mr-2"></i>
+        <span class="font-bold text-sm hidden md:inline tracking-widest">返回首頁</span>
+    </button>
+
+    <div id="success-modal" class="fixed inset-0 z-50 flex items-center justify-center hidden bg-black bg-opacity-50 transition-opacity" aria-modal="true" role="dialog" aria-labelledby="modal-title">
+        <div class="bg-white rounded-2xl shadow-2xl p-8 max-w-sm w-full text-center transform scale-95 transition-transform duration-300">
+            <div class="w-16 h-16 bg-green-100 text-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <i data-lucide="check-circle" class="w-8 h-8"></i>
+            </div>
+            <h3 id="modal-title" class="text-2xl font-bold text-gray-800 mb-2">遞交成功！</h3>
+            <p class="text-gray-600 mb-6 text-sm">
+                我們已收到您的表演申請，確認電郵已發送至閣下的信箱。我們將於 3 個工作天內與你聯絡。
+            </p>
+            <button id="close-modal-btn" class="w-full bg-brand-darker hover:bg-brand-dark text-white font-bold py-2 px-4 rounded-lg transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-darker focus-visible:ring-offset-2">
+                確定並返回首頁
+            </button>
+        </div>
+    </div>
+
+    <div id="news-modal" class="fixed inset-0 z-50 flex items-center justify-center hidden bg-black bg-opacity-50 transition-opacity" aria-modal="true" role="dialog" aria-labelledby="news-modal-title">
+        <div class="bg-white rounded-2xl shadow-2xl p-8 max-w-2xl w-full max-h-[90vh] overflow-y-auto transform scale-95 transition-transform duration-300 relative mx-4">
+            <button id="close-news-modal-btn" class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center bg-gray-100 rounded-full text-gray-500 hover:bg-brand-100 hover:text-brand transition focus:outline-none focus:ring-2 focus:ring-brand" aria-label="關閉">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+            <div class="mb-6 border-b border-gray-100 pb-4 pr-6">
+                <span id="news-modal-category" class="inline-block text-white text-xs font-bold px-3 py-1 rounded shadow mb-3"></span>
+                <h3 id="news-modal-title" class="text-2xl md:text-3xl font-black text-gray-800 mb-3 leading-tight"></h3>
+                <p id="news-modal-date" class="text-sm text-gray-500 flex items-center font-medium"><i data-lucide="calendar" class="w-4 h-4 mr-2"></i> <span></span></p>
+            </div>
+            <div id="news-modal-content" class="text-gray-700 leading-relaxed space-y-4">
+                </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. Initialize Lucide Icons
+            lucide.createIcons();
+
+            // 2. Mobile Menu Toggle Logic
+            const mobileBtn = document.getElementById('mobile-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            function toggleMobileMenu() {
+                if (!mobileMenu) return; // 新增 null 檢查
+                const isOpen = mobileMenu.classList.contains('max-h-[80vh]');
+                if (isOpen) {
+                    mobileMenu.classList.remove('max-h-[80vh]', 'pb-4', 'overflow-y-auto');
+                    if (mobileBtn) mobileBtn.setAttribute('aria-expanded', 'false');
+                } else {
+                    mobileMenu.classList.add('max-h-[80vh]', 'pb-4', 'overflow-y-auto');
+                    if (mobileBtn) mobileBtn.setAttribute('aria-expanded', 'true');
+                }
+            }
+
+            if (mobileBtn) {
+                mobileBtn.addEventListener('click', toggleMobileMenu);
+            }
+
+            // Mobile Submenu Accordion Logic
+            const mobileSubmenuBtns = document.querySelectorAll('.mobile-submenu-btn');
+            mobileSubmenuBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const targetId = btn.getAttribute('aria-controls');
+                    const targetMenu = targetId ? document.getElementById(targetId) : null;
+                    const icon = btn.querySelector('i');
+                   
+                    if (!targetMenu) return; // 避免 null 錯誤
+                   
+                    if (targetMenu.classList.contains('hidden')) {
+                        targetMenu.classList.remove('hidden');
+                        targetMenu.classList.add('flex');
+                        btn.setAttribute('aria-expanded', 'true');
+                        if (icon) icon.classList.add('rotate-180');
+                    } else {
+                        targetMenu.classList.add('hidden');
+                        targetMenu.classList.remove('flex');
+                        btn.setAttribute('aria-expanded', 'false');
+                        if (icon) icon.classList.remove('rotate-180');
+                    }
+                });
+            });
+
+            // 3. SPA View Switcher Routing Logic
+            const views = document.querySelectorAll('.view-section');
+            const viewLinks = document.querySelectorAll('[data-view], [data-scroll-to]');
+
+            function switchView(targetViewId, scrollToId = null) {
+                const targetView = document.getElementById(`view-${targetViewId}`);
+                const isAlreadyActive = targetView && targetView.classList.contains('active');
+
+                // 1. 若手機選單展開，先行收合
+                if (mobileMenu && (mobileMenu.classList.contains('max-h-[80vh]') || !mobileMenu.classList.contains('max-h-0'))) {
+                    toggleMobileMenu();
+                }
+
+                // 2. 切換視圖激活狀態
+                if (!isAlreadyActive) {
+                    views.forEach(view => {
+                        view.classList.remove('active');
+                    });
+                    if (targetView) {
+                        targetView.classList.add('active');
+                    }
+                }
+
+                // 3. 執行原生精確平滑捲動（配合 CSS scroll-mt 確保避開 Sticky Header）
+                const delay = isAlreadyActive ? 20 : 120;
+                
+                setTimeout(() => {
+                    if (scrollToId) {
+                        if (scrollToId === 'footer') {
+                            const footerEl = document.getElementById('footer');
+                            if (footerEl) footerEl.scrollIntoView({ behavior: 'smooth' });
+                        } else {
+                            const el = document.getElementById(scrollToId);
+                            if (el) {
+                                el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                            }
+                        }
+                    } else if (!isAlreadyActive) {
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }
+                }, delay);
+            }
+
+            viewLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const viewId = link.getAttribute('data-view');
+                    const scrollToId = link.getAttribute('data-scroll-to');
+                    const targetTabId = link.getAttribute('data-target-tab');
+                   
+                    if (viewId) {
+                        switchView(viewId, scrollToId);
+                    } else if (scrollToId) {
+                        // Handle standalone scroll-to (e.g., Contact Us -> Footer)
+                        const el = document.getElementById(scrollToId);
+                        if (el) {
+                            if (scrollToId === 'footer') {
+                                window.scrollTo({ top: document.body.scrollHeight || document.documentElement.scrollHeight, behavior: 'smooth' });
+                            } else {
+                                const headerOffset = document.querySelector('header').offsetHeight || 80;
+                                const elementPosition = el.getBoundingClientRect().top;
+                                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                                window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+                            }
+                        }
+                        if (mobileMenu && mobileMenu.classList.contains('max-h-[80vh]')) {
+                            toggleMobileMenu();
+                        }
+                    }
+
+                    // Handle Tab Switching if data-target-tab is present
+                    if (targetTabId) {
+                        setTimeout(() => {
+                            const tabBtn = document.getElementById(targetTabId);
+                            if (tabBtn) tabBtn.click();
+                        }, 50); // Delay ensures the view is fully active before clicking tab
+                    }
+                });
+            });
+
+            // 4. Tab Switcher Logic for Events View
+            const eventTabs = document.querySelectorAll('.event-tab-btn');
+            const eventPanels = document.querySelectorAll('.event-panel');
+
+            eventTabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    // Reset all tabs
+                    eventTabs.forEach(t => {
+                        t.classList.remove('border-brand', 'text-brand-darker');
+                        t.classList.add('border-transparent', 'text-gray-500');
+                        t.setAttribute('aria-selected', 'false');
+                    });
+                    // Reset all panels
+                    eventPanels.forEach(p => p.classList.add('hidden'));
+
+                    // Activate clicked tab
+                    tab.classList.remove('border-transparent', 'text-gray-500');
+                    tab.classList.add('border-brand', 'text-brand-darker');
+                    tab.setAttribute('aria-selected', 'true');
+
+                    // Show associated panel
+                    const targetPanelId = tab.getAttribute('aria-controls');
+                    const targetPanel = targetPanelId ? document.getElementById(targetPanelId) : null;
+                   
+                    if (targetPanel) { // 避免 null 錯誤
+                        targetPanel.classList.remove('hidden');
+                    }
+                });
+            });
+
+            // 5. Form Submission Logic (串接 FormSubmit API 發送完整表單至指定電郵)
+            const form = document.getElementById('performance-form');
+            const modal = document.getElementById('success-modal');
+            const closeModalBtn = document.getElementById('close-modal-btn');
+
+            // 5.1 在此指定接收申請表的目標電郵地址
+            const RECIPIENT_EMAIL = "cfhkemail@gmail.com"; // 可隨時更改為您指定的電郵
+
+            if (form) {
+                form.addEventListener('submit', async (e) => {
+                    e.preventDefault(); // 阻止原生跳頁
+
+                    const submitBtn = form.querySelector('button[type="submit"]');
+                    const originalBtnHtml = submitBtn ? submitBtn.innerHTML : '';
+
+                    // 收集所有填寫的表單資料（保持原欄位結構不變）
+                    const formData = {
+                        _subject: `【表演申請】${document.getElementById('orgName')?.value || ''} - ${document.getElementById('eventName')?.value || ''}`,
+                        _template: "table",
+                        "1. 機構/團體名稱": document.getElementById('orgName')?.value || '',
+                        "2. 聯絡人姓名": document.getElementById('contactName')?.value || '',
+                        "3. 聯絡電話": document.getElementById('contactPhone')?.value || '',
+                        "4. 聯絡電郵": document.getElementById('contactEmail')?.value || '',
+                        "5. 活動名稱": document.getElementById('eventName')?.value || '',
+                        "6. 活動日期": document.getElementById('eventDate')?.value || '',
+                        "7. 預計表演時間": document.getElementById('eventTime')?.value || '',
+                        "8. 表演場地地址": document.getElementById('eventLocation')?.value || '',
+                        "9. 表演性質及要求": document.getElementById('eventNotes')?.value || '無',
+                        "10. 表演預算": document.getElementById('eventbudget')?.value || ''
+                    };
+
+                    // 切換按鈕為發送中狀態，防止重複點擊
+                    if (submitBtn) {
+                        submitBtn.disabled = true;
+                        submitBtn.innerHTML = `<i data-lucide="loader-2" class="w-5 h-5 mr-2 animate-spin"></i> 發送中...`;
+                        lucide.createIcons({ root: submitBtn });
+                    }
+
+                    try {
+                        const response = await fetch(`https://formsubmit.co/ajax/${RECIPIENT_EMAIL}`, {
+                            method: "POST",
+                            headers: {
+                                "Content-Type": "application/json",
+                                "Accept": "application/json"
+                            },
+                            body: JSON.stringify(formData)
+                        });
+
+                        if (response.ok) {
+                            // 發送成功，彈出成功提示 Modal
+                            if (modal) {
+                                modal.classList.remove('hidden');
+                                requestAnimationFrame(() => {
+                                    const modalDiv = modal.querySelector('div');
+                                    if (modalDiv) {
+                                        modalDiv.classList.remove('scale-95');
+                                        modalDiv.classList.add('scale-100');
+                                    }
+                                });
+                            }
+                            form.reset();
+                        } else {
+                            alert("遞交失敗，請稍後再試或直接透過電郵聯絡我們。");
+                        }
+                    } catch (error) {
+                        console.error("Form submission error:", error);
+                        alert("網路連線異常，請稍後再試或致電總會秘書處。");
+                    } finally {
+                        // 恢復按鈕狀態
+                        if (submitBtn) {
+                            submitBtn.disabled = false;
+                            submitBtn.innerHTML = originalBtnHtml;
+                            lucide.createIcons({ root: submitBtn });
+                        }
+                    }
+                });
+            }
+
+            function closeModal() {
+                if (!modal) return;
+               
+                const modalDiv = modal.querySelector('div');
+                if (modalDiv) {
+                    modalDiv.classList.remove('scale-100');
+                    modalDiv.classList.add('scale-95');
+                }
+                setTimeout(() => {
+                    modal.classList.add('hidden');
+                    switchView('home'); // Go back to home after success
+                }, 300);
+            }
+
+            if (closeModalBtn) {
+                closeModalBtn.addEventListener('click', closeModal);
+            }
+
+            // 6. News Modal Logic
+            const newsModal = document.getElementById('news-modal');
+            const closeNewsModalBtn = document.getElementById('close-news-modal-btn');
+            const newsReadMoreBtns = document.querySelectorAll('article button, article .news-title');
+
+            // 6.1 各消息彈出視窗的獨立自訂內容字典 (可隨時在此新增或修改各篇內容)
+            const newsDetailData = {
+                "啦啦隊青苗訓練班": {
+                    html: `
+                        <p class="font-bold text-lg text-brand-darker mb-4">啦啦隊青苗培訓計劃現正接受報名！</p>
+                        <p class="mb-3">本課程專為初學者設計，旨在打好基礎體能、技巧動作及培養團隊合作精神。由本會資深註冊教練親自執教。</p>
+                        <ul class="list-disc pl-5 space-y-1 mb-4 text-sm text-gray-600">
+                            <li>訓練對象：6 - 12 歲兒童及青少年</li>
+                            <li>訓練地點：深水埗體育館副場</li>
+                            <li>名額有限，先到先得。</li>
+                        </ul>
+                        <div class="bg-brand-50 p-4 rounded-lg mt-6 border border-brand-100">
+                            <p class="text-sm font-bold text-brand-darker mb-2 flex items-center"><i data-lucide="phone" class="w-4 h-4 mr-2"></i> 查詢及報名</p>
+                            <p class="text-sm text-gray-600">請致電 (852) 2527 9288 或電郵至 cfhkemail@gmail.com 索取報名表格。</p>
+                        </div>
+                    `
+                },
+                "ICU 亞洲啦啦隊錦標賽 2026 及 亞太啦啦隊盃2026": {
+                    html: `
+                        <p class="font-bold text-lg text-brand-darker mb-4">中國香港代表隊遠征海外賽事公告</p>
+                        <p class="mb-3">本會將派出代表隊出戰 2026 年度 ICU 亞洲啦啦隊錦標賽及亞太啦啦隊盃，與各國頂尖隊伍切磋交流。</p>
+                        <div class="bg-slate-100 p-4 rounded-lg mb-4 text-sm">
+                            <p class="font-bold text-gray-800">比賽地點：馬來西亞</p>
+                            <p class="text-gray-600">預計出賽項目：競技啦啦隊混合組、舞蹈啦啦隊雙人組</p>
+                        </div>
+                        <div class="bg-brand-50 p-4 rounded-lg mt-6 border border-brand-100">
+                            <p class="text-sm font-bold text-brand-darker mb-2 flex items-center"><i data-lucide="phone" class="w-4 h-4 mr-2"></i> 查詢</p>
+                            <p class="text-sm text-gray-600">港隊選拔及隨團詳情請聯絡秘書處。</p>
+                        </div>
+                    `
+                },
+                "全港啦啦隊大賽2026": {
+                    html: `
+                        <p class="font-bold text-lg text-brand-darker mb-4">全港啦啦隊年度盛事即將展開！</p>
+                        <p class="mb-3">「全港啦啦隊大賽2026」將匯聚本地多支中小學及公開組啦啦隊同場競技，展現活力與高難度技巧。</p>
+                        <div class="bg-red-50 p-4 rounded-lg mb-4 border border-red-100 text-sm">
+                            <p class="font-bold text-red-800 mb-1">賽事重要日程：</p>
+                            <p class="text-gray-700">比賽日期：2026年3月29日 | 截止報名：2026年2月28日</p>
+                        </div>
+                        <div class="bg-brand-50 p-4 rounded-lg mt-6 border border-brand-100">
+                            <p class="text-sm font-bold text-brand-darker mb-2 flex items-center"><i data-lucide="download" class="w-4 h-4 mr-2"></i> 相關文件</p>
+                            <p class="text-sm text-gray-600">賽事章程及評分規則請前往「文件下載」專區下載。</p>
+                        </div>
+                    `
+                }
+            };
+
+            function openNewsModal(title, date, category, excerpt) {
+                if (!newsModal) return;
+               
+                document.getElementById('news-modal-title').textContent = title;
+                document.querySelector('#news-modal-date span').textContent = date;
+               
+                const catBadge = document.getElementById('news-modal-category');
+                catBadge.textContent = category;
+               
+                // 動態設定標籤顏色
+                catBadge.className = 'inline-block text-xs font-bold px-3 py-1 rounded shadow mb-3 ' +
+                    (category.includes('港外賽事') ? 'bg-brand-100 text-brand-800' :
+                     category.includes('訓練班') ? 'bg-green-200 text-green-800' :
+                     category.includes('本地賽事') ? 'bg-red-200 text-red-800' : 'bg-gray-600');
+
+                // 判斷是否在自訂字典中有個別內容，否則使用通用模板
+                const customNews = newsDetailData[title.trim()];
+                if (customNews && customNews.html) {
+                    document.getElementById('news-modal-content').innerHTML = customNews.html;
+                } else {
+                    document.getElementById('news-modal-content').innerHTML = `
+                        <p class="font-bold text-lg text-brand-darker mb-4">${excerpt}</p>
+                        <p>這是一篇有關「${title}」的詳細報導。本會一直致力推廣啦啦隊運動，並為各項賽事及培訓提供最優質的安排。</p>
+                        <p>有關本次活動的進一步詳情、報名細則及相關注意事項，已上載至本會系統。各屬會及會員可登入系統查閱完整文件。</p>
+                        <div class="bg-brand-50 p-4 rounded-lg mt-6 border border-brand-100">
+                            <p class="text-sm font-bold text-brand-darker mb-2 flex items-center"><i data-lucide="phone" class="w-4 h-4 mr-2"></i> 查詢</p>
+                            <p class="text-sm text-gray-600">如有任何疑問，請於辦公時間內致電 (852) 2527 9288 或電郵至 cfhkemail@gmail.com 與本會秘書處聯絡。</p>
+                        </div>
+                    `;
+                }
+               
+                // 重新初始化 Modal 內的 Lucide 圖示
+                lucide.createIcons({ root: document.getElementById('news-modal-content') });
+
+                newsModal.classList.remove('hidden');
+                requestAnimationFrame(() => {
+                    const modalDiv = newsModal.querySelector('div');
+                    if (modalDiv) {
+                        modalDiv.classList.remove('scale-95');
+                        modalDiv.classList.add('scale-100');
+                    }
+                });
+            }
+
+            function closeNewsModal() {
+                if (!newsModal || newsModal.classList.contains('hidden')) return;
+                const modalDiv = newsModal.querySelector('div');
+                if (modalDiv) {
+                    modalDiv.classList.remove('scale-100');
+                    modalDiv.classList.add('scale-95');
+                }
+                setTimeout(() => {
+                    newsModal.classList.add('hidden');
+                }, 300);
+            }
+
+            if (closeNewsModalBtn) {
+                closeNewsModalBtn.addEventListener('click', closeNewsModal);
+            }
+
+            // 支援點擊背景遮罩關閉
+            if (newsModal) {
+                newsModal.addEventListener('click', (e) => {
+                    if (e.target === newsModal) {
+                        closeNewsModal();
+                    }
+                });
+            }
+
+            // 支援按下鍵盤 ESC 鍵關閉彈出視窗
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' || e.key === 'Esc') {
+                    if (newsModal && !newsModal.classList.contains('hidden')) {
+                        closeNewsModal();
+                    }
+                }
+            });
+
+            newsReadMoreBtns.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const article = e.target.closest('article');
+                    if (article) {
+                        const title = article.querySelector('h3').textContent;
+                        const dateText = article.querySelector('.text-gray-500').textContent.trim();
+                        const excerpt = article.querySelector('.line-clamp-3') ? article.querySelector('.line-clamp-3').textContent : '';
+                       
+                        let category = "最新消息";
+                        const catElement = article.querySelector('span.rounded.shadow');
+                        if (catElement) category = catElement.textContent.trim();
+                       
+                        openNewsModal(title, dateText, category, excerpt);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
