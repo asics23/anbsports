@@ -194,8 +194,8 @@
             </button>
         </div>
 
-        <div id="mobile-menu" class="lg:hidden absolute top-[100%] right-0 w-full sm:w-80 max-w-full bg-white border-b border-l border-gray-200 shadow-2xl max-h-0 overflow-hidden transition-all duration-300 ease-in-out rounded-bl-xl z-50">
-            <nav class="px-4 py-1 flex flex-col text-sm font-medium text-left" aria-label="手機導航">
+        <div id="mobile-menu" class="lg:hidden absolute top-[100%] right-0 w-64 max-w-[80vw] bg-white border-b border-l border-gray-200 shadow-2xl max-h-0 overflow-hidden transition-all duration-300 ease-in-out rounded-bl-2xl z-50">
+            <nav class="px-4 py-2 flex flex-col text-sm font-medium text-left" aria-label="手機導航">
                 
                 <div class="border-b border-gray-100">
                     <button class="mobile-submenu-btn flex items-center justify-start text-left text-gray-800 hover:text-brand font-bold py-1 focus:outline-none w-full" aria-expanded="false" aria-controls="mobile-about-sub">
@@ -306,45 +306,71 @@
                 </div>
 
                 <div class="grid md:grid-cols-3 gap-8">
+                    <!-- <article class="bg-white rounded-xl shadow-sm hover:shadow-xl transition duration-300 overflow-hidden border border-gray-100 flex flex-row h-full">
+                        <div class="p-4 flex flex-col flex-grow w-3/5">
+                            <span class="inline-block bg-red-200 text-red-800 text-xs font-bold px-3 py-1 rounded shadow w-max mb-3">本地賽事</span>
+                            <p class="text-sm text-gray-500 mb-2 flex items-center"><i data-lucide="calendar" class="w-4 h-4 mr-2"></i> 2027年1月10日</p>
+                            <h3 class="text-xl font-bold text-gray-800 mb-3 hover:text-brand-darker transition cursor-pointer news-title">全港啦啦隊大賽2027</h3>
+                            <button class="text-brand-darker font-bold text-sm flex items-center hover:text-brand transition mt-auto">詳細資料 <i data-lucide="chevron-right" class="w-4 h-4 ml-1"></i></button>
+                        </div>
+                        <div class="w-2/5 flex-shrink-0 relative bg-gray-200">
+                            <img src="https://images.unsplash.com/photo-1569074187119-c87815b476da?auto=format&fit=crop&q=80" alt="本地賽事" class="absolute inset-0 w-full h-full object-cover">
+                        </div>
+                    </article> -->
                     <article class="bg-white rounded-xl shadow-sm hover:shadow-xl transition duration-300 overflow-hidden border border-gray-100 flex flex-row h-full">
                         <div class="p-4 flex flex-col flex-grow w-3/5">
-                            <span class="inline-block bg-green-200 text-gray-800 text-xs font-bold px-3 py-1 rounded shadow w-max mb-3">訓練班</span>
-                            <p class="text-sm text-gray-500 mb-2 flex items-center"><i data-lucide="calendar" class="w-4 h-4 mr-2"></i> 2026年2月15日</p>
-                            <h3 class="text-xl font-bold text-gray-800 mb-3 hover:text-brand-darker transition cursor-pointer news-title">啦啦隊青苗訓練班</h3>
+                            <span class="inline-block bg-blue-200 text-gray-800 text-xs font-bold px-3 py-1 rounded shadow w-max mb-3">裁判班</span>
+                            <p class="text-sm text-gray-500 mb-2 flex items-center"><i data-lucide="calendar" class="w-4 h-4 mr-2"></i> 2026年9月1日</p>
+                            <h3 class="text-xl font-bold text-gray-800 mb-3 hover:text-brand-darker transition cursor-pointer news-title">啦啦隊一級裁判員課程2026</h3>
                             <!--<p class="text-gray-600 line-clamp-3 mb-4 flex-grow">敬請各屬會及個人會員於3月31日前辦理本年度之續會手續，逾期將影響參賽及相關權利。</p>-->
-                            <p class="line-clamp-3 mb-4 flex-grow">請參閱章程。</p>
-                            <button class="text-brand-darker font-bold text-sm flex items-center hover:text-brand transition mt-auto">閱讀全文 <i data-lucide="chevron-right" class="w-4 h-4 ml-1"></i></button>
+                            <p class="line-clamp-2 mb-3 flex-grow">截止日期：<br>2026年11月27日</p>
+                            <button class="text-brand-darker font-bold text-sm flex items-center hover:text-brand transition mt-auto">詳細資料 <i data-lucide="chevron-right" class="w-4 h-4 ml-1"></i></button>
+                        </div>
+                        <div class="w-2/5 flex-shrink-0 relative bg-gray-200">
+                            <img src="https://images.unsplash.com/photo-1569074187119-c87815b476da?auto=format&fit=crop&q=80" alt="裁判班" class="absolute inset-0 w-full h-full object-cover">
+                        </div>
+                    </article>
+                    
+                    <article class="bg-white rounded-xl shadow-sm hover:shadow-xl transition duration-300 overflow-hidden border border-gray-100 flex flex-row h-full">
+                        <div class="p-4 flex flex-col flex-grow w-3/5">
+                            <span class="inline-block bg-brand-100 text-brand-800 text-xs font-bold px-3 py-1 rounded shadow w-max mb-3">港外賽事</span>
+                            <p class="text-sm text-gray-500 mb-2 flex items-center"><i data-lucide="calendar" class="w-4 h-4 mr-2"></i> 2026年7月26日</p>
+                            <h3 class="text-xl font-bold text-gray-800 mb-3 hover:text-brand-darker transition cursor-pointer news-title">ICU 亞洲啦啦隊錦標賽2026 (ACC) 及 亞太啦啦隊盃2026 (APCC)</h3>
+                            <!--<p class="text-gray-600 line-clamp-3 mb-4 flex-grow">本年度首個一級教練課程已順利完成，恭喜所有通過考核的新晉教練，證書將於下週寄出。</p>-->
+                            <button class="text-brand-darker font-bold text-sm flex items-center hover:text-brand transition mt-auto">詳細資料 <i data-lucide="chevron-right" class="w-4 h-4 ml-1"></i></button>
+                        </div>
+                        <div class="w-2/5 flex-shrink-0 relative bg-gray-200">
+                            <img src="https://images.unsplash.com/photo-1569074187119-c87815b476da?auto=format&fit=crop&q=80" alt="港外賽事" class="absolute inset-0 w-full h-full object-cover">
+                        </div>
+                    </article>
+                    
+                    <article class="bg-white rounded-xl shadow-sm hover:shadow-xl transition duration-300 overflow-hidden border border-gray-100 flex flex-row h-full">
+                        <div class="p-4 flex flex-col flex-grow w-3/5">
+                            <span class="inline-block bg-green-200 text-red-800 text-xs font-bold px-3 py-1 rounded shadow w-max mb-3">國內訓練營</span>
+                            <p class="text-sm text-gray-500 mb-2 flex items-center"><i data-lucide="calendar" class="w-4 h-4 mr-2"></i> 2026年7月10日</p>
+                            <h3 class="text-xl font-bold text-gray-800 mb-3 hover:text-brand-darker transition cursor-pointer news-title">2026粵港澳大灣區啦啦操精英訓練營</h3>
+                            <!--<p class="text-gray-600 line-clamp-3 mb-4 flex-grow">本年度首個一級教練課程已順利完成，恭喜所有通過考核的新晉教練，證書將於下週寄出。</p>-->
+                            <button class="text-brand-darker font-bold text-sm flex items-center hover:text-brand transition mt-auto">詳細資料 <i data-lucide="chevron-right" class="w-4 h-4 ml-1"></i></button>
+                        </div>
+                        <div class="w-2/5 flex-shrink-0 relative bg-gray-200">
+                            <img src="https://images.unsplash.com/photo-1569074187119-c87815b476da?auto=format&fit=crop&q=80" alt="本地賽事" class="absolute inset-0 w-full h-full object-cover">
+                        </div>
+                    </article>
+
+                    <article class="bg-white rounded-xl shadow-sm hover:shadow-xl transition duration-300 overflow-hidden border border-gray-100 flex flex-row h-full">
+                        <div class="p-4 flex flex-col flex-grow w-3/5">
+                            <span class="inline-block bg-green-200 text-red-800 text-xs font-bold px-3 py-1 rounded shadow w-max mb-3">訓練班</span>
+                            <p class="text-sm text-gray-500 mb-2 flex items-center"><i data-lucide="calendar" class="w-4 h-4 mr-2"></i> 2026年7月9日</p>
+                            <h3 class="text-xl font-bold text-gray-800 mb-3 hover:text-brand-darker transition cursor-pointer news-title">香港啦啦隊青苗訓練班2026</h3>
+                            <!--<p class="text-gray-600 line-clamp-3 mb-4 flex-grow">敬請各屬會及個人會員於3月31日前辦理本年度之續會手續，逾期將影響參賽及相關權利。</p>-->
+                            <p class="line-clamp-2 mb-3 flex-grow">截止日期(第一期)：<br>2026年9月22日</p>
+                            <button class="text-brand-darker font-bold text-sm flex items-center hover:text-brand transition mt-auto">詳細資料 <i data-lucide="chevron-right" class="w-4 h-4 ml-1"></i></button>
                         </div>
                         <div class="w-2/5 flex-shrink-0 relative bg-gray-200">
                             <img src="https://images.unsplash.com/photo-1569074187119-c87815b476da?auto=format&fit=crop&q=80" alt="訓練班" class="absolute inset-0 w-full h-full object-cover">
                         </div>
                     </article>
                    
-                    <article class="bg-white rounded-xl shadow-sm hover:shadow-xl transition duration-300 overflow-hidden border border-gray-100 flex flex-row h-full">
-                        <div class="p-4 flex flex-col flex-grow w-3/5">
-                            <span class="inline-block bg-brand-100 text-brand-800 text-xs font-bold px-3 py-1 rounded shadow w-max mb-3">港外賽事</span>
-                            <p class="text-sm text-gray-500 mb-2 flex items-center"><i data-lucide="calendar" class="w-4 h-4 mr-2"></i> 2026年1月10日</p>
-                            <h3 class="text-xl font-bold text-gray-800 mb-3 hover:text-brand-darker transition cursor-pointer news-title">ICU 亞洲啦啦隊錦標賽 2026 及 亞太啦啦隊盃2026</h3>
-                            <!--<p class="text-gray-600 line-clamp-3 mb-4 flex-grow">本年度首個一級教練課程已順利完成，恭喜所有通過考核的新晉教練，證書將於下週寄出。</p>-->
-                            <button class="text-brand-darker font-bold text-sm flex items-center hover:text-brand transition mt-auto">閱讀全文 <i data-lucide="chevron-right" class="w-4 h-4 ml-1"></i></button>
-                        </div>
-                        <div class="w-2/5 flex-shrink-0 relative bg-gray-200">
-                            <img src="https://images.unsplash.com/photo-1569074187119-c87815b476da?auto=format&fit=crop&q=80" alt="港外賽事" class="absolute inset-0 w-full h-full object-cover">
-                        </div>
-                    </article>
-
-                    <article class="bg-white rounded-xl shadow-sm hover:shadow-xl transition duration-300 overflow-hidden border border-gray-100 flex flex-row h-full">
-                        <div class="p-4 flex flex-col flex-grow w-3/5">
-                            <span class="inline-block bg-red-200 text-red-800 text-xs font-bold px-3 py-1 rounded shadow w-max mb-3">本地賽事</span>
-                            <p class="text-sm text-gray-500 mb-2 flex items-center"><i data-lucide="calendar" class="w-4 h-4 mr-2"></i> 2026年1月10日</p>
-                            <h3 class="text-xl font-bold text-gray-800 mb-3 hover:text-brand-darker transition cursor-pointer news-title">全港啦啦隊大賽2026</h3>
-                            <!--<p class="text-gray-600 line-clamp-3 mb-4 flex-grow">本年度首個一級教練課程已順利完成，恭喜所有通過考核的新晉教練，證書將於下週寄出。</p>-->
-                            <button class="text-brand-darker font-bold text-sm flex items-center hover:text-brand transition mt-auto">閱讀全文 <i data-lucide="chevron-right" class="w-4 h-4 ml-1"></i></button>
-                        </div>
-                        <div class="w-2/5 flex-shrink-0 relative bg-gray-200">
-                            <img src="https://images.unsplash.com/photo-1569074187119-c87815b476da?auto=format&fit=crop&q=80" alt="本地賽事" class="absolute inset-0 w-full h-full object-cover">
-                        </div>
-                    </article>
                 </div>
             </div>
         </section>
@@ -408,33 +434,49 @@
                         </div>
                     </article>
                 </div> -->
-
+                
                 <div class="mb-16 mt-12">
                     <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center"></h3>
                     <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
                         <div class="overflow-x-auto table-scroll">
                             <table class="w-full text-left border-collapse min-w-[600px]">
                                 <tbody class="text-gray-800">
-                                    <tr class="border-b border-gray-100 hover:bg-slate-50 transition">
-                                        <td class="py-4 px-6 text-sm">2026年5月10日</td>
-                                        <td class="py-4 px-6 font-bold text-brand-darker">訓練班：啦啦隊青苗訓練班</td>
-                                        <td class="py-4 px-6">
-                                            <span class="bg-green-100 text-green-700 py-1 px-3 rounded-full text-xs font-bold cursor-pointer hover:bg-green-200 transition">詳情</span>
+                                    
+                                    <!-- <tr class="hover:bg-slate-50 transition">
+                                        <td class="py-4 px-6 text-sm whitespace-nowrap">2026年7月10日</td>
+                                        <td class="py-4 px-6 font-bold text-brand-darker">本地賽事：全港啦啦隊大賽2026</td>
+                                        <td class="py-4 px-6 text-right whitespace-nowrap">
+                                            <span class="bg-yellow-100 text-brand-800 py-2 px-4 rounded-full text-xs font-bold cursor-pointer hover:bg-brand-200 transition">詳情</span>
+                                        </td> -->
+                                    <tr class="hover:bg-slate-50 transition">
+                                        <td class="py-4 px-6 text-sm whitespace-nowrap">2026年9月1日</td>
+                                        <td class="py-4 px-6 font-bold text-brand-darker">裁判班：啦啦隊一級裁判員課程2026</td>
+                                        <td class="py-4 px-6 text-right whitespace-nowrap">
+                                            <a target="_blank" rel="noopener noreferrer" href="image/referee1_training_2026.jpg" class="inline-flex items-center justify-center bg-yellow-100 text-brand-800 py-2 px-4 rounded-full text-xs font-bold cursor-pointer hover:bg-brand-200 transition">詳情</a>
                                         </td>
                                     </tr>
                                     <tr class="border-b border-gray-100 hover:bg-slate-50 transition">
-                                        <td class="py-4 px-6 text-sm">2026年6月10日</td>
-                                        <td class="py-4 px-6 font-bold text-brand-darker">港外賽事：ICU 亞洲啦啦隊錦標賽2026 及 亞太啦啦隊盃2026</td>
-                                        <td class="py-4 px-6">
-                                            <span class="bg-yellow-100 text-yellow-700 py-1 px-3 rounded-full text-xs font-bold cursor-pointer hover:bg-yellow-200 transition">詳情</span>
+                                        <td class="py-4 px-6 text-sm whitespace-nowrap">2026年7月26日</td>
+                                        <td class="py-4 px-6 font-bold text-brand-darker">港外賽事：ICU 亞洲啦啦隊錦標賽2026 (ACC) 及 亞太啦啦隊盃2026 (APCC)</td>
+                                        <td class="py-4 px-6 text-right whitespace-nowrap">
+                                            <button type="button" data-view="events" data-target-tab="tab-intl" class="inline-flex items-center justify-center bg-yellow-100 text-brand-800 py-2 px-4 rounded-full text-xs font-bold cursor-pointer hover:bg-brand-200 transition">詳情</button>
                                         </td>
                                     </tr>
                                     <tr class="hover:bg-slate-50 transition">
-                                        <td class="py-4 px-6 text-sm">2026年4月11日</td>
-                                        <td class="py-4 px-6 font-bold text-brand-darker">本地賽事：全港啦啦隊大賽2026</td>
-                                        <td class="py-4 px-6">
-                                            <span class="bg-brand-100 text-brand-800 py-1 px-3 rounded-full text-xs font-bold cursor-pointer hover:bg-brand-200 transition">詳情</span>
+                                        <td class="py-4 px-6 text-sm whitespace-nowrap">2026年7月10日</td>
+                                        <td class="py-4 px-6 font-bold text-brand-darker">訓練營：2026粵港澳大灣區啦啦操精英訓練營</td>
+                                        <td class="py-4 px-6 text-right whitespace-nowrap">
+                                            <button type="button" data-view="training-cheer" class="inline-flex items-center justify-center bg-yellow-100 text-brand-800 py-2 px-4 rounded-full text-xs font-bold cursor-pointer hover:bg-brand-200 transition">詳情</button>
                                         </td>
+                                    </tr>
+                                    <tr class="border-b border-gray-100 hover:bg-slate-50 transition">
+                                        <td class="py-4 px-6 text-sm whitespace-nowrap">2026年7月9日</td>
+                                        <td class="py-4 px-6 font-bold text-brand-darker">訓練班：香港啦啦隊青苗訓練班2026</td>
+                                        <td class="py-4 px-6 text-right whitespace-nowrap">
+                                            <button type="button" data-view="training-cheer" class="inline-flex items-center justify-center bg-yellow-100 text-brand-800 py-2 px-4 rounded-full text-xs font-bold cursor-pointer hover:bg-brand-200 transition">詳情</button>
+                                        </td>
+                                    </tr>
+                                    
                                     </tr>
                                 </tbody>
                             </table>
@@ -484,7 +526,7 @@
                             <div class="absolute w-6 h-6 bg-brand-light rounded-full -left-3.5 top-1 border-4 border-white shadow"></div>
                             <h4 class="text-xl font-bold text-brand-darker">五、未來願景與發展策略：融入國家大局，共創體育新篇</h4>
                             <span class="text-sm font-bold text-brand mb-2 block">2019年</span>
-                            <p class="text-gray-600">邁向未來，本會的發展已邁入嶄新里程。本會已於2019年成為「粵港澳大灣區體育教育與發展聯盟」創會理事單位及「中國香港體育協會暨奧林匹克委員會」正式成員；並於<b>2022年</b>獲國際奧委會（IOC）官方認可的國際啦啦隊總會（ICU）接納為正式會員（Full Member），國際地位備受肯定。 (詳情： <a target="_blank" href="http://cheerunion.org/members/hong-kong" class="text-brand hover:underline">cheerunion.org/members/hong-kong</a>)<br><br>
+                            <p class="text-gray-600">邁向未來，本會的發展已邁入嶄新里程。本會已於2019年成為「粵港澳大灣區體育教育與發展聯盟」創會理事單位及「中國香港體育協會暨奧林匹克委員會」正式成員；並於<b>2022年</b>獲國際奧委會（IOC）官方認可的國際啦啦隊總會（ICU）接納為正式會員（Full Member），國際地位備受肯定。 (詳情： <a target="_blank" rel="noopener noreferrer" href="http://cheerunion.org/members/hong-kong" class="text-brand hover:underline">cheerunion.org/members/hong-kong</a>)<br><br>
                             作為中國香港首創的競技及舞蹈啦啦隊總會，我們的未來願景是：<br>
                             <b>1. 深化人才培育：</b>透過啦啦隊運動，持續為參與者注入運動正能量，讓他們在訓練中掌握正面的運動技能與生命智慧，為未來在不同體育領域的發揮奠定堅實基礎。<br>
                             <b>2. 提升社會效益：</b>繼續透過各階層的培訓、展演及公開比賽平台，協助特區政府營造和諧共融、互助互愛的社會氛圍，幫助年輕一代建立卓越的團隊精神與充滿正能量的群體文化。<br>
@@ -685,7 +727,7 @@
                                                 <span class="w-full sm:w-1/2 text-gray-600 break-words">日期：2026年月日<br>
                                                 地點：體育館</span>
                                                 <span class="w-20 flex-shrink-0 relative">
-                                                    <img src="poster/poster0.jpg">
+                                                    <img src="poster/white.jpg">
                                                 </span>
                                             </li> -->
                                             <li class="flex flex-col sm:flex-row sm:items-start justify-between gap-2 border-b border-gray-200 pb-2">
@@ -693,7 +735,7 @@
                                                 <span class="w-full sm:w-1/2 text-gray-600 break-words">日期：2026年3月29日<br>
                                                 地點：深水埗體育館</span>
                                                 <span class="w-20 flex-shrink-0 relative">
-                                                    <img src="poster/poster0.jpg">
+                                                    <img src="poster/white.jpg">
                                                 </span>
                                             </li>
                                         </ul>
@@ -721,7 +763,7 @@
                                                 <span class="w-full sm:w-1/2 text-gray-600 break-words">日期：2024年月日<br>
                                                 地點：奧海城</span>
                                                 <span class="w-20 flex-shrink-0 relative">
-                                                    <img src="poster/poster0.jpg">
+                                                    <img src="poster/white.jpg">
                                                 </span>
                                             </li> -->
                                             <li class="flex flex-col sm:flex-row sm:items-start justify-between gap-2 border-b border-gray-200 pb-2">
@@ -729,7 +771,7 @@
                                                 <span class="w-full sm:w-1/2 text-gray-600 break-words">日期：2024年6月22-23日<br>
                                                 地點：奧海城2期地下主題中庭</span>
                                                 <span class="w-20 flex-shrink-0 relative">
-                                                    <img src="poster/poster0.jpg">
+                                                    <img src="poster/white.jpg">
                                                 </span>
                                             </li>
                                         </ul>
@@ -756,7 +798,7 @@
                                                 <span class="w-full sm:w-1/2 text-gray-600 break-words">日期：2025年3月22日<br>
                                                 地點：中華基督教會協和小學(長沙灣)</span>
                                                 <span class="w-20 flex-shrink-0 relative">
-                                                    <img src="poster/poster0.jpg">
+                                                    <img src="poster/white.jpg">
                                                 </span>
                                             </li> -->
                                             <li class="flex flex-col sm:flex-row sm:items-start justify-between gap-2 border-b border-gray-200 pb-2">
@@ -764,7 +806,7 @@
                                                 <span class="w-full sm:w-1/2 text-gray-600 break-words">日期：2025年3月22日<br>
                                                 地點：中華基督教會協和小學(長沙灣)</span>
                                                 <span class="w-20 flex-shrink-0 relative">
-                                                    <img src="poster/poster0.jpg">
+                                                    <img src="poster/white.jpg">
                                                 </span>
                                             </li>
                                         </ul>
@@ -791,7 +833,7 @@
                                                 <span class="w-full sm:w-1/2 text-gray-600 break-words">日期：2027年月日<br>
                                                 地點：體育館</span>
                                                 <span class="w-20 flex-shrink-0 relative">
-                                                    <img src="poster/poster0.jpg">
+                                                    <img src="poster/white.jpg">
                                                 </span>
                                             </li> -->
                                             <li class="flex flex-col sm:flex-row sm:items-start justify-between gap-2 border-b border-gray-200 pb-2">
@@ -799,7 +841,7 @@
                                                 <span class="w-full sm:w-1/2 text-gray-600 break-words">日期：2026年5月2日<br>
                                                 地點：深水埗體育館</span>
                                                 <span class="w-20 flex-shrink-0 relative">
-                                                    <img src="poster/poster_iscc2026.jpg">
+                                                    <img src="poster/iscc_2026.jpg">
                                                 </span>
                                             </li>
                                             
@@ -827,7 +869,7 @@
                                                 <span class="w-full sm:w-1/2 text-gray-600 break-words">日期：2024年月日<br>
                                                 地點：海濱長廊</span>
                                                 <span class="w-20 flex-shrink-0 relative">
-                                                    <img src="poster/poster0.jpg">
+                                                    <img src="poster/white.jpg">
                                                 </span>
                                             </li> -->
                                             <li class="flex flex-col sm:flex-row sm:items-start justify-between gap-2 border-b border-gray-200 pb-2">
@@ -835,7 +877,7 @@
                                                 <span class="w-full sm:w-1/2 text-gray-600 break-words">日期：2026年7月4日<br>
                                                 地點：九龍灣體育館</span>
                                                 <span class="w-20 flex-shrink-0 relative">
-                                                    <img src="poster/poster0.jpg">
+                                                    <img src="poster/white.jpg">
                                                 </span>
                                             </li>
                                             <li class="flex flex-col sm:flex-row sm:items-start justify-between gap-2 border-b border-gray-200 pb-2">
@@ -843,7 +885,7 @@
                                                 <span class="w-full sm:w-1/2 text-gray-600 break-words">日期：2024年9月28日<br>
                                                 地點：東涌海濱長廊</span>
                                                 <span class="w-20 flex-shrink-0 relative">
-                                                    <img src="poster/poster0.jpg">
+                                                    <img src="poster/white.jpg">
                                                 </span>
                                             </li>                                           
                                         </ul>
@@ -863,20 +905,21 @@
                             <div class="p-6 flex-grow">
                                 <div class="flex flex-col md:flex-row gap-6 items-start md:items-center">
                                     <div class="w-full md:w-1/4 bg-gray-50 p-4 rounded-lg text-center border border-gray-100 flex-shrink-0">
-                                        <span class="block text-brand-darker font-black text-2xl">4月20日</span>
+                                        <span class="block text-brand-darker font-black text-2xl">10月15-19日</span>
                                         <span class="text-gray-500 text-sm">2026年</span>
                                     </div>
                                     <div class="flex-grow">
-                                        <h4 class="text-xl font-bold text-gray-800 mb-2">ICU 世界啦啦隊錦標賽 2026</h4>
-                                        <p class="text-gray-600 text-sm mb-3">地點：美國 佛羅里達州 奧蘭多 <br>代表隊：香港競技啦啦隊混合組、舞蹈啦啦隊雙人組</p>
+                                        <h4 class="text-xl font-bold text-gray-800 mb-2">ICU 亞洲啦啦隊錦標賽2026 (ACC) 及 亞太啦啦隊盃2026 (APCC)<br>
+                                            ICU Asian Cheerleading Championships 2026 (ACC) & Asia Pacific Cheerleading Cup 2026 (APCC)</h4>
+                                        <p class="text-gray-600 text-sm mb-3">地點：馬來西亞布城 (Putrajaya, Malaysia)<br></p>
                                         <div class="flex gap-3">
-                                            <span class="text-sm bg-green-50 text-green-700 px-3 py-1 rounded font-medium"><i data-lucide="check-circle" class="w-3 h-3 inline mr-1"></i>名單已確認</span>
+                                            <span class="text-sm bg-green-50 text-green-700 px-3 py-1 rounded font-medium"><i data-lucide="check-circle" class="w-3 h-3 inline mr-1"></i>名單將確認</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="w-full md:w-2/5 flex-shrink-0 relative bg-gray-200 min-h-[250px] md:min-h-auto">
-                                <img src="poster/poster_test.jpg" alt="港外賽事" class="absolute inset-0 w-full h-full object-cover">
+                                <img src="poster/icucc_2026.jpg" alt="港外賽事" class="absolute inset-0 w-full h-full object-cover">
                             </div>
                         </div>
                     </div>
@@ -904,7 +947,7 @@
                                                 <span class="w-full sm:w-1/2 text-gray-600 break-words">日期：2024年月日<br>
                                                 地點：GO PARK</span>
                                                 <span class="w-20 flex-shrink-0 relative">
-                                                    <img src="poster/poster0.jpg">
+                                                    <img src="poster/white.jpg">
                                                 </span>
                                             </li> -->
                                             <li class="flex flex-col sm:flex-row sm:items-start justify-between gap-2 border-b border-gray-200 pb-2">
@@ -912,7 +955,7 @@
                                                 <span class="w-full sm:w-1/2 text-gray-600 break-words">日期：2024年10月11-13日<br>
                                                 地點：西沙 GO PARK</span>
                                                 <span class="w-20 flex-shrink-0 relative">
-                                                    <img src="poster/poster_wgs2024.jpg">
+                                                    <img src="poster/wgs_2024.jpg">
                                                 </span>
                                             </li>
                                             <li class="flex flex-col sm:flex-row sm:items-start justify-between gap-2 border-b border-gray-200 pb-2">
@@ -920,7 +963,7 @@
                                                 <span class="w-full sm:w-1/2 text-gray-600 break-words">日期：2023年11月5-15日<br>
                                                 地點：廣西桂林</span>
                                                 <span class="w-20 flex-shrink-0 relative">
-                                                    <img src="poster/poster0.jpg">
+                                                    <img src="poster/white.jpg">
                                                 </span>
                                             </li>                                           
                                         </ul>
@@ -946,7 +989,7 @@
                                                 <span class="w-full sm:w-1/2 text-gray-600 break-words">日期：2026年月日<br>
                                                 地點：美國</span>
                                                 <span class="w-20 flex-shrink-0 relative">
-                                                    <img src="poster/poster0.jpg">
+                                                    <img src="poster/white.jpg">
                                                 </span>
                                             </li> -->
                                             <li class="flex flex-col sm:flex-row sm:items-start justify-between gap-2 border-b border-gray-200 pb-2">
@@ -954,7 +997,7 @@
                                                 <span class="w-full sm:w-1/2 text-gray-600 break-words">日期：2026年4月20–27日/ 2026年4月23–30日<br>
                                                 地點：美國奧蘭多</span>
                                                 <span class="w-20 flex-shrink-0 relative">
-                                                    <img src="poster/poster0.jpg">
+                                                    <img src="poster/white.jpg">
                                                 </span>
                                             </li>                                           
                                         </ul>
@@ -980,15 +1023,15 @@
                                                 <span class="w-full sm:w-1/2 text-gray-600 break-words">日期：2026年月日<br>
                                                 地點：馬來西亞</span>
                                                 <span class="w-20 flex-shrink-0 relative">
-                                                    <img src="poster/poster0.jpg">
+                                                    <img src="poster/white.jpg">
                                                 </span>
                                             </li> -->
                                             <li class="flex flex-col sm:flex-row sm:items-start justify-between gap-2 border-b border-gray-200 pb-2">
-                                                <span class="w-full sm:w-1/2 font-bold text-brand-darker break-words">ICU 亞洲啦啦隊錦標賽 2026 及亞太啦啦隊盃2026<br>The ICU Asian Cheerleading Championships 2026 (ACC) and Asia Pacific Cheerleading Cup 2026(APCC)</span>
+                                                <span class="w-full sm:w-1/2 font-bold text-brand-darker break-words">ICU 亞洲啦啦隊錦標賽 2026 及 亞太啦啦隊盃2026<br>The ICU Asian Cheerleading Championships 2026 (ACC) and Asia Pacific Cheerleading Cup 2026(APCC)</span>
                                                 <span class="w-full sm:w-1/2 text-gray-600 break-words">日期：2026年10月15–19日<br>
                                                 地點：馬來西亞</span>
                                                 <span class="w-20 flex-shrink-0 relative">
-                                                    <img src="poster/poster0.jpg">
+                                                    <img src="poster/white.jpg">
                                                 </span>
                                             </li>                                           
                                         </ul>
@@ -1014,7 +1057,7 @@
                                                 <span class="w-full sm:w-1/2 text-gray-600 break-words">日期：2026年月<br>
                                                 地點：大灣區</span>
                                                 <span class="w-20 flex-shrink-0 relative">
-                                                    <img src="poster/poster0.jpg">
+                                                    <img src="poster/white.jpg">
                                                 </span>
                                             </li> -->
                                             <li class="flex flex-col sm:flex-row sm:items-start justify-between gap-2 border-b border-gray-200 pb-2">
@@ -1022,7 +1065,7 @@
                                                 <span class="w-full sm:w-1/2 text-gray-600 break-words">日期：2026年12月(暫定)<br>
                                                 地點：大灣區</span>
                                                 <span class="w-20 flex-shrink-0 relative">
-                                                    <img src="poster/poster0.jpg">
+                                                    <img src="poster/white.jpg">
                                                 </span>
                                             </li>
                                             <li class="flex flex-col sm:flex-row sm:items-start justify-between gap-2 border-b border-gray-200 pb-2">
@@ -1030,7 +1073,7 @@
                                                 <span class="w-full sm:w-1/2 text-gray-600 break-words">日期：2025年6月20-22日<br>
                                                 地點：廣東南沙</span>
                                                 <span class="w-20 flex-shrink-0 relative">
-                                                    <img src="poster/poster0.jpg">
+                                                    <img src="poster/white.jpg">
                                                 </span>
                                             </li>
                                             <li class="flex flex-col sm:flex-row sm:items-start justify-between gap-2 border-b border-gray-200 pb-2">
@@ -1038,7 +1081,7 @@
                                                 <span class="w-full sm:w-1/2 text-gray-600 break-words">日期：2024年10月24-28日<br>
                                                 地點：中國南京</span>
                                                 <span class="w-20 flex-shrink-0 relative">
-                                                    <img src="poster/poster0.jpg">
+                                                    <img src="poster/white.jpg">
                                                 </span>
                                             </li>                                           
                                         </ul>
@@ -1064,7 +1107,7 @@
                                                 <span class="w-full sm:w-1/2 text-gray-600 break-words">日期：2026年月日<br>
                                                 地點：韓國</span>
                                                 <span class="w-20 flex-shrink-0 relative">
-                                                    <img src="poster/poster0.jpg">
+                                                    <img src="poster/white.jpg">
                                                 </span>
                                             </li> -->
                                             <li class="flex flex-col sm:flex-row sm:items-start justify-between gap-2 border-b border-gray-200 pb-2">
@@ -1072,7 +1115,7 @@
                                                 <span class="w-full sm:w-1/2 text-gray-600 break-words">日期：2026年6月12–16日<br>
                                                 地點：韓國</span>
                                                 <span class="w-20 flex-shrink-0 relative">
-                                                    <img src="poster/poster0.jpg">
+                                                    <img src="poster/white.jpg">
                                                 </span>
                                             </li>
                                             <li class="flex flex-col sm:flex-row sm:items-start justify-between gap-2 border-b border-gray-200 pb-2">
@@ -1080,7 +1123,7 @@
                                                 <span class="w-full sm:w-1/2 text-gray-600 break-words">日期：2024年11月21-24日<br>
                                                 地點：韓國</span>
                                                 <span class="w-20 flex-shrink-0 relative">
-                                                    <img src="poster/poster0.jpg">
+                                                    <img src="poster/white.jpg">
                                                 </span>
                                             </li>
                                         </ul>
@@ -1106,7 +1149,7 @@
                                                 <span class="w-full sm:w-1/2 text-gray-600 break-words">日期：2025年月日<br>
                                                 地點：珠海</span>
                                                 <span class="w-20 flex-shrink-0 relative">
-                                                    <img src="poster/poster0.jpg">
+                                                    <img src="poster/white.jpg">
                                                 </span>
                                             </li> -->
                                             <li class="flex flex-col sm:flex-row sm:items-start justify-between gap-2 border-b border-gray-200 pb-2">
@@ -1114,7 +1157,7 @@
                                                 <span class="w-full sm:w-1/2 text-gray-600 break-words">日期：2025年9月19-22日<br>
                                                 地點：珠海</span>
                                                 <span class="w-20 flex-shrink-0 relative">
-                                                    <img src="poster/poster0.jpg">
+                                                    <img src="poster/white.jpg">
                                                 </span>
                                             </li>                                           
                                         </ul>
@@ -1178,7 +1221,7 @@
                                         <span class="w-20 flex-shrink-0 relative">
                                             <img src="image/National_Games_2025.jpg">
                                         </span>
-                                        <p class="text-sm text-gray-600"></p>
+                                        <p class="text-sm text-gray-600">.</p>
                                         <br><br>
                                     </div>
                                 </li>
@@ -1200,7 +1243,7 @@
                                         <span class="w-20 flex-shrink-0 relative">
                                             <img src="image/.jpg">
                                         </span>
-                                        <p class="text-sm text-gray-600"></p>
+                                        <p class="text-sm text-gray-600">.</p>
                                             <br><br>
                                     </div>
                                 </li> -->
@@ -1217,43 +1260,44 @@
                 </div>
 
                 <div class="mb-16">
-                    <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center"><i data-lucide="book-open" class="text-brand mr-3"></i>即將舉辦課程</h3>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center"><i data-lucide="book-open" class="text-brand mr-3"></i>舉辦課程</h3>
                     <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
                         <div class="overflow-x-auto table-scroll">
                             <table class="w-full text-left border-collapse min-w-[600px]">
                                 <thead>
                                     <tr class="bg-gray-50 border-b border-gray-200 text-sm text-gray-600 uppercase">
                                         <th class="py-4 px-6 font-medium" scope="col">課程名稱</th>
-                                        <th class="py-4 px-6 font-medium" scope="col">對象</th>
-                                        <th class="py-4 px-6 font-medium" scope="col">日期</th>
-                                        <th class="py-4 px-6 font-medium" scope="col">狀態</th>
+                                        <th class="py-4 px-6 font-medium whitespace-nowrap" scope="col">對象</th>
+                                        <th class="py-4 px-6 font-medium whitespace-nowrap" scope="col">截止日期</th>
+                                        <th class="py-4 px-6 font-medium text-center whitespace-nowrap" scope="col">狀態</th>
                                     </tr>
                                 </thead>
                                 <tbody class="text-gray-800">
                                     <tr class="border-b border-gray-100 hover:bg-slate-50 transition">
-                                        <td class="py-4 px-6 font-bold text-brand-darker"><a target="http://www..pdf" href="http://www..pdf">普及啦啦隊訓練班</a></td>
-                                        <td class="py-4 px-6 text-sm">年滿18歲具基礎經驗者</td>
-                                        <td class="py-4 px-6 text-sm">2026年5月 (共4節)</td>
-                                        <td class="py-4 px-6">
-                                            <span class="bg-green-100 text-green-700 py-1 px-3 rounded-full text-xs font-bold">接受報名</span>
-                                        </td>
-                                    </tr>
-                                    <tr class="border-b border-gray-100 hover:bg-slate-50 transition">
-                                        <td class="py-4 px-6 font-bold text-brand-darker"><a target="http://www..pdf" href="http://www..pdf">啦啦隊青苗訓練班</a></td>
-                                        <td class="py-4 px-6 text-sm">註冊一級教練</td>
-                                        <td class="py-4 px-6 text-sm">2026年6月10日</td>
-                                        <td class="py-4 px-6">
-                                            <span class="bg-yellow-100 text-yellow-700 py-1 px-3 rounded-full text-xs font-bold">即將公佈</span>
+                                        <td class="py-4 px-6 font-bold text-brand-darker"><a target="_blank" rel="noopener noreferrer" href="image/junior_training_2026.jpg" class="hover:underline">香港啦啦隊青苗訓練班2026</a></td>
+                                        <td class="py-4 px-6 text-sm whitespace-nowrap">6-18歲青少年</td>
+                                        <td class="py-4 px-6 text-sm whitespace-nowrap">2026年9月22日(第一期)</td>
+                                        <td class="py-4 px-6 text-center whitespace-nowrap">
+                                            <a class="inline-flex items-center justify-center bg-yellow-100 text-yellow-700 py-2 px-4 rounded-full text-xs font-bold hover:bg-yellow-200 transition whitespace-nowrap" target="_blank" rel="noopener noreferrer" href="https://forms.gle/qRvspVZFYSmFuSSC7">現正接受報名</a>
                                         </td>
                                     </tr>
                                     <tr class="hover:bg-slate-50 transition">
-                                        <td class="py-4 px-6 font-bold text-brand-darker"><a target="http://www..pdf" href="http://www..pdf">粵港澳大灣區啦啦操精英訓練</a></td>
-                                        <td class="py-4 px-6 text-sm">12-18歲青少年</td>
-                                        <td class="py-4 px-6 text-sm">2026年4月11日起</td>
-                                        <td class="py-4 px-6">
-                                            <span class="bg-brand-100 text-brand-800 py-1 px-3 rounded-full text-xs font-bold">名額已滿</span>
+                                        <td class="py-4 px-6 font-bold text-brand-darker"><a target="_blank" rel="noopener noreferrer" href="image/elite_training_2026.jpg" class="hover:underline">2026粵港澳大灣區啦啦操精英訓練營</a></td>
+                                        <td class="py-4 px-6 text-sm whitespace-nowrap">8歲或以上</td>
+                                        <td class="py-4 px-6 text-sm whitespace-nowrap">-</td>
+                                        <td class="py-4 px-6 text-center whitespace-nowrap">
+                                            <span class="inline-flex items-center justify-center bg-brand-100 text-brand-800 py-2 px-4 rounded-full text-xs font-bold whitespace-nowrap">完滿結束</span>
                                         </td>
                                     </tr>
+                                    <tr class="border-b border-gray-100 hover:bg-slate-50 transition">
+                                        <td class="py-4 px-6 font-bold text-brand-darker">普及啦啦隊訓練班</td>
+                                        <td class="py-4 px-6 text-sm whitespace-nowrap">-</td>
+                                        <td class="py-4 px-6 text-sm whitespace-nowrap">-</td>
+                                        <td class="py-4 px-6 text-center whitespace-nowrap">
+                                            <span class="inline-flex items-center justify-center bg-green-100 text-green-700 py-2 px-4 rounded-full text-xs font-bold whitespace-nowrap">即將公佈</span>
+                                        </td>
+                                    </tr>
+                                   
                                 </tbody>
                             </table>
                         </div>
@@ -1270,7 +1314,7 @@
                 </div>
 
                 <div class="max-w-3xl mx-auto">
-                    <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center"><i data-lucide="shield-check" class="text-brand mr-3"></i><a target="list/coach_list.pdf" href="list/coach_list.pdf">註冊教練名單</a></h3>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center"><i data-lucide="shield-check" class="text-brand mr-3"></i><a target="_blank" rel="noopener noreferrer" href="list/coach_list.pdf">註冊教練名單</a></h3>
                     <!-- <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center"><i data-lucide="shield-check" class="text-brand mr-3"></i> 教練資歷架構</h3>
                     <div class="bg-brand-50 p-6 rounded-xl border border-brand-100">
                         <h4 class="font-bold text-xl text-brand-darker mb-4 flex items-center"><i data-lucide="whistle" class="mr-2"></i> 教練級別</h4>
@@ -1301,7 +1345,7 @@
                 </div>
 
                 <div class="max-w-3xl mx-auto">
-                    <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center"><i data-lucide="shield-check" class="text-brand mr-3"></i><a target="list/judge_list.pdf" href="list/judge_list.pdf">註冊裁判名單</a></h3>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center"><i data-lucide="shield-check" class="text-brand mr-3"></i><a target="_blank" rel="noopener noreferrer" href="list/judge_list.pdf">註冊裁判名單</a></h3>
                     <!-- <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center"><i data-lucide="shield-check" class="text-brand mr-3"></i> 裁判資歷架構</h3>
                     <div class="bg-brand-50 p-6 rounded-xl border border-brand-100">
                         <h4 class="font-bold text-xl text-brand-darker mb-4 flex items-center"><i data-lucide="gavel" class="mr-2"></i> 裁判級別</h4>
@@ -1344,37 +1388,37 @@
                                                 <td class="py-4 px-6 text-sm">2025年6月</td>
                                                 <td class="py-4 px-6 font-bold text-brand-darker">粵港澳大灣區啦啦操精英賽</td>
                                                 <td class="py-4 px-6">
-                                                    <a class="bg-yellow-100 text-yellow-700 py-1 px-3 rounded-full text-xs font-bold cursor-pointer hover:bg-yellow-200 transition" target="media/olympic_voice.pdf" href="media/olympic_voice.pdf">Olympic Voice</a>
+                                                    <a class="bg-yellow-100 text-yellow-700 py-1 px-3 rounded-full text-xs font-bold cursor-pointer hover:bg-yellow-200 transition" target="_blank" rel="noopener noreferrer" href="media/olympic_voice.pdf">▶️ Olympic Voice</a>
                                                 </td>
                                             </tr>
                                             <tr class="border-b border-gray-100 hover:bg-slate-50 transition">
                                                 <td class="py-4 px-6 text-sm">2025年9月</td>
                                                 <td class="py-4 px-6 font-bold text-brand-darker">十五運</td>
                                                 <td class="py-4 px-6">
-                                                    <a class="bg-yellow-100 text-yellow-700 py-1 px-3 rounded-full text-xs font-bold cursor-pointer hover:bg-yellow-200 transition" target="media/national_games_2025.pdf" href="media/national_games_2025.pdf">National Games 2025</a><br>
-                                                    <a class="bg-yellow-100 text-yellow-700 py-1 px-3 rounded-full text-xs font-bold cursor-pointer hover:bg-yellow-200 transition" target="media/20250226.pdf" href="media/20250226.pdf">香港01 全運會2025群眾項目｜即睇香港區免費選拔安排 民間高手機會來了</a><br>
-                                                    <a class="bg-yellow-100 text-yellow-700 py-1 px-3 rounded-full text-xs font-bold cursor-pointer hover:bg-yellow-200 transition" target="media/20250716.pdf" href="media/20250716.pdf">Now TV 我們的全運會｜社區 躍動</a><br>
-                                                    <a class="bg-yellow-100 text-yellow-700 py-1 px-3 rounded-full text-xs font-bold cursor-pointer hover:bg-yellow-200 transition" target="media/20250916.pdf" href="media/20250916.pdf">Sportsoho【我要上全運】港隊首征全運會廣播體操 盼推廣普及</a><br>
-                                                    <a class="bg-yellow-100 text-yellow-700 py-1 px-3 rounded-full text-xs font-bold cursor-pointer hover:bg-yellow-200 transition" target="media/20250919.pdf" href="media/20250919.pdf">香港新聞網 全運會廣播體操賽 香港群眾來了</a><br>
-                                                    <a class="bg-yellow-100 text-yellow-700 py-1 px-3 rounded-full text-xs font-bold cursor-pointer hover:bg-yellow-200 transition" target="media/20250920.pdf" href="media/20250920.pdf">Ulifestyle 全運會｜香港隊首戰廣播體操 廖綺婷母女檔上陣</a><br>
-                                                    <a class="bg-yellow-100 text-yellow-700 py-1 px-3 rounded-full text-xs font-bold cursor-pointer hover:bg-yellow-200 transition" target="media/202509201.pdf" href="media/202509201.pdf">Ulifestyle 全運會｜香港廣播體操隊首戰珠海 展現體操魅力</a><br>
-                                                    <a class="bg-yellow-100 text-yellow-700 py-1 px-3 rounded-full text-xs font-bold cursor-pointer hover:bg-yellow-200 transition" target="media/202509202.pdf" href="media/202509202.pdf">巴士的報 全運會｜廣播體操項目一連兩日珠海舉行 本港首次派隊參與</a><br>
-                                                    <a class="bg-yellow-100 text-yellow-700 py-1 px-3 rounded-full text-xs font-bold cursor-pointer hover:bg-yellow-200 transition" target="media/202509203.pdf" href="media/202509203.pdf">香港電台 即時新聞 全運會｜廣播體操今明兩日舉行 總會稱適合不同年齡參與值得推廣</a><br>
-                                                    <a class="bg-yellow-100 text-yellow-700 py-1 px-3 rounded-full text-xs font-bold cursor-pointer hover:bg-yellow-200 transition" target="media/20250921.pdf" href="media/20250921.pdf">中國體育報 十五運會群眾展演廣播體操决賽戰罢 各等次獎項產生</a><br>
-                                                    <a class="bg-yellow-100 text-yellow-700 py-1 px-3 rounded-full text-xs font-bold cursor-pointer hover:bg-yellow-200 transition" target="media/202509211.pdf" href="media/202509211.pdf">香港新聞網 全運會廣播體操項目開鑼 香港隊首現賽場</a><br>
-                                                    <a class="bg-yellow-100 text-yellow-700 py-1 px-3 rounded-full text-xs font-bold cursor-pointer hover:bg-yellow-200 transition" target="media/202509212.pdf" href="media/202509212.pdf">珠海網 十五運會香港代表隊首次亮相 收獲珠海觀眾熱烈掌聲</a><br>
-                                                    <a class="bg-yellow-100 text-yellow-700 py-1 px-3 rounded-full text-xs font-bold cursor-pointer hover:bg-yellow-200 transition" target="media/20250922.pdf" href="media/20250922.pdf">華僑網 十五運會群眾展演廣播體操項目决賽在珠海收官</a><br>
-                                                    <a class="bg-yellow-100 text-yellow-700 py-1 px-3 rounded-full text-xs font-bold cursor-pointer hover:bg-yellow-200 transition" target="media/20250923.pdf" href="media/20250923.pdf">國家體育總局 十五運會廣播體操比賽 香港隊來了</a><br>
-                                                    <a class="bg-yellow-100 text-yellow-700 py-1 px-3 rounded-full text-xs font-bold cursor-pointer hover:bg-yellow-200 transition" target="media/20251002.pdf" href="media/20251002.pdf">Sportsoho 【我要上全運】港隊首度征戰廣播體操 獲嘉賓團現場支持展現香港精神</a>
+                                                    <a class="bg-yellow-100 text-yellow-700 py-1 px-3 rounded-full text-xs font-bold cursor-pointer hover:bg-yellow-200 transition" target="_blank" rel="noopener noreferrer" href="media/national_games_2025.pdf">▶️ National Games 2025</a><br>
+                                                    <a class="bg-yellow-100 text-yellow-700 py-1 px-3 rounded-full text-xs font-bold cursor-pointer hover:bg-yellow-200 transition" target="_blank" rel="noopener noreferrer" href="media/20250226.pdf">▶️ 香港01 全運會2025群眾項目｜即睇香港區免費選拔安排 民間高手機會來了</a><br>
+                                                    <a class="bg-yellow-100 text-yellow-700 py-1 px-3 rounded-full text-xs font-bold cursor-pointer hover:bg-yellow-200 transition" target="_blank" rel="noopener noreferrer" href="media/20250716.pdf">▶️ Now TV 我們的全運會｜社區 躍動</a><br>
+                                                    <a class="bg-yellow-100 text-yellow-700 py-1 px-3 rounded-full text-xs font-bold cursor-pointer hover:bg-yellow-200 transition" target="_blank" rel="noopener noreferrer" href="media/20250916.pdf">▶️ Sportsoho【我要上全運】港隊首征全運會廣播體操 盼推廣普及</a><br>
+                                                    <a class="bg-yellow-100 text-yellow-700 py-1 px-3 rounded-full text-xs font-bold cursor-pointer hover:bg-yellow-200 transition" target="_blank" rel="noopener noreferrer" href="media/20250919.pdf">▶️ 香港新聞網 全運會廣播體操賽 香港群眾來了</a><br>
+                                                    <a class="bg-yellow-100 text-yellow-700 py-1 px-3 rounded-full text-xs font-bold cursor-pointer hover:bg-yellow-200 transition" target="_blank" rel="noopener noreferrer" href="media/20250920.pdf">▶️ Ulifestyle 全運會｜香港隊首戰廣播體操 廖綺婷母女檔上陣</a><br>
+                                                    <a class="bg-yellow-100 text-yellow-700 py-1 px-3 rounded-full text-xs font-bold cursor-pointer hover:bg-yellow-200 transition" target="_blank" rel="noopener noreferrer" href="media/202509201.pdf">▶️ Ulifestyle 全運會｜香港廣播體操隊首戰珠海 展現體操魅力</a><br>
+                                                    <a class="bg-yellow-100 text-yellow-700 py-1 px-3 rounded-full text-xs font-bold cursor-pointer hover:bg-yellow-200 transition" target="_blank" rel="noopener noreferrer" href="media/202509202.pdf">▶️ 巴士的報 全運會｜廣播體操項目一連兩日珠海舉行 本港首次派隊參與</a><br>
+                                                    <a class="bg-yellow-100 text-yellow-700 py-1 px-3 rounded-full text-xs font-bold cursor-pointer hover:bg-yellow-200 transition" target="_blank" rel="noopener noreferrer" href="media/202509203.pdf">▶️ 香港電台 即時新聞 全運會｜廣播體操今明兩日舉行 總會稱適合不同年齡參與值得推廣</a><br>
+                                                    <a class="bg-yellow-100 text-yellow-700 py-1 px-3 rounded-full text-xs font-bold cursor-pointer hover:bg-yellow-200 transition" target="_blank" rel="noopener noreferrer" href="media/20250921.pdf">▶️ 中國體育報 十五運會群眾展演廣播體操决賽戰罢 各等次獎項產生</a><br>
+                                                    <a class="bg-yellow-100 text-yellow-700 py-1 px-3 rounded-full text-xs font-bold cursor-pointer hover:bg-yellow-200 transition" target="_blank" rel="noopener noreferrer" href="media/202509211.pdf">▶️ 香港新聞網 全運會廣播體操項目開鑼 香港隊首現賽場</a><br>
+                                                    <a class="bg-yellow-100 text-yellow-700 py-1 px-3 rounded-full text-xs font-bold cursor-pointer hover:bg-yellow-200 transition" target="_blank" rel="noopener noreferrer" href="media/202509212.pdf">▶️ 珠海網 十五運會香港代表隊首次亮相 收獲珠海觀眾熱烈掌聲</a><br>
+                                                    <a class="bg-yellow-100 text-yellow-700 py-1 px-3 rounded-full text-xs font-bold cursor-pointer hover:bg-yellow-200 transition" target="_blank" rel="noopener noreferrer" href="media/20250922.pdf">▶️ 華僑網 十五運會群眾展演廣播體操項目决賽在珠海收官</a><br>
+                                                    <a class="bg-yellow-100 text-yellow-700 py-1 px-3 rounded-full text-xs font-bold cursor-pointer hover:bg-yellow-200 transition" target="_blank" rel="noopener noreferrer" href="media/20250923.pdf">▶️ 國家體育總局 十五運會廣播體操比賽 香港隊來了</a><br>
+                                                    <a class="bg-yellow-100 text-yellow-700 py-1 px-3 rounded-full text-xs font-bold cursor-pointer hover:bg-yellow-200 transition" target="_blank" rel="noopener noreferrer" href="media/20251002.pdf">▶️ Sportsoho 【我要上全運】港隊首度征戰廣播體操 獲嘉賓團現場支持展現香港精神</a>
                                                 </td>
                                             </tr>
                                             <tr class="hover:bg-slate-50 transition">
                                                 <td class="py-4 px-6 text-sm">2024年10月</td>
                                                 <td class="py-4 px-6 font-bold text-brand-darker">世界運動會</td>
                                                 <td class="py-4 px-6">
-                                                    <a class="bg-yellow-100 text-yellow-700 py-1 px-3 rounded-full text-xs font-bold cursor-pointer hover:bg-yellow-200 transition" target="media/20240924.pdf" href="media/20240924.pdf">香港01 西沙GO PARK辦運動嘉年華</a><br>
-                                                    <a class="bg-yellow-100 text-yellow-700 py-1 px-3 rounded-full text-xs font-bold cursor-pointer hover:bg-yellow-200 transition" target="media/20241011.pdf" href="media/20241011.pdf">東方日報 世運香港巡迴賽明日上演 包括啦啦操武術等 嘉年華今起有得玩</a><br>
-                                                    <a class="bg-yellow-100 text-yellow-700 py-1 px-3 rounded-full text-xs font-bold cursor-pointer hover:bg-yellow-200 transition" target="media/202410111.pdf" href="media/202410111.pdf">星島日報 世動會香港巡迴賽西沙GO PARK揭幕 黃偉綸：重要里程碑</a>
+                                                    <a class="bg-yellow-100 text-yellow-700 py-1 px-3 rounded-full text-xs font-bold cursor-pointer hover:bg-yellow-200 transition" target="_blank" rel="noopener noreferrer" href="media/20240924.pdf">▶️ 香港01 西沙GO PARK辦運動嘉年華</a><br>
+                                                    <a class="bg-yellow-100 text-yellow-700 py-1 px-3 rounded-full text-xs font-bold cursor-pointer hover:bg-yellow-200 transition" target="_blank" rel="noopener noreferrer" href="media/20241011.pdf">▶️ 東方日報 世運香港巡迴賽明日上演 包括啦啦操武術等 嘉年華今起有得玩</a><br>
+                                                    <a class="bg-yellow-100 text-yellow-700 py-1 px-3 rounded-full text-xs font-bold cursor-pointer hover:bg-yellow-200 transition" target="_blank" rel="noopener noreferrer" href="media/202410111.pdf">▶️ 星島日報 世動會香港巡迴賽西沙GO PARK揭幕 黃偉綸：重要里程碑</a>
                                                 </td>
                                             </tr>
                                         </tbody>
@@ -1394,17 +1438,17 @@
                                     <table class="w-full text-left border-collapse min-w-[600px]">
                                         <tbody class="text-gray-800">
                                             <tr class="border-b border-gray-100 hover:bg-slate-50 transition">
-                                                <td class="py-4 px-6 text-sm">-</td>
-                                                <td class="py-4 px-6 font-bold text-brand-darker">Coming Soon</td>
+                                                <td class="py-4 px-6 text-sm">2026年7月</td>
+                                                <td class="py-4 px-6 font-bold text-brand-darker">CFHK 2026-2027年度主要活動日程表</td>
                                                 <td class="py-4 px-6">
-                                                    <!-- <a class="bg-green-100 text-green-500 py-1 px-3 rounded-full text-xs font-bold cursor-pointer hover:bg-green-200 transition" target="media/.pdf" href="media/.pdf">詳情</a> -->
+                                                    <a class="bg-green-100 text-green-500 py-1 px-3 rounded-full text-xs font-bold cursor-pointer hover:bg-green-200 transition" target="_blank" rel="noopener noreferrer" href="media/event_calendar_2609-2710.jpg">▶️ 活動日程表</a>
                                                 </td>
                                             </tr>
                                             <!-- <tr class="border-b border-gray-100 hover:bg-slate-50 transition">
                                                 <td class="py-4 px-6 text-sm">2026年6月10日</td>
                                                 <td class="py-4 px-6 font-bold text-brand-darker">港外賽事：ICU 亞洲啦啦隊錦標賽2026 及 亞太啦啦隊盃2026</td>
                                                 <td class="py-4 px-6">
-                                                    <a class="bg-green-100 text-green-500 py-1 px-3 rounded-full text-xs font-bold cursor-pointer hover:bg-green-200 transition" target="media/.pdf" href="media/.pdf">詳情</a>
+                                                    <a class="bg-green-100 text-green-500 py-1 px-3 rounded-full text-xs font-bold cursor-pointer hover:bg-green-200 transition" target="_blank" rel="noopener noreferrer" href="media/.pdf">▶️ 詳情</a>
                                                 </td>
                                             </tr> -->
                                         </tbody>
@@ -1427,14 +1471,14 @@
                                                 <td class="py-4 px-6 text-sm">-</td>
                                                 <td class="py-4 px-6 font-bold text-brand-darker">Coming Soon</td>
                                                 <td class="py-4 px-6">
-                                                    <!-- <a class="bg-brand-100 text-brand-800 py-1 px-3 rounded-full text-xs font-bold cursor-pointer hover:bg-brand-200 transition" target="media/.pdf" href="media/.pdf">詳情</a> -->
+                                                    <!-- <a class="bg-brand-100 text-brand-800 py-1 px-3 rounded-full text-xs font-bold cursor-pointer hover:bg-brand-200 transition" target="_blank" rel="noopener noreferrer" href="media/.pdf">詳情</a> -->
                                                 </td>
                                             </tr>
                                             <!-- <tr class="hover:bg-slate-50 transition">
                                                 <td class="py-4 px-6 text-sm">2026年4月11日</td>
                                                 <td class="py-4 px-6 font-bold text-brand-darker">本地賽事：全港啦啦隊大賽2026</td>
                                                 <td class="py-4 px-6">
-                                                    <a class="bg-brand-100 text-brand-800 py-1 px-3 rounded-full text-xs font-bold cursor-pointer hover:bg-brand-200 transition" target="media/.pdf" href="media/.pdf">詳情</a>
+                                                    <a class="bg-brand-100 text-brand-800 py-1 px-3 rounded-full text-xs font-bold cursor-pointer hover:bg-brand-200 transition" target="_blank" rel="noopener noreferrer" href="media/.pdf">詳情</a>
                                                 </td>
                                             </tr> -->
                                         </tbody>
@@ -1722,7 +1766,6 @@
             <div class="border-t border-brand-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-brand-300">
                 <p>&copy; 2026 中國香港啦啦隊總會 Cheerleading Federation of Hong Kong, China. 版權所有.</p>
                 <div class="space-x-4 mt-4 md:mt-0 flex">
-                    <a href="downloads/privacy_policy.pdf" class="hover:text-white transition focus-visible:outline-none focus-visible:underline">私隱政策</a>
                     <a href="downloads/disclaimer.pdf" class="hover:text-white transition focus-visible:outline-none focus-visible:underline">免責聲明</a>
                 </div>
             </div>
@@ -1741,7 +1784,7 @@
             </div>
             <h3 id="modal-title" class="text-2xl font-bold text-gray-800 mb-2">遞交成功！</h3>
             <p class="text-gray-600 mb-6 text-sm">
-                我們已收到您的表演申請，確認電郵已發送至閣下的信箱。我們將於 3 個工作天內與你聯絡。
+                我們已收到您的表演申請，我們將於 3 個工作天內與你聯絡。
             </p>
             <button id="close-modal-btn" class="w-full bg-brand-darker hover:bg-brand-dark text-white font-bold py-2 px-4 rounded-lg transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-darker focus-visible:ring-offset-2">
                 確定並返回首頁
@@ -2026,46 +2069,87 @@
 
             // 6.1 各消息彈出視窗的獨立自訂內容字典 (可隨時在此新增或修改各篇內容)
             const newsDetailData = {
-                "啦啦隊青苗訓練班": {
+                "啦啦隊一級裁判員課程2026": {
                     html: `
-                        <p class="font-bold text-lg text-brand-darker mb-4">啦啦隊青苗培訓計劃現正接受報名！</p>
-                        <p class="mb-3">本課程專為初學者設計，旨在打好基礎體能、技巧動作及培養團隊合作精神。由本會資深註冊教練親自執教。</p>
+                        <p class="font-bold text-lg text-brand-darker mb-4">裁判班現正接受報名！</p>
+                        <p class="mb-3">想更深入了解啦啦隊比賽的評分標準？無論是教練還是運動員，掌握裁判的視角都能為日常訓練和比賽策略帶來突破性的提升！精準掌握評分要求，能讓訓練更有方向，讓賽場表現更上一層樓。</p>
                         <ul class="list-disc pl-5 space-y-1 mb-4 text-sm text-gray-600">
-                            <li>訓練對象：6 - 12 歲兒童及青少年</li>
-                            <li>訓練地點：深水埗體育館副場</li>
-                            <li>名額有限，先到先得。</li>
+                            <li>日期：<br>
+                                2026年12月11日(五) 18:30-22:00<br>
+                                2026年12月12日(六) 09:00-18:00<br>
+                                2026年12月13日(日) 09:00-18:00<br>
+                                (註：如課程需要調動，以本會最終決定為準)</li>
+                            <li>訓練地點：香島中學 (九龍又一村桃源街33號)</li>
+                            <li>費用：會員 $1400 (包括課程、考試費用及首年註冊費用)、持牌裁判進修 $700</li>
+                            <li>名額：35名 (先到先得)</li>
                         </ul>
                         <div class="bg-brand-50 p-4 rounded-lg mt-6 border border-brand-100">
-                            <p class="text-sm font-bold text-brand-darker mb-2 flex items-center"><i data-lucide="phone" class="w-4 h-4 mr-2"></i> 查詢及報名</p>
-                            <p class="text-sm text-gray-600">請致電 (852) 2527 9288 或電郵至 cfhkemail@gmail.com 索取報名表格。</p>
+                            <p class="text-sm font-bold text-brand-darker mb-2 flex items-center"><i data-lucide="file-pen-line" class="w-4 h-4 mr-2"></i> <a target="_blank" rel="noopener noreferrer" href="https://forms.gle/uYLegkHMfkZBZbjF8">立即報名</a></p>
                         </div>
                     `
                 },
-                "ICU 亞洲啦啦隊錦標賽 2026 及 亞太啦啦隊盃2026": {
+                "香港啦啦隊青苗訓練班2026": {
                     html: `
-                        <p class="font-bold text-lg text-brand-darker mb-4">中國香港代表隊遠征海外賽事公告</p>
-                        <p class="mb-3">本會將派出代表隊出戰 2026 年度 ICU 亞洲啦啦隊錦標賽及亞太啦啦隊盃，與各國頂尖隊伍切磋交流。</p>
-                        <div class="bg-slate-100 p-4 rounded-lg mb-4 text-sm">
-                            <p class="font-bold text-gray-800">比賽地點：馬來西亞</p>
-                            <p class="text-gray-600">預計出賽項目：競技啦啦隊混合組、舞蹈啦啦隊雙人組</p>
+                        <p class="font-bold text-lg text-brand-darker mb-4">訓練班現正接受報名！</p>
+                        <p class="mb-3">想踏上啦啦隊的世界舞台？中國香港啦啦隊總會「香港啦啦隊青苗訓練班 2026」正式接受報名！我們致力於發掘具潛質的運動員，透過系統化教授競技啦啦隊及舞蹈啦啦隊技巧，提升學員的表演及比賽經驗，為參加地區及國際賽事作長遠準備！</p>
+                        <ul class="list-disc pl-5 space-y-1 mb-4 text-sm text-gray-600">
+                            <li>*** 課程詳情 ***<br>
+                                對象：6-18歲青少年<br>
+                                時間：逢星期六 14:00-16:00<br>
+                                地點：世界龍岡學校劉皇發中學 (九龍大角咀樹木街66號)</li><br>
+
+                            <li>*** 期數與費用 ***<br>
+                                🔸第一期：<br>
+                                日期：2026年10月3, 10, 17, 24日、11月7, 14, 21, 28日 (共8堂)<br>
+                                費用：HK$200 (獲康文署資助)<br><br>
+
+                                🔸第二期：<br>
+                                日期：2026年12月 19日、2027年1月 9 ,16 ,23, 30日、2月13, 27日、3月6, 13日 (共9堂)<br>
+                                費用：HK$1,980 (本會恆常訓練，非康文署資助活動)<br><br>
+
+                                🔸第三期：<br>
+                                日期：2027年4月10, 17, 24日、5月8, 15, 22日、6月26日 (共7堂)<br>
+                                費用：HK$1,540 (本會恆常訓練，非康文署資助活動)</li>
+                        </ul>
+                        <div class="bg-brand-50 p-4 rounded-lg mt-6 border border-brand-100">
+                            <p class="text-sm font-bold text-brand-darker mb-2 flex items-center"><i data-lucide="file-pen-line" class="w-4 h-4 mr-2"></i> <a target="_blank" rel="noopener noreferrer" href="https://forms.gle/qRvspVZFYSmFuSSC7">立即報名</a></p>
+                        </div>
+                    `
+                },
+                "ICU 亞洲啦啦隊錦標賽2026 (ACC) 及 亞太啦啦隊盃2026 (APCC)": {
+                    html: `
+                        <p class="font-bold text-lg text-brand-darker mb-4">中國香港代表隊遠征港外賽事</p>
+                        <p class="mb-3">本會將派出代表隊出戰 ICU Asian Cheerleading Championships 2026 (ACC) & Asia Pacific Cheerleading Cup 2026 (APCC)</p>
+                        <ul class="list-disc pl-5 space-y-1 mb-4 text-sm text-gray-600">
+                            <li>截止報名： 2026年8月18日(二)</li>
+                        </ul>
+                        <div class="bg-red-50 p-4 rounded-lg mb-4 border border-red-100 text-sm">
+                            <p class="text-gray-700">比賽日期：2026年10月15–19日 (週四至週一)</p>
+                            <p class="text-gray-700">比賽地點：馬來西亞布城 (Putrajaya, Malaysia)</p>
+                            <!-- <<p class="text-gray-700">預計出賽項目：競技啦啦隊混合組、舞蹈啦啦隊雙人組</p> -->
+                        </div>                
+                        <div class="bg-brand-50 p-4 rounded-lg mt-6 border border-brand-100">
+                            <p class="text-sm font-bold text-brand-darker mb-2 flex items-center"><i data-lucide="phone" class="w-4 h-4 mr-2"></i> 查詢</p>
+                            <p class="text-sm text-gray-600">歡迎致電本會辦公室：2527 9288</p>
+                        </div>
+                    `
+                },
+                "2026粵港澳大灣區啦啦操精英訓練營": {
+                    html: `
+                        <p class="font-bold text-lg text-brand-darker mb-4">精英訓練營即將展開！</p>
+                        <p class="mb-3">學員將接受世界冠軍教練李洪波、世錦賽冠軍王亞洲及俄羅斯大劇院芭蕾導師Olgadolskaya的親身指導，全面提升技巧、花球及芭蕾基本功。酒店設施完善，讓學員專注訓練、安心住宿。</p>
+                        <!-- <ul class="list-disc pl-5 space-y-1 mb-4 text-sm text-gray-600">
+                            <li>日期： 2026年8月18日(二)</li><br>
+                        </ul> -->
+                        <div class="bg-red-50 p-4 rounded-lg mb-4 border border-red-100 text-sm">
+                            <!-- <p class="font-bold text-red-800 mb-1">賽事重要日程：</p> -->
+                            <p class="text-gray-700">對象：8歲或以上</p>
+                            <p class="text-gray-700">日期：2026年8月21–26日 (可選擇1日或多日)</p>
+                            <p class="text-gray-700">地點：深圳寶安區維納斯皇家酒店</p>
                         </div>
                         <div class="bg-brand-50 p-4 rounded-lg mt-6 border border-brand-100">
                             <p class="text-sm font-bold text-brand-darker mb-2 flex items-center"><i data-lucide="phone" class="w-4 h-4 mr-2"></i> 查詢</p>
-                            <p class="text-sm text-gray-600">港隊選拔及隨團詳情請聯絡秘書處。</p>
-                        </div>
-                    `
-                },
-                "全港啦啦隊大賽2026": {
-                    html: `
-                        <p class="font-bold text-lg text-brand-darker mb-4">全港啦啦隊年度盛事即將展開！</p>
-                        <p class="mb-3">「全港啦啦隊大賽2026」將匯聚本地多支中小學及公開組啦啦隊同場競技，展現活力與高難度技巧。</p>
-                        <div class="bg-red-50 p-4 rounded-lg mb-4 border border-red-100 text-sm">
-                            <p class="font-bold text-red-800 mb-1">賽事重要日程：</p>
-                            <p class="text-gray-700">比賽日期：2026年3月29日 | 截止報名：2026年2月28日</p>
-                        </div>
-                        <div class="bg-brand-50 p-4 rounded-lg mt-6 border border-brand-100">
-                            <p class="text-sm font-bold text-brand-darker mb-2 flex items-center"><i data-lucide="download" class="w-4 h-4 mr-2"></i> 相關文件</p>
-                            <p class="text-sm text-gray-600">賽事章程及評分規則請前往「文件下載」專區下載。</p>
+                            <p class="text-sm text-gray-600">歡迎致電本會辦公室：2527 9288</p>
                         </div>
                     `
                 }
@@ -2082,10 +2166,12 @@
                
                 // 動態設定標籤顏色
                 catBadge.className = 'inline-block text-xs font-bold px-3 py-1 rounded shadow mb-3 ' +
-                    (category.includes('港外賽事') ? 'bg-brand-100 text-brand-800' :
-                     category.includes('訓練班') ? 'bg-green-200 text-green-800' :
-                     category.includes('本地賽事') ? 'bg-red-200 text-red-800' : 'bg-gray-600');
-
+                    (category.includes('裁判班') ? 'bg-blue-200 text-gray-800' :
+                     category.includes('港外賽事') ? 'bg-brand-100 text-brand-800' :
+                     (category.includes('國內訓練營') || category.includes('訓練營')) ? 'bg-green-200 text-red-800' :
+                     category.includes('訓練班') ? 'bg-green-200 text-red-800' :
+                     category.includes('本地賽事') ? 'bg-red-200 text-red-800' : 'bg-brand text-white');
+                
                 // 判斷是否在自訂字典中有個別內容，否則使用通用模板
                 const customNews = newsDetailData[title.trim()];
                 if (customNews && customNews.html) {
@@ -2093,8 +2179,8 @@
                 } else {
                     document.getElementById('news-modal-content').innerHTML = `
                         <p class="font-bold text-lg text-brand-darker mb-4">${excerpt}</p>
-                        <p>這是一篇有關「${title}」的詳細報導。本會一直致力推廣啦啦隊運動，並為各項賽事及培訓提供最優質的安排。</p>
-                        <p>有關本次活動的進一步詳情、報名細則及相關注意事項，已上載至本會系統。各屬會及會員可登入系統查閱完整文件。</p>
+                        <p>這是有關「${title}」的詳細資料。<br>本會一直致力推廣啦啦隊運動，並為各項賽事及培訓提供最優質的安排。</p>
+                        <p>有關本次活動的進一步詳情及相關注意事項已上載，請查閱完整文件。</p>
                         <div class="bg-brand-50 p-4 rounded-lg mt-6 border border-brand-100">
                             <p class="text-sm font-bold text-brand-darker mb-2 flex items-center"><i data-lucide="phone" class="w-4 h-4 mr-2"></i> 查詢</p>
                             <p class="text-sm text-gray-600">如有任何疑問，請於辦公時間內致電 (852) 2527 9288 或電郵至 cfhkemail@gmail.com 與本會秘書處聯絡。</p>
